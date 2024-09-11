@@ -5,11 +5,12 @@ import footerImg from "../../../public/assets/Cityscapes - Town.png"
 import { CalendarFill , TelephoneFill } from 'react-bootstrap-icons';
 
 
+
 const footer = () => {
   return (
-    <div className="position-static bottom-0 w-100  footerColor p-2 ">
+    <div className="position-static bottom-0 w-100  footerColor pt-2  d-flex flex-column">
       <div className='d-flex flex-row justify-content-evenly align-items-center footerFont'>
-        <div className='d-flex flex-column '>
+        <div className='d-flex flex-column m-auto'>
           <div className='fs-5 fw-medium mb-1'>Contact Details : </div>
           <div className='d-flex flex-column '>
           <div className='text-center  footerText opacity-75 mb-1'> if you have any questions or need help feel free to contact our team</div>
@@ -21,12 +22,10 @@ const footer = () => {
                 <TelephoneFill style={{ color: '#fddb88', fontSize: '20px' }} />
                 <span className="ms-2">01097315496</span>
               </div>
-              <div className='text-end  footerText opacity-75 mt-2 ms-5'>
-                CopyRight 2024 @ All Rights Reserved by SchoolSync
-              </div>
+
           </div>
         </div>
-        <div  className='d-flex flex-column  '>
+        <div  className='d-flex flex-column m-auto '>
         <div className='fs-5 fw-medium mb-1'>Pages</div>
           <div className='fs-6 opacity-75'>teachers</div>
           <div className='fs-6 opacity-75'>Courses</div>
@@ -34,8 +33,14 @@ const footer = () => {
           <div className='fs-6 opacity-75'>Menu</div>
         </div>
         <div>
-          <img src={footerImg} className='opacity-75 position-static img-fluid '/>
+          <img src={footerImg} className='opacity-75 position-static img-fluid m-auto'/>
         </div>
+      </div>
+      <div className='d-flex flex-row footerSecColor p-1 justify-content-evenly footerFont'>
+      <div className='text-start  footerText opacity-75 mt-2 '>
+          CopyRight 2024 <span className='yellow'>@</span> All Rights Reserved
+      </div>
+      <div className='text-center opacity-75'>made with love</div>       
       </div>
       </div>
   )
