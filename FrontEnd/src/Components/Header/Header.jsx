@@ -2,12 +2,12 @@ import './header.css';
 import { TelephoneFill, Facebook, Twitter, Instagram, GeoAltFill, CalendarFill } from 'react-bootstrap-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import img from '../public/assets/730005bd39661bcd3959d4dad27f9d5b.jpg';
+import img from '../../../public/assets/730005bd39661bcd3959d4dad27f9d5b.jpg';
 
 function Header() {
   return (
     <>
-      <div className="header">
+      <div className="header ">
         <div className="top-navbar">
           <div className="container d-flex flex-column flex-md-row justify-content-end"> 
             <div className="sicon d-flex flex-column flex-md-row align-items-left">
@@ -69,7 +69,8 @@ function Header() {
           </nav>
         </div>
       </div>
-    </>
+      </>
+    
   );
 }
 
