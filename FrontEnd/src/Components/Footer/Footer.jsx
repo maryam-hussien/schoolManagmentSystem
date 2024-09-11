@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "./footer.css"
 import footerImg from "../../../public/assets/Cityscapes - Town.png"
-import { CalendarFill , TelephoneFill } from 'react-bootstrap-icons';
+import { EnvelopeAt , TelephoneFill, SuitHeartFill  } from 'react-bootstrap-icons';
 
 
 
@@ -15,7 +15,7 @@ const footer = () => {
           <div className='d-flex flex-column '>
           <div className='text-center  footerText opacity-75 mb-1'> if you have any questions or need help feel free to contact our team</div>
           <div className="d-flex align-items-center ">
-                <CalendarFill style={{ color: '#fddb88', fontSize: '18px' }} />
+                <EnvelopeAt style={{ color: '#fddb88', fontSize: '18px' }} />
                 <span className="ms-2">school@gamil.com</span>
               </div>
               <div className="d-flex align-items-center pt-1">
@@ -40,7 +40,9 @@ const footer = () => {
       <div className='text-start  footerText opacity-75 mt-2 '>
           CopyRight 2024 <span className='yellow'>@</span> All Rights Reserved
       </div>
-      <div className='text-center opacity-75'>made with love</div>       
+      <div className='text-center opacity-75'>made with love 
+      <SuitHeartFill style={{ color: '#fd7899', fontSize: '20px' ,margin:'2px' }} />
+        </div>       
       </div>
       </div>
   )
