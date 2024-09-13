@@ -8,15 +8,15 @@ import { EnvelopeAt , TelephoneFill, SuitHeartFill  } from 'react-bootstrap-icon
 
 const footer = () => {
   return (
-    <div className="position-static bottom-0 w-100  footerColor pt-2  d-flex flex-column">
-      <div className='d-flex flex-row justify-content-evenly align-items-center footerFont'>
+    <div className="position-static bottom-0 w-100  footerColor pt-2  d-flex flex-column flex-wrap">
+      <div className='d-flex flex-row justify-content-evenly align-items-center footerFont '>
         <div className='d-flex flex-column m-auto'>
           <div className='fs-5 fw-medium mb-1'>Contact Details : </div>
           <div className='d-flex flex-column '>
-          <div className='text-center  footerText opacity-75 mb-1'> if you have any questions or need help feel free to contact our team</div>
+          <div className='text-center  footerText opacity-75 mb-1'> If you have any questions or need assistance, please feel free to contact our team.</div>
           <div className="d-flex align-items-center ">
                 <EnvelopeAt style={{ color: '#fddb88', fontSize: '18px' }} />
-                <span className="ms-2">school@gamil.com</span>
+                <span className="ms-2">info@school.com</span>
               </div>
               <div className="d-flex align-items-center pt-1">
                 <TelephoneFill style={{ color: '#fddb88', fontSize: '20px' }} />
