@@ -1,12 +1,26 @@
-
+/* slider.css */
 .teacher-slider {
-    width: 80%;
+    width: 300px;
     margin: 0 auto;
   }
   
+  .slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slider-item {
+    padding: 10px; /* Optional: Add some spacing around images */
+  }
+  
   .slider-item img {
-    width: 100%;
+    width: 300px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  .slick-dots {
+    bottom: -30px; /* Adjust as needed to position dots */
   }
   
