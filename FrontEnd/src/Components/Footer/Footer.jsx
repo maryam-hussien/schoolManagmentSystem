@@ -8,7 +8,7 @@ import { EnvelopeAt , TelephoneFill, SuitHeartFill  } from 'react-bootstrap-icon
 
 const footer = () => {
   return (
-    <div className="position-static bottom-0 w-100  footerColor pt-2  d-flex flex-column">
+    <div className=" bottom-0 w-100  footerColor pt-2  d-flex flex-column">
       <div className='d-flex flex-row justify-content-evenly align-items-center footerFont'>
         <div className='d-flex flex-column m-auto'>
           <div className='fs-5 fw-medium mb-1'>Contact Details : </div>

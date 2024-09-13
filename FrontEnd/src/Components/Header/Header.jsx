@@ -3,13 +3,21 @@ import { TelephoneFill, Facebook, Twitter, Instagram, GeoAltFill, CalendarFill }
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import img from '../../../public/assets/730005bd39661bcd3959d4dad27f9d5b.jpg';
+import { Link } from 'react-router-dom'; 
+import { useState } from 'react';
 
-function Header() {
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+
   return (
     <>
-      <div className="header ">
+      <div className="header">
         <div className="top-navbar">
-          <div className="container d-flex flex-column flex-md-row justify-content-end"> 
+          <div className="container d-flex flex-column flex-md-row justify-content-end">
             <div className="sicon d-flex flex-column flex-md-row align-items-left">
               <div className="d-flex align-items-center mb-2 mb-md-0">
                 <TelephoneFill style={{ color: '#fddb88', fontSize: '20px' }} />
@@ -29,7 +37,7 @@ function Header() {
                 <Facebook style={{ color: 'blue', fontSize: '20px' }} />
               </a>
               <a href="#" className="text-light mx-2">
-                <Twitter style={{ color: 'black', fontSize: '20px' }} />
+                <Twitter style={{ color: 'blue', fontSize: '20px' }} />
               </a>
               <a href="#" className="text-light mx-2">
                 <Instagram style={{ color: 'pink', fontSize: '20px' }} />
@@ -39,29 +47,33 @@ function Header() {
         </div>
         <div className="bheader">
           <nav className="navbar navbar-expand-lg">
-            <div className="container">
-            <a className="navbar-brand" href="#">
+            <div className="container navbar-container">
+              <Link className="navbar-brand" to="/">
                 <img src={img} alt="Brand Logo" className="logo-img" /> SCHOOL TEAM
-              </a>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+              </Link>
+              <button className="navbar-toggler" type="button" onClick={toggleMenu}>
+                <div className="navyy">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
               </button>
-              <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNav"> 
+              <div className={`nav-menu ${menuOpen ? 'open' : ''}`}>
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Home</a>
+                    <Link className="nav-link" to="/" onClick={toggleMenu}>Home</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">About Us</a>
+                    <Link className="nav-link" to="/about" onClick={toggleMenu}>About Us</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Menu</a>
+                    <Link className="nav-link" to="/menu" onClick={toggleMenu}>Menu</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Profile</a>
+                    <Link className="nav-link" to="/profile" onClick={toggleMenu}>Profile</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Courses</a>
+                    <Link className="nav-link" to="/courses" onClick={toggleMenu}>Courses</Link>
                   </li>
                 </ul>
               </div>
@@ -69,9 +81,8 @@ function Header() {
           </nav>
         </div>
       </div>
-      </>
-    
+    </>
   );
-}
+};
 
 export default Header;
