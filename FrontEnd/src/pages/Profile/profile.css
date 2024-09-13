@@ -1,0 +1,156 @@
+.profile{
+  height: 100vh;
+  margin-top: 10% ;  
+  background-color: #148B9c;
+  display: flex;
+  justify-content: center;
+
+}
+.profileContinater{
+  width: 90%;
+  margin-top: 9%;
+  background-color: #fceeee;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px;
+  border-radius: 30px;
+  position: relative;
+}
+.profileImgCont{
+  width: fit-content;
+  height: fit-content;
+position: absolute;
+top:-50px;
+left: 45%;
+}
+.profileImg{
+  width:150px ;
+  border: 2px solid;
+  border-radius: 100px;
+  border-color: #fddb88;
+}
+.profilename{
+  margin-top: 5%;
+}
+.bar{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #148B9c;
+  border-radius: 13px;
+
+
+}
+/* Media query for screens less than 1440px wide */
+
+
+
+/* Media query for screens less than 1200px wide */
+@media (max-width: 1200px) {
+  .profile {
+    margin-top: 15%;
+  }
+  .profileImg{
+    width: 130px;
+  }
+}
+
+/* Media query for screens less than 992px wide */
+@media (max-width: 992px) {
+  .profile {
+    margin-top: 18%;
+  }
+ 
+}
+
+/* Media query for screens less than 768px wide (tablets) */
+@media (max-width: 768px) {
+  .profile {
+    margin-top: 15%;
+  }
+  .profileContinater{
+    margin-top: 20%;
+  }
+  .profileImg{
+    width: 120px;
+  }
+}
+@media (max-width: 668px) {
+  .profile {
+    margin-top: 28%;
+  }
+  .profileContinater{
+    margin-top: 23%;
+  }
+  .profileImg{
+    width: 110px;
+  }
+}
+
+/* Media query for screens less than 576px wide (large mobile) */
+@media (max-width: 576px) {
+  .profile {
+    margin-top: 38%;
+  }
+  .profileContinater{
+    margin-top: 25%;
+  }
+  .profileImg{
+    width: 100px;
+  }
+}
+/* Media query for screens less than 480px wide (small mobile) */
+@media (max-width: 480px) {
+  .profile {
+    margin-top: 40%;
+  }
+  .profileContinater{
+    margin-top: 25%;
+  }
+  .profileImg{
+    width: 90px;
+  }
+}
+
+
+
+/* Media query for screens less than 480px wide (small mobile) */
+@media (max-width: 425px) {
+  .profile {
+    margin-top: 56%;
+  }
+  .profileContinater{
+    margin-top: 15%;
+  }
+  .profileImgCont{
+    top:-43px;
+  }
+}
+
+
+/* Media query for screens less than 360px wide (very small mobile) */
+@media (max-width: 375px) {
+  .profile {
+    margin-top: 60%;
+  }
+  .profileContinater{
+    margin-top: 18%;
+  }
+  .profileImgCont{
+    top:-45px;
+  }
+}
+
+/* Media query for screens less than 320px wide (ultra-small mobile) */
+@media (max-width: 320px) {
+  .profile {
+    margin-top: 64%;
+  }
+  .profileContinater{
+    margin-top: 28%;
+  }
+  .profileImgCont{
+    top:-40px;
+  }
+}
