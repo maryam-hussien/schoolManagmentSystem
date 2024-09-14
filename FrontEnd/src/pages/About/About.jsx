@@ -2,6 +2,7 @@ import './about.css'
 import img from '../../../public/assets/photo_2024-09-12_23-29-54.jpg'
 import image from '../../../public/assets/8cf95c4384883dd4dc407fbb0e82a49c.jpg'
 import imag from '../../../public/assets/175cb3ce86a19e7044c5ce612bef589d.jpg'
+import Slide from '../../Components/Slider/Slide'
 
 
 const About = () => {
@@ -54,7 +55,7 @@ Ancient Civilizations: The concept of formal education dates back to ancient civ
   
     <h1 className='center'>OUR TEACHERS</h1>
     <div className='slider'>
-
+  <Slide />
     </div>
     </div>
   
