@@ -4,39 +4,39 @@ const ProfileBar = () => {
   return (
     <>
       <NavLink 
-        to="/schedule" 
+        to="/profile" 
         className="text-white text-decoration-none" 
         activeClassName="active"
       >
         Info
       </NavLink>
       <NavLink 
-        to="/attendance" 
+        to="schedule" 
         className="text-white text-decoration-none" 
         activeClassName="active"
       >
         Schedule
       </NavLink>
       <NavLink 
-        to="/scores" 
+        to="attendence" 
         className="text-white text-decoration-none" 
         activeClassName="active"
       >
         Attendance
       </NavLink>
       <NavLink 
-        to="/settings" 
+        to="score" 
         className="text-white text-decoration-none" 
         activeClassName="active"
       >
         Scores
       </NavLink>
       <NavLink 
-        to="/settings" 
+        to="settings" 
         className="text-white text-decoration-none" 
         activeClassName="active"
       >
-        Setting
+        Settings
       </NavLink>
     </>
   )
