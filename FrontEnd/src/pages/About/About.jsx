@@ -37,9 +37,7 @@ Teachers play a crucial role in guiding and inspiring students.</p>
 Ancient Civilizations: The concept of formal education dates back to ancient civilizations like Egypt, Greece, and China. In Egypt.</p>
     </div>
     <h1 className='center'>OUR TEACHERS</h1>
-    <div className='slider'>
-    <Slider />
-    </div>
+
     </div>
   
     </>
