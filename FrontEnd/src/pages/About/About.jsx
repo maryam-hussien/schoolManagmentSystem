@@ -57,6 +57,7 @@ Ancient Civilizations: The concept of formal education dates back to ancient civ
     <div className='slider'>
   <Slide />
     </div>
+
     </div>
   
     </>

@@ -3,20 +3,22 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "./footer.css"
 import footerImg from "../../../public/assets/Cityscapes - Town.png"
 import { EnvelopeAt , TelephoneFill, SuitHeartFill  } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
+
 
 
 
 const footer = () => {
   return (
-    <div className=" bottom-0 w-100  footerColor pt-2  d-flex flex-column">
-      <div className='d-flex flex-row justify-content-evenly align-items-center footerFont'>
-        <div className='d-flex flex-column m-auto'>
+    <div className="position-static bottom-0 w-100  footerColor pt-2  d-flex flex-column ">
+      <div className='d-flex flex-row justify-content-evenly align-items-center footerFont flex-wrap '>
+        <div className='d-flex flex-column mx-auto my-3 '>
           <div className='fs-5 fw-medium mb-1'>Contact Details : </div>
           <div className='d-flex flex-column '>
-          <div className='text-center  footerText opacity-75 mb-1'> if you have any questions or need help feel free to contact our team</div>
+          <div className='text-center  footerText opacity-75 mb-1'> If you have any questions or need assistance, please feel free to contact our team.</div>
           <div className="d-flex align-items-center ">
                 <EnvelopeAt style={{ color: '#fddb88', fontSize: '18px' }} />
-                <span className="ms-2">school@gamil.com</span>
+                <span className="ms-2">info@school.com</span>
               </div>
               <div className="d-flex align-items-center pt-1">
                 <TelephoneFill style={{ color: '#fddb88', fontSize: '20px' }} />
@@ -25,13 +27,56 @@ const footer = () => {
 
           </div>
         </div>
-        <div  className='d-flex flex-column m-auto '>
-        <div className='fs-5 fw-medium mb-1'>Pages</div>
-          <div className='fs-6 opacity-75'>teachers</div>
-          <div className='fs-6 opacity-75'>Courses</div>
-          <div className='fs-6 opacity-75'>AboutUs</div>
-          <div className='fs-6 opacity-75'>Menu</div>
-        </div>
+        <div  className='d-flex flex-column m-auto align-items-center '>
+        <div className='fs-5 fw-medium mb-1 '>Pages</div>
+        <ul className="list-unstyled">
+        <li className='mb-2'>
+          <Link to="/teachers" className='fs-6 opacity-75 text-decoration-none text-white'>
+            Teachers
+          </Link>
+        </li>
+        <li className='mb-1'>
+          <Link to="/courses" className='fs-6 opacity-75 text-decoration-none text-white'>
+            Courses
+          </Link>
+        </li>
+        <li className='mb-1'>
+          <Link to="/about-us" className='fs-6 opacity-75 text-decoration-none text-white'>
+            AboutUs
+          </Link>
+        </li>
+        <li className='mb-1'>
+          <Link to="/menu" className='fs-6 opacity-75 text-decoration-none text-white'>
+            Menu
+          </Link>
+        </li>
+      </ul>
+      </div>
+        <div  className='d-flex flex-column m-auto align-items-center '>
+        <div className='fs-5 fw-medium mb-1 '>Pages</div>
+        <ul className="list-unstyled">
+        <li className='mb-2'>
+          <Link to="/teachers" className='fs-6 opacity-75 text-decoration-none text-white'>
+            Teachers
+          </Link>
+        </li>
+        <li className='mb-1'>
+          <Link to="/courses" className='fs-6 opacity-75 text-decoration-none text-white'>
+            Courses
+          </Link>
+        </li>
+        <li className='mb-1'>
+          <Link to="/about-us" className='fs-6 opacity-75 text-decoration-none text-white'>
+            AboutUs
+          </Link>
+        </li>
+        <li className='mb-1'>
+          <Link to="/menu" className='fs-6 opacity-75 text-decoration-none text-white'>
+            Menu
+          </Link>
+        </li>
+      </ul>
+      </div>
         <div>
           <img src={footerImg} className='opacity-75 position-static img-fluid m-auto'/>
         </div>
