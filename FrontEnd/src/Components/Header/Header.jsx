@@ -3,14 +3,19 @@ import { TelephoneFill, Facebook, Twitter, Instagram, GeoAltFill, CalendarFill }
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import img from '../../../public/assets/730005bd39661bcd3959d4dad27f9d5b.jpg';
-import { Link } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom'; 
 import { useState } from 'react';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
+  };
+
+  const handleLogin = () => {
+    navigate('/login'); 
   };
 
   return (
@@ -43,6 +48,7 @@ const Header = () => {
                 <Instagram style={{ color: 'pink', fontSize: '20px' }} />
               </a>
             </div>
+            <button type="button" onClick={handleLogin} className='butt'>Log in</button> 
           </div>
         </div>
         <div className="bheader">
@@ -67,7 +73,7 @@ const Header = () => {
                     <Link className="nav-link" to="/about" onClick={toggleMenu}>About Us</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/menu" onClick={toggleMenu}>Menu</Link>
+                    <Link className="nav-link" to="/post" onClick={toggleMenu}>SCHOOL TIMELINE</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/profile" onClick={toggleMenu}>Profile</Link>
