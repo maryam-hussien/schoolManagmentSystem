@@ -1,9 +1,7 @@
-body,
-input {
-  font-family: Lucida Handwriting;
-}
+
 
 .containen {
+  font-family: Lucida Handwriting;
   position: relative;
   width: 100%;
   background-color: #fff;
