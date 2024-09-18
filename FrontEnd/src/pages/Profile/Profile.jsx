@@ -7,11 +7,14 @@ import ProfileAttendence from "../../Components/ProfileAttendence/ProfileAttende
 import ProfileShedule from "../../Components/ProfileSchedule/ProfileShedule";
 import ProfileSetting from "../../Components/ProfileSetting/ProfileSetting";
 import ProfileInfo from "../../Components/ProfileInfo/ProfileInfo";
+import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer"
 
 
 const Profile = () => {
   return (
     <>
+    <Header/>
       <div className="profile  mb-5 w-100">
         <div className="profileContinater mb-5 py-3 px-2 ">
           <div className="profileImgCont">
@@ -30,6 +33,7 @@ const Profile = () => {
             </Routes>
     </div>
       </div>
+      <Footer/>
     </>
   )
 }

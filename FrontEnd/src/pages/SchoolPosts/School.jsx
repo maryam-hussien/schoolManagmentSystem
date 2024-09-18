@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaThumbsUp, FaReply, FaTrash } from "react-icons/fa";
 import './school.css'; 
+import Header from "../../Components/Header/Header"
+import Footer from "../../Components/Footer/Footer"
 
 function School() {
   const [comment, setComment] = useState("");
@@ -34,6 +36,8 @@ function School() {
   };
 
   return (
+    <>
+    <Header/>
     <div className="main-container">
       <div className="comments-list">
         {comments.map((comment, index) => (
@@ -67,6 +71,8 @@ function School() {
         </button>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ import Home from './pages/Home/Home';
 
 import About from './pages/About/about';
 import Profile from './pages/Profile/Profile';
-import School from './pages/School/School';
+import School from './pages/SchoolPosts/School';
 import Authentication from './pages/Authentication/Authentication';
 function App() {
   return (
