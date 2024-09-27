@@ -1,9 +1,10 @@
-body,
+
 input {
   font-family: Lucida Handwriting;
 }
 
 .containen {
+  font-family: Lucida Handwriting;
   position: relative;
   width: 100%;
   background-color: #fff;
@@ -38,6 +39,7 @@ input {
 }
 
 .signin-signup {
+  font-family: Lucida Handwriting;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
