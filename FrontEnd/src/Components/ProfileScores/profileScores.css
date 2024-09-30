@@ -1,0 +1,23 @@
+.ProfileScores{
+  border-radius: 13px;
+  background-color: #b6d5d8;
+  padding: 1.5rem;
+  width: 100%;
+}
+.gradeSection{
+  width: 60%;
+  padding: 0.5rem;
+  justify-content: space-between;
+  background-color: white;
+}
+.gradeSectionn{
+  width: 60%;
+  padding: 0.5rem;
+  justify-content: space-between;
+  background-color: #148B9c;
+  opacity: 85%;
+}
+.grades{
+  justify-content: space-between;
+
+}
