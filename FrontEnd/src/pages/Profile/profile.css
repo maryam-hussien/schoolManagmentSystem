@@ -33,7 +33,7 @@ left: 45%;
   border-color: #fddb88;
 }
 .profilename{
-  margin-top: 4%;
+  margin-top: 6%;
   font-size: calc(1.275rem + .3vw);
 }
 .bar{
@@ -44,7 +44,6 @@ left: 45%;
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
-  margin: auto;
 
 }
 /* Media query for screens less than 1440px wide */
