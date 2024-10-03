@@ -25,7 +25,7 @@
   font-family: Lucida Handwriting;
   text-align: left;
   z-index: 2;
-  max-width: 300px;
+  max-width: 400px;
   padding: 20px;
   position: absolute;
   left: 20px;
@@ -167,7 +167,7 @@
 }
 
 .core-value-image {
-  width: 100%; 
+  width: 200px; 
   height: 200px; 
   object-fit: cover;
   border-top-left-radius: 8px; 
@@ -409,6 +409,9 @@
   .feature-card {
     width: calc(50% - 20px);
     min-width: 200px;
+  }
+  .hero-text{
+    max-width: 300px;
   }
 }
 
