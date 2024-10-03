@@ -1,0 +1,10 @@
+.ProfileAttendance{
+  border-radius: 13px;
+  background-color: #b6d5d8;
+  width: 94%;
+}
+@media (max-width: 668px) {
+.ProfileAttendance{
+  width: 100%;
+}
+}
