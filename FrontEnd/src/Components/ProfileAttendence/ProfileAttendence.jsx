@@ -28,7 +28,7 @@ const ProfileAttendance = () => {
       events={attendanceData}
       startAccessor="start"
       endAccessor="end"
-      style={{ height: 500 }}
+      style={{ height: 500  ,backgroundColor: 'white'}}
       views={['month']} // Only show month view
       popup={true}
       eventPropGetter={(event) => ({

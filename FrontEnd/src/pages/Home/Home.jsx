@@ -107,9 +107,9 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="core-values-section">
+        <section className="core-values-section ">
   <h2>Our Core Values</h2>
-  <div className="core-values-grid">
+  <div className="core-values-grid ">
     <div className="core-value-card">
       <img src={coreValue1} alt="Learning & Fun" className="core-value-image" />
       <div className="core-value-text">
@@ -174,7 +174,7 @@ const Home = () => {
                 </span>
         </section>
 
-        <section className="course-section">
+        <section className="course-section ">
           <h2>Our Courses</h2>
           <div className="course-cards">
             {courses.map((course, index) => (
