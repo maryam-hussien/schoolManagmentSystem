@@ -1,0 +1,7 @@
+.dashHome{
+height: 100vh;
+}
+.dashboard{
+  display: flex;
+  justify-content: center;
+}

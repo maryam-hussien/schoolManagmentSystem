@@ -8,6 +8,7 @@ import About from './pages/About/about';
 import Profile from './pages/Profile/Profile';
 import School from './pages/SchoolPosts/School';
 import Authentication from './pages/Authentication/Authentication';
+import DashHome from './Dashboard/DashPages/DashHome/DashHome';
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Route path='/profile/*' element={<Profile/>}/>
         <Route path='/post' element={<School/>}/>
         <Route path='/login' element={<Authentication />}/>
+        <Route path='/dashboard' element={<DashHome/>}/>
       </Routes>
      
       
