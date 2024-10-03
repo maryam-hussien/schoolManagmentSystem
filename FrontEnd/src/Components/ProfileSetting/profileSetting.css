@@ -1,0 +1,10 @@
+.ProfileSetting{
+    border-radius: 13px;
+    background-color: #b6d5d8;
+    width: 75%;
+  }
+  @media (max-width: 668px) {
+  .ProfileSetting{
+    width: 100%;
+  }
+  }

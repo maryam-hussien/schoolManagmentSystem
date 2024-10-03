@@ -22,14 +22,18 @@ const ProfileInfo = () => {
     </div>
     </div>
     <div className='ProfilecontentSection mt-3 px-4 py-3  fs-6 lh-lg m-auto'>
-    <div className='fs-6 fw-semibold mb-1'> Emergency contacts </div>
+    <div className='fs-6 fw-semibold mb-1'> Emergency Info </div>
     <div className=' opacity-75  border-bottom border-secondary mb-1'>
-      <div className='fs-6 fw-medium'>Father's Number</div>
+      <div className='fs-6 fw-medium'>Father Number</div>
+      <div>01234567</div>
+    </div>
+    <div className=' opacity-75 mb-1 border-bottom border-secondary'>
+      <div className='fs-6 fw-medium'>Mother Number</div>
       <div>01234567</div>
     </div>
     <div className=' opacity-75 mb-1'>
-      <div className='fs-6 fw-medium'>Mother's Number</div>
-      <div>01234567</div>
+      <div className='fs-6 fw-medium'>Blood Group</div>
+      <div>O+</div>
     </div>
 
 </div>
