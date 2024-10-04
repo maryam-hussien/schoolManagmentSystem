@@ -40,8 +40,8 @@ const Home = () => {
           <h1 className='hero-text'>Welcome to School Team</h1>
         </section>
 
-        <section className="info-and-features">
-          <div className="info-section">
+        <section className="info-and-features ">
+          <div className="info-section m-auto">
             <h2>Welcome to School Team, a prestigious school</h2>
             <p>
               We understand that each of our students is a uniquely talented individual. Within our supportive community, students are facilitated to develop positive relationships and grab the opportunity to realize their individual potential to the full.
@@ -51,6 +51,7 @@ const Home = () => {
             </button>
           </div>
 
+        </section>
           <div className="features">
             <div className="feature-card"><FaSchool className="feature-icon" /><h3>Our School</h3><p>We take pride in our famous teaching traditions & achievements.</p></div>
             <div className="feature-card"><MdStars className="feature-icon" /><h3>Why Choose Us?</h3><p>Our school ranked among the top 10 best schools for children aged 13-19.</p></div>
@@ -59,7 +60,6 @@ const Home = () => {
             <div className="feature-card"><BiMedal className="feature-icon" /><h3>Reputation</h3><p>We have a good reputation for friendly teaching & learning environment.</p></div>
             <div className="feature-card"><MdLibraryBooks className="feature-icon" /><h3>Courses</h3><p>We have the most modern library for the referencing needs of students.</p></div>
           </div>
-        </section>
 
         <section className="smarty-programs">
           <img src={img} alt="Smarty Programs" className="logo" />
@@ -120,7 +120,13 @@ const Home = () => {
     </div>
   </div>
 </section>
-
+<section className='logos'>
+    <h2>Schools Uses Our Website</h2>
+   <img src={school1} className='img1' />
+   <img src={school2}   className='img1' />
+   <img src={school3}   className='img1' />
+   <img src={school4}   className='img1' />
+   </section>
 
         <section className="testimonial-section">
           <h2>What Parents Say</h2>
@@ -188,13 +194,7 @@ const Home = () => {
     {' '}Learn More...
   </span>
 </section>
-   <section className='logos'>
-    <h2>Schools Uses Our Website</h2>
-   <img src={school1} className='img1' />
-   <img src={school2}   className='img1' />
-   <img src={school3}   className='img1' />
-   <img src={school4}   className='img1' />
-   </section>
+
       </div>
       <Footer />
     </>
