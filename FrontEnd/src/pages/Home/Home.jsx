@@ -15,32 +15,10 @@ import parent2 from '../../../public/assets/e26a33b95639e3b1621446a42f47faaa.jpg
 import animationImage from '../../../public/assets/dbe952cfcd79ece5d17cb134ba35b587.jpg';
 import digitalSkillsImage from '../../../public/assets/f1c71ed1586390fe809406f5b31038d7.jpg';
 import aiImage from '../../../public/assets/1c6921a6de046156b675b130f60868dd.jpg';
-
-const courses = [
-  {
-    title: 'Animation',
-    description: 'Learn the art of animation with our comprehensive course.',
-    imageUrl: animationImage,
- 
-    bgColor: 'rgb(235 169 105)',
-  },
-  {
-    title: 'Digital Skills',
-  
-    description: 'Master essential digital skills in this tech-driven world.',
-    imageUrl: digitalSkillsImage,
- 
-    bgColor: '#0097E6',
-  },
-  {
-    title: 'AI',
-    
-    description: ' Artificial intelligance Delve into the world of AI with cutting-edge concepts.',
-    imageUrl: aiImage,
-    bgColor: 'rgb(103 181 92)',
-  },
-];
-
+import school1 from '../../../public/assets/download (1).png';
+import school2 from '../../../public/assets/download (2).png';
+import school3 from '../../../public/assets/download3.jpg';
+import school4 from '../../../public/assets/download (4).jpg';
 const Home = () => {
   const navigate = useNavigate();
 
@@ -51,7 +29,9 @@ const Home = () => {
   const handleTestimonialLearnMoreClick = () => {
     navigate('/post');
   };
-
+  const handlecourseLearnMoreClick = () => {
+    navigate('/courses');
+  };
   return (
     <>
       <Header />
@@ -173,28 +153,48 @@ const Home = () => {
                   {' '}Learn More...
                 </span>
         </section>
+        <section className="course-section">
+  <h2>Our Courses</h2>
+  <div className="course-cards">
+    <div className="course-card" style={{ backgroundColor: 'rgb(235 169 105)' }}>
+      <img src={animationImage} alt="Animation" className="course-image" />
+      <h3 className="course-title">
+        Animation <span className="arrow-icon" style={{ color: 'rgb(235, 169, 105)' }}>&rarr;</span>
+      </h3>
+      <p>Learn the art of animation with our comprehensive course.</p>
+    </div>
 
-        <section className="course-section ">
-          <h2>Our Courses</h2>
-          <div className="course-cards">
-            {courses.map((course, index) => (
-              <div className="course-card" key={index} style={{ backgroundColor: course.bgColor }}>
-                <img src={course.imageUrl} alt={course.title} className="course-image" />
-                <h3 className="course-title">
-                  {course.title} <span className="arrow-icon">&rarr;</span>
-                </h3>
-                <p>{course.description}</p>
-              </div>
-            ))}
-          </div>
-          <span 
-                  className="learn-more-text" 
-                  onClick={handleTestimonialLearnMoreClick}
-                  style={{ cursor: 'pointer', color: '#495057', textDecoration: 'none',textAlign:'left' }}
-                >
-                  {' '}Learn More...
-                </span>
-        </section>
+    <div className="course-card" style={{ backgroundColor: '#0097E6' }}>
+      <img src={digitalSkillsImage} alt="Digital Skills" className="course-image" />
+      <h3 className="course-title">
+        Digital Skills <span className="arrow-icon" style={{ color: '#0097E6' }}>&rarr;</span>
+      </h3>
+      <p>Master essential digital skills in this tech-driven world.</p>
+    </div>
+
+    <div className="course-card" style={{ backgroundColor: 'rgb(103 181 92)' }}>
+      <img src={aiImage} alt="AI" className="course-image" />
+      <h3 className="course-title">
+        AI <span className="arrow-icon" style={{ color: 'rgb(103 181 92)' }}>&rarr;</span>
+      </h3>
+      <p>Delve into the world of AI with cutting-edge concepts.</p>
+    </div>
+  </div>
+  <span 
+    className="learn-more-text" 
+    onClick={handlecourseLearnMoreClick}
+    style={{ cursor: 'pointer', color: '#495057', textDecoration: 'none', textAlign: 'left' }}
+  >
+    {' '}Learn More...
+  </span>
+</section>
+   <section className='logos'>
+    <h2>Schools Uses Our Website</h2>
+   <img src={school1} className='img1' />
+   <img src={school2}   className='img1' />
+   <img src={school3}   className='img1' />
+   <img src={school4}   className='img1' />
+   </section>
       </div>
       <Footer />
     </>

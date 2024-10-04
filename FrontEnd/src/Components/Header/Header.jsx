@@ -54,9 +54,9 @@ const Header = () => {
         <div className="bheader">
           <nav className="navbar navbar-expand-lg">
             <div className="container navbar-container">
-              <Link className="navbar-brand" to="/">
-                <img src={img} alt="Brand Logo" className="logo-img" /> SCHOOL TEAM
-              </Link>
+              <div className="navbar-brand" to="/">
+                <img src={img} alt="Brand Logo" className="logo-img" />  <span className='fw-semibold '>SCHOOL TEAM</span>
+              </div>
               <button className="navbar-toggler" type="button" onClick={toggleMenu}>
                 <div className="navyy">
                   <div></div>
