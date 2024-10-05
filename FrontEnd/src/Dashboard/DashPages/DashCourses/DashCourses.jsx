@@ -1,5 +1,4 @@
-import React from 'react'
-import "./DashHome.css"
+import "./DashCourses.css"
 
 function DashCourses() {
   return (

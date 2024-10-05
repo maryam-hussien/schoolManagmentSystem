@@ -7,8 +7,7 @@ import Profile from "./pages/Profile/Profile";
 import School from "./pages/SchoolPosts/School";
 import Authentication from "./pages/Authentication/Authentication";
 import DashHome from "./Dashboard/DashPages/DashHome/DashHome";
-import DashProfile from "./Dashboard/DashPages/DashProfile/DashProfile";
-import DashCourses from "./Dashboard/DashPages/DashCourses/DashCourses";
+import Course from "./pages/Courses/Course"
 
 function App() {
   return (
