@@ -76,7 +76,7 @@
 .info-section p {
   color: #666;
   max-width: 800px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
 }
 
 .learn-more-button {
@@ -86,7 +86,6 @@
   background: transparent;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 40px;
   transition: background-color 0.3s, color 0.3s;
 }
 
