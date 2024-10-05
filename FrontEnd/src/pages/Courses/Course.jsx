@@ -9,6 +9,8 @@ import KinderCourses from "../../Components/courses/KinderGarten"
 import PreparatoryCourses from "../../Components/courses/Preparatory"
 import SecondaryCourses from "../../Components/courses/Secondary"
 import MyCourses from '../../Components/courses/Mycourse'
+import {  ArrowLeftCircleFill} from 'react-bootstrap-icons';
+
 
 const Course = () => {
   return (
@@ -16,7 +18,11 @@ const Course = () => {
       <Header />
       <div className="courses">
         <h2>Courses</h2>
-        <section className='first'>
+        <section className='first'>  
+          <NavLink to='/course' > 
+          <ArrowLeftCircleFill style={{ color: '#191970', fontSize: '22px' }} />
+          <span>back to my courses</span>
+          </NavLink>                
           <NavLink to='kindergaten' >       
             <button>Kindergarten</button>
           </NavLink>
