@@ -1,54 +1,49 @@
-import './DashSidebar.css'
-import { Boxes , PersonFill ,Book ,CalendarCheckFill ,ClipboardData , Grid3x3GapFill ,ArrowBarLeft} from 'react-bootstrap-icons';
-import img from '../../../../public/assets/730005bd39661bcd3959d4dad27f9d5b.jpg'
+import './DashSidebar.css';
+import { Boxes, PersonFill, Book, CalendarCheckFill, ClipboardData, Grid3x3GapFill, ArrowBarLeft } from 'react-bootstrap-icons';
+import img from '../../../../public/assets/730005bd39661bcd3959d4dad27f9d5b.jpg';
+import { NavLink } from 'react-router-dom';
 
 const DashSidebar = () => {
   return (
-    <div className="dashSidebar ">
+    <div className="dashSidebar">
       <div className='d-flex topSideBar'>
-      <img src={img} alt="Brand Logo" className="logo-img" />
-            <span className='fw-semibold '>SCHOOL TEAM</span>
+        <img src={img} alt="Brand Logo" className="logo-img" />
+        <span className='fw-semibold'>SCHOOL TEAM</span>
       </div>
       <div className='px-4 py-3'>
         <ul className="nav flex-column m-auto">
-          <a className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" href="#">
+          <NavLink className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" to="/dashboard">
             <Boxes style={{ color: 'white', fontSize: '19px' }} />
             <span>Dashboard</span>
-          </a>
-          <a className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" href="#">
+          </NavLink>
+          <NavLink className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" to="dashProfile">
             <PersonFill style={{ color: 'white', fontSize: '19px' }} />
             <span>Profile</span>
-          </a>
-          <a className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" href="#">
+          </NavLink>
+          <NavLink className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" to="courses">
             <Book style={{ color: 'white', fontSize: '19px' }} />
-            <span>courses</span>
-            
-          </a>
-          <a className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" href="#">
+            <span>Courses</span>
+          </NavLink>
+          <NavLink className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" to="Attendance">
             <CalendarCheckFill style={{ color: 'white', fontSize: '19px' }} />
-            <span>Attendence</span>
-
-          </a>
-          <a className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" href="#">
+            <span>Attendance</span>
+          </NavLink>
+          <NavLink className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" to="Grades">
             <ClipboardData style={{ color: 'white', fontSize: '19px' }} />
             <span>Grades</span>
-
-          </a>
-          <a className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" href="#">
+          </NavLink>
+          <NavLink className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" to="Schedule">
             <Grid3x3GapFill style={{ color: 'white', fontSize: '19px' }} />
             <span>Schedule</span>
-
-          </a>
-          <a className="icon-link icon-link-hover link-opacity-50-hover  fw-light mb-4 opacity-100" href="#" style={{color:'red'}}>
+          </NavLink>
+          <NavLink className="icon-link icon-link-hover link-opacity-50-hover fw-light mb-4 opacity-100" to="#" style={{ color: 'red' }}>
             <ArrowBarLeft style={{ color: 'red', fontSize: '19px' }} />
             <span>Log Out</span>
-          </a>
-
-
-      </ul>
+          </NavLink>
+        </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashSidebar
+export default DashSidebar;
