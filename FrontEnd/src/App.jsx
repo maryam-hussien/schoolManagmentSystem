@@ -19,7 +19,7 @@ function App() {
         <Route path="/profile/*" element={<Profile />} />
         <Route path="/post" element={<School />} />
         <Route path="/login" element={<Authentication />} />
-        <Route path='/course' element={<Course/>}/>
+        <Route path='/course/*' element={<Course/>}/>
         <Route path="/dashboard/*" element={<DashHome />} />
       </Routes>
     </Router>
