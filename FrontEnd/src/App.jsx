@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Home from './pages/Home/Home';
-
+import Course from './pages/Courses/course';
 import About from './pages/About/about';
 import Profile from './pages/Profile/Profile';
 import School from './pages/SchoolPosts/School';
@@ -18,6 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path='/profile/*' element={<Profile/>}/>
         <Route path='/post' element={<School/>}/>
+        <Route path='/course' element={<Course/>}/>
         <Route path='/login' element={<Authentication />}/>
         <Route path='/dashboard' element={<DashHome/>}/>
       </Routes>
