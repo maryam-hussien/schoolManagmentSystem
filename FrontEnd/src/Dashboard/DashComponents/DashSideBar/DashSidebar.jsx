@@ -1,15 +1,10 @@
 import './DashSidebar.css';
 import { Boxes, PersonFill, Book, CalendarCheckFill, ClipboardData, Grid3x3GapFill, ArrowBarLeft } from 'react-bootstrap-icons';
-import img from '../../../../public/assets/730005bd39661bcd3959d4dad27f9d5b.jpg';
 import { NavLink } from 'react-router-dom';
 
 const DashSidebar = () => {
   return (
     <div className="dashSidebar">
-      <div className='d-flex topSideBar'>
-        <img src={img} alt="Brand Logo" className="logo-img" />
-        <span className='fw-semibold'>SCHOOL TEAM</span>
-      </div>
       <div className='px-4 py-3'>
         <ul className="nav flex-column m-auto">
           <NavLink className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4" to="/dashboard">
