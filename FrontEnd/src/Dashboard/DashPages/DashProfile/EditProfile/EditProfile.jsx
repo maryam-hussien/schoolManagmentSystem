@@ -1,15 +1,104 @@
-
+import { useState } from "react";
 import "./EditProfile.css";
 
 const EditProfile = () => {
- 
+  const [formData, setFormData] = useState({
+    name: "User name",
+    email: "mi@xpaytech.co",
+    phone: "+20-01274318900",
+    address: "285 N Broad St, Elizabeth, NJ 07208, USA",
+    profileImage: null,
+  });
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData({ ...formData, profileImage: reader.result });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+
+    // Display an alert to confirm the changes
+    alert("Your changes have been saved successfully!");
+  };
 
   return (
     <div className="edit-profile-container">
-     Edit Profile
-     </div>
+      <h2>Edit Profile</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="address">Address:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            value={formData.address}
+            onChange={handleInputChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="profileImage">Profile Image:</label>
+          <input type="file" id="profileImage" onChange={handleImageChange} />
+          {formData.profileImage && (
+            <img
+              src={formData.profileImage}
+              alt="Profile Preview"
+              className="image-preview"
+            />
+          )}
+        </div>
+
+        <button type="submit" className="save-btn">
+          Save Changes
+        </button>
+      </form>
+    </div>
   );
 };
 

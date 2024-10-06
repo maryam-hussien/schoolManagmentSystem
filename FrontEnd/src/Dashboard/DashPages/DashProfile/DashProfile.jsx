@@ -21,7 +21,7 @@ return (
             <p><strong>Certification:</strong> Certified JavaScript Developer</p>
             <p><strong>Work Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
 
-            <NavLink to="edit">
+            <NavLink to="/dashboard/edit">
               <button className="edit-btn">Edit Profile</button>
             </NavLink>
             <button className="change-password-btn">Change Password</button>
