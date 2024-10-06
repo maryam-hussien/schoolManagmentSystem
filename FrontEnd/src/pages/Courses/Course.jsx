@@ -19,7 +19,7 @@ const Course = () => {
       <div className="courses">
         <h2>Courses</h2>
         <section className='first'>  
-        <NavLink to='course' >       
+        <NavLink to='/course' >       
             <button>My course</button>
           </NavLink>                
           <NavLink to='kindergaten' >       
@@ -39,7 +39,7 @@ const Course = () => {
         </section>
        
         <Routes>
-              <Route path='course' element={<MyCourses/>}/>
+              <Route path='/' element={<MyCourses/>}/>
               <Route path="kindergaten" element={<KinderCourses />} />
               <Route path="primary" element={<PrimaryCourses />} />
               <Route path="preparatory" element={<PreparatoryCourses />} />
