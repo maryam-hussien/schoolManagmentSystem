@@ -73,6 +73,11 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
+.all{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 .info-section p {
   color: #666;
   max-width: 800px;
@@ -368,9 +373,27 @@
     background-color: #f9f9f9;
     text-align: center;
   }
-  
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 130px;
+    background: url('../../../public/assets/photo_2024-09-27_16-13-02.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 60px 20px;
+    height: 650px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
 }
 @media (max-width: 850px) {
+  .all{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   .course-card {
     width: calc(100% - 40px);
 }
@@ -450,7 +473,11 @@
   .testimonial-section h2 {
     font-size: 2em;
   }
-
+  .all{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   .testimonial-image {
     width: 60px;
     height: 60px;

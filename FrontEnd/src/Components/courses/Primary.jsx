@@ -1,7 +1,7 @@
 import '../../../src/pages/Courses/course.css';
-import ScienceImage from '../../../public/assets/a1327d0d7ff475a3f8a58d4660ee27bb.jpg'; 
-import HistoryImage from '../../../public/assets/2021f398be5e10ac967420161f0f8120.jpg'; 
-import GeographyImage from '../../../public/assets/7998cd7054b50afd5741a5c1bba0d7e4.jpg'; 
+import ScienceImage from '/assets/a1327d0d7ff475a3f8a58d4660ee27bb.jpg'; 
+import HistoryImage from '/assets/2021f398be5e10ac967420161f0f8120.jpg'; 
+import GeographyImage from '/assets/7998cd7054b50afd5741a5c1bba0d7e4.jpg'; 
 
 const Primary = () => {
   return (
@@ -13,7 +13,7 @@ const Primary = () => {
             <img
               src={ScienceImage}
               alt="Science"
-              className="course-image"
+              className="course-image1"
             />
             <div className="course-info">
               <h3 className="course-title">Science Exploration</h3>
@@ -28,7 +28,7 @@ const Primary = () => {
             <img
               src={HistoryImage}
               alt="History"
-              className="course-image"
+              className="course-image1"
             />
             <div className="course-info">
               <h3 className="course-title">World History</h3>
@@ -43,7 +43,7 @@ const Primary = () => {
             <img
               src={GeographyImage}
               alt="Geography"
-              className="course-image"
+              className="course-image1"
             />
             <div className="course-info">
               <h3 className="course-title">Geography Adventures</h3>
