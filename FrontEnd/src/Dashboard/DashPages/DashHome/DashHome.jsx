@@ -6,14 +6,17 @@ import DashCourses from "../DashCourses/DashCourses";
 import DashAttendance from "../DashAttendaane/DashAttendance";
 import DashGrades from "../DashGrades/DashGrades";
 import DashSchedule from "../DashSchedule/DashSchedule";
+import DashNav from "../../DashComponents/DashNav/DashNav";
 import EditProfile from "../DashProfile/EditProfile/EditProfile";
 
 const DashHome = () => {
   return (
-    <div className="dashHome d-flex">
+    <>
+      <DashNav/>
+      <div className="d-flex dashHome">
       <DashSidebar />
 
-      <div className="dashboard p-3 m-auto">
+      <div className="dashboard">
         <Routes>
           <Route path="dashProfile" element={<DashProfile />} />
           <Route path="courses" element={<DashCourses />} />
@@ -26,6 +29,7 @@ const DashHome = () => {
         </Routes>
       </div>
     </div>
+      </>
   );
 };
 
