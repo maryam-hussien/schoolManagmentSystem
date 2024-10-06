@@ -9,7 +9,7 @@
 .top-navbar {
   background-color: #148b9c;
   color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .butt {
   width: 157px;
@@ -57,10 +57,10 @@
 }
 
 .bheader {
-  padding: 5px 0; 
+  
   position: fixed;
   width: 100%;
-  top: 80px;
+ 
   font-size: 20px;
   z-index: 1000;
   color: black;
@@ -139,10 +139,10 @@
   }
   
   .bheader {
-    padding: 5px 0; 
+  
     position: fixed;
     width: 100%;
-    top: 190px; 
+ 
     font-size: 20px;
     z-index: 1000;
     color: black;
@@ -182,10 +182,10 @@
   }
   
   .bheader {
-    padding: 5px 0; 
+  
     position: fixed;
     width: 100%;
-    top: 80px; 
+  
     font-size: 20px;
     z-index: 1000;
     color: black;

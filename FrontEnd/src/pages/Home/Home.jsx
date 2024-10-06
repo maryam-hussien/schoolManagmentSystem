@@ -39,7 +39,7 @@ const Home = () => {
         <section className="hero-section">
           <h1 className='hero-text'>Welcome to School Team</h1>
         </section>
-
+     <div className='all'>
         <section className="info-and-features ">
           <div className="info-section m-auto">
             <h2>Welcome to School Team, a prestigious school</h2>
@@ -60,7 +60,7 @@ const Home = () => {
             <div className="feature-card"><BiMedal className="feature-icon" /><h3>Reputation</h3><p>We have a good reputation for friendly teaching & learning environment.</p></div>
             <div className="feature-card"><MdLibraryBooks className="feature-icon" /><h3>Courses</h3><p>We have the most modern library for the referencing needs of students.</p></div>
           </div>
-
+   </div>
         <section className="smarty-programs">
           <img src={img} alt="Smarty Programs" className="logo" />
           <h2>Smarty Programs</h2>

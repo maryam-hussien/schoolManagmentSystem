@@ -1,0 +1,9 @@
+.attendcard{
+  border-radius: 12px;
+  background-color: #ffdbdb;
+  color: black;
+  padding: 0.5rem;
+  margin: auto;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}

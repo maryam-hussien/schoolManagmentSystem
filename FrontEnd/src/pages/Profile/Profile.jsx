@@ -1,7 +1,7 @@
 import "./profile.css"
 import profileImg from "../../../public/assets/profile.jpg"
 import ProfileBar from "../../Components/ProfileBar/ProfileBar";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 import ProfileScores from "../../Components/ProfileScores/ProfileScores";
 import ProfileAttendence from "../../Components/ProfileAttendence/ProfileAttendence";
 import ProfileShedule from "../../Components/ProfileSchedule/ProfileShedule";
