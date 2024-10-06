@@ -6,13 +6,7 @@
   opacity: 90%;
 }
 
-.topSideBar {
-  background-color: white;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+
 
 .logo-img {
   height: 40px;
