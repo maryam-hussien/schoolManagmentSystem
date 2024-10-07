@@ -101,3 +101,18 @@ input[type="file"] {
     max-width: 100px;
   }
 }
+.delete-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff5959;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #ff0000;
+}

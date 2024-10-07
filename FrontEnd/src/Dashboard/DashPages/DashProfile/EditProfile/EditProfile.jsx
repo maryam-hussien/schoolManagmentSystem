@@ -34,6 +34,13 @@ const EditProfile = () => {
     alert("Your changes have been saved successfully!");
   };
 
+  const handleDeleteAccount = () => {
+    const confirmed = window.confirm("Are you sure you want to delete your account? This action cannot be undone.");
+    if (confirmed) {
+      // Implement the logic to delete the account here.
+      alert("Your account has been deleted.");
+    }
+  };
   return (
     <div className="edit-profile-container">
       <h2>Edit Profile</h2>
@@ -96,6 +103,10 @@ const EditProfile = () => {
 
         <button type="submit" className="save-btn">
           Save Changes
+        </button>
+
+        <button type="button" className="delete-btn" onClick={handleDeleteAccount}>
+          Delete Account
         </button>
       </form>
     </div>
