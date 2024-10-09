@@ -11,7 +11,7 @@ function Authentication() {
   const navigate = useNavigate();
 
   const goBack = () => {
-    console.log("Go Back button clicked"); // Debugging
+    console.log("Go Back button clicked"); 
     navigate('/');
   };
 
@@ -28,7 +28,6 @@ function Authentication() {
   const handleSignIn = (e) => {
     e.preventDefault();
     
-    // Simple validation before form submission
     const errors = {};
 
     const isValidEmail = /\S+@\S+\.\S+/.test(email);

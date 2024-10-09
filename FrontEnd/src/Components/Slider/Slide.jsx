@@ -42,12 +42,12 @@ const Slide = () => {
             <div className="relative overflow-hidden w-full">
                 <Slider {...settings}>
                     {slides.map((slide, index) => (
-                        <div key={index} className="p-2">
+                        <div key={index} className="p-0">
                             <div className="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
                                 <img src={slide.imgSrc} className="w-full" alt={slide.title} />
                                 <div className="p-4 pt-2">
                                     <div className="mb-8">
-                                        <p className="text-gray-900 font-bold text-lg mb-2 hover:text-indigo-600  inline-block">{slide.title}</p>
+                                        <p className="text-gray-900 font-bold text-lg mb-2 hover:text-indigo-600 ">{slide.title}</p>
                                     </div>
                                 </div>
                             </div>
