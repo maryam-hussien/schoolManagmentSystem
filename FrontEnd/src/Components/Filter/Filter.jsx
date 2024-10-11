@@ -1,73 +1,48 @@
 import { useState } from 'react';
 import { FaFilter } from 'react-icons/fa';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom'; 
+import './FilterButton.css'; 
 
 function FilterButton({ onFilterChange }) {
-  const [selectedFilter, setSelectedFilter] = useState('All'); // Default to 'All'
+  const [selectedFilter, setSelectedFilter] = useState('My Courses');
+  const navigate = useNavigate();
 
-  // Handles filter selection
-  const handleFilterChange = (event) => {
-    const filter = event.target.value;  // Get the selected filter value
-    setSelectedFilter(filter);           // Update the local state
-    onFilterChange(filter);              // Notify the parent component about the filter change
+  const filterRoutes = {
+    'Courses': '/course', 
+    Kindergarten: 'kindergaten',
+    Primary: 'primary',
+    Preparatory: 'preparatory',
+    Secondary: 'secondary',
+  };
+
+  const handleFilterChange = (filter) => {
+    setSelectedFilter(filter);
+    onFilterChange(filter); 
+    navigate(filterRoutes[filter]); 
   };
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-      <FaFilter style={{ marginRight: '8px' }} />
-      <span style={{ fontSize: '22px', fontWeight: 'bold' }}>Filters:</span>
-      <label>
-        <input
-          type="radio"
-          value="All"
-          checked={selectedFilter === 'All'}
-          onChange={handleFilterChange}
-        />
-        All
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="Kindergarten"
-          checked={selectedFilter === 'Kindergarten'}
-          onChange={handleFilterChange}
-        />
-        Kindergarten
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="Primary"
-          checked={selectedFilter === 'Primary'}
-          onChange={handleFilterChange}
-        />
-        Primary
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="Preparatory"
-          checked={selectedFilter === 'Preparatory'}
-          onChange={handleFilterChange}
-        />
-        Preparatory
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="Secondary"
-          checked={selectedFilter === 'Secondary'}
-          onChange={handleFilterChange}
-        />
-        Secondary
-      </label>
+    <div className="filter-container">
+      <FaFilter className="filter-icon" />
+      <span className="filter-title">Filter by:</span>
+      <div className="button-group">
+        {['Courses', 'Kindergarten', 'Primary', 'Preparatory', 'Secondary'].map((filter) => (
+          <button
+            key={filter}
+            className={`filter-button ${selectedFilter === filter ? 'active' : ''}`}
+            onClick={() => handleFilterChange(filter)}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
 
-// Validate prop types
 FilterButton.propTypes = {
-  onFilterChange: PropTypes.func.isRequired,  // onFilterChange must be a function
+  onFilterChange: PropTypes.func.isRequired,
 };
 
 export default FilterButton;

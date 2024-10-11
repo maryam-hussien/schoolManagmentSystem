@@ -1,4 +1,27 @@
 
+.password-link-container {
+  display: flex;       
+  justify-content: flex-end;  
+  width: 100%;          
+}
+
+.forgot-password-link {
+  display: block; 
+  color: #007bff;
+  text-decoration: none; 
+  font-size: 14px;
+}
+
+.containen .forgot-password-link:hover { 
+  text-decoration: underline;
+  color: black; 
+}
+
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+  color: black !important; 
+}
 
 
 
