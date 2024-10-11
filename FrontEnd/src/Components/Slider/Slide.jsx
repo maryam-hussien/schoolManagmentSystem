@@ -1,4 +1,5 @@
 
+
 import Slider from 'react-slick';
 import './slide.css';
 
