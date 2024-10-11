@@ -1,6 +1,6 @@
 
 import './DashSidebar.css';
-import { Boxes, PersonFill, Book, CalendarCheckFill, ClipboardData, Grid3x3GapFill, ArrowBarLeft } from 'react-bootstrap-icons';
+import { Boxes, PersonFill, Book, CalendarCheckFill, ClipboardData, Grid3x3GapFill, ArrowBarLeft ,PeopleFill} from 'react-bootstrap-icons';
 import { NavLink ,useNavigate  } from 'react-router-dom';
 
 
