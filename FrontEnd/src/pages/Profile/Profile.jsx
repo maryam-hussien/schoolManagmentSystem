@@ -9,8 +9,6 @@ import ProfileSetting from "../../Components/ProfileSetting/ProfileSetting";
 import ProfileInfo from "../../Components/ProfileInfo/ProfileInfo";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer"
-
-
 const Profile = () => {
   return (
     <>
