@@ -60,13 +60,7 @@ const DashSidebar = () => {
             <Grid3x3GapFill style={{ color: "white", fontSize: "19px" }} />
             <span>Schedule</span>
           </NavLink>
-                    <NavLink
-            className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-            to="courses"
-          >
-            <Book style={{ color: "white", fontSize: "19px" }} />
-            <span>Courses</span>
-          </NavLink>
+ 
           <div
             className="icon-link icon-link-hover link-opacity-50-hover fw-light mb-4"
             style={{ color: "red", cursor: "pointer" }}
