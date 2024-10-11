@@ -1,7 +1,8 @@
 const courses = [
-  // Kindergarten Courses
+  
   {
     level: "Kindergarten",
+    grade: 1,
     title: "Art & Crafts",
     description: "Engage in creative activities to express imagination and develop fine motor skills.",
     creator: "Ms. Sarah",
@@ -10,6 +11,7 @@ const courses = [
   },
   {
     level: "Kindergarten",
+    grade: 2,
     title: "Basic Math",
     description: "Learn numbers, shapes, and simple addition and subtraction through fun games.",
     creator: "Mr. John",
@@ -18,6 +20,7 @@ const courses = [
   },
   {
     level: "Kindergarten",
+    grade: 3,
     title: "Music & Movement",
     description: "Explore music and rhythm through singing, dancing, and playing instruments.",
     creator: "Ms. Emily",
@@ -28,6 +31,7 @@ const courses = [
   // Preparatory School Courses
   {
     level: "Preparatory",
+    grade: 1,
     title: "Language Arts",
     description: "Enhance reading, writing, and comprehension skills through engaging literature.",
     creator: "Ms. Angela",
@@ -36,6 +40,7 @@ const courses = [
   },
   {
     level: "Preparatory",
+    grade: 2,
     title: "Advanced Mathematics",
     description: "Prepare for higher-level math with problem-solving and critical thinking exercises.",
     creator: "Mr. David",
@@ -44,6 +49,7 @@ const courses = [
   },
   {
     level: "Preparatory",
+    grade: 3,
     title: "Physical Science",
     description: "Explore the fundamentals of physics and chemistry through experiments and projects.",
     creator: "Ms. Kelly",
@@ -51,9 +57,10 @@ const courses = [
     image: "/assets/3e1ddf696fab2b11c9e12d63351f4aa6.jpg",
   },
 
-  // Primary School Courses
+  // Primary School Courses (Grades 1 to 6)
   {
     level: "Primary",
+    grade: 1,
     title: "Science Exploration",
     description: "Discover the wonders of science through experiments and hands-on activities.",
     creator: "Ms. Jessica",
@@ -62,6 +69,7 @@ const courses = [
   },
   {
     level: "Primary",
+    grade: 2,
     title: "World History",
     description: "Learn about important historical events and figures that shaped our world.",
     creator: "Mr. Alex",
@@ -70,16 +78,45 @@ const courses = [
   },
   {
     level: "Primary",
+    grade: 3,
     title: "Geography Adventures",
     description: "Explore the world’s continents, countries, and cultures through maps and activities.",
     creator: "Ms. Rachel",
     backgroundColor: "#9dd6d6",
     image: "/assets/7998cd7054b50afd5741a5c1bba0d7e4.jpg",
   },
+  {
+    level: "Primary",
+    grade: 4,
+    title: "Advanced Science",
+    description: "Dive deeper into scientific concepts and methodologies.",
+    creator: "Mr. Daniel",
+    backgroundColor: "#7ea1a5",
+    image: "/assets/a1327d0d7ff475a3f8a58d4660ee27bb.jpg",
+  },
+  {
+    level: "Primary",
+    grade: 5,
+    title: "Civics",
+    description: "Understand the role of government and citizenship.",
+    creator: "Ms. Olivia",
+    backgroundColor: "#d7a96f",
+    image: "/assets/2021f398be5e10ac967420161f0f8120.jpg",
+  },
+  {
+    level: "Primary",
+    grade: 6,
+    title: "Creative Writing",
+    description: "Develop writing skills through storytelling and poetry.",
+    creator: "Mr. Henry",
+    backgroundColor: "#9dd6d6",
+    image: "/assets/7998cd7054b50afd5741a5c1bba0d7e4.jpg",
+  },
 
-  // Secondary School Courses
+  // Secondary School Courses (Grades 1 to 3)
   {
     level: "Secondary",
+    grade: 1,
     title: "Chemistry",
     description: "Explore the composition, properties, and reactions of matter in this engaging chemistry course.",
     creator: "Mr. Thompson",
@@ -88,6 +125,7 @@ const courses = [
   },
   {
     level: "Secondary",
+    grade: 2,
     title: "Physics",
     description: "Understand the laws of nature and the fundamental principles governing the physical universe.",
     creator: "Ms. Smith",
@@ -96,6 +134,7 @@ const courses = [
   },
   {
     level: "Secondary",
+    grade: 3,
     title: "Geology",
     description: "Discover the Earth structure, materials, and the processes that shape our planet over time.",
     creator: "Dr. Johnson",
@@ -103,4 +142,5 @@ const courses = [
     image: "/assets/abe1d5fd8f5d887ae6f2d21123d2d6ab.jpg",
   },
 ];
-export default courses
+
+export default courses;
