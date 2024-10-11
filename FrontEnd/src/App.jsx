@@ -8,7 +8,7 @@ import School from "./pages/SchoolPosts/School";
 import Authentication from "./pages/Authentication/Authentication";
 import DashHome from "./Dashboard/DashPages/DashHome/DashHome";
 import Course from "./pages/Courses/Course"
-
+import Chatbot from "./pages/Chatbot/Chatbot";
 function App() {
   return (
     <Router>
@@ -21,6 +21,7 @@ function App() {
         <Route path="/login" element={<Authentication />} />
         <Route path='/course/*' element={<Course/>}/>
         <Route path="/dashboard/*" element={<DashHome />} />
+        <Route path ="/chatbot" element ={<Chatbot/>} />
       </Routes>
     </Router>
   );
