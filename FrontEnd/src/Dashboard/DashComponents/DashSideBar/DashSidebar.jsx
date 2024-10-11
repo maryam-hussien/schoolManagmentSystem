@@ -3,6 +3,7 @@ import './DashSidebar.css';
 import { Boxes, PersonFill, Book, CalendarCheckFill, ClipboardData, Grid3x3GapFill, ArrowBarLeft } from 'react-bootstrap-icons';
 import { NavLink ,useNavigate  } from 'react-router-dom';
 
+
 const DashSidebar = () => {
   const navigate = useNavigate(); 
   const handleLogout = () => {
@@ -15,8 +16,7 @@ const DashSidebar = () => {
   return (
 
     <div className="dashSidebar">
-
-      <div className='px-4 py-3'>
+      <div className="px-4 py-3">
         <ul className="nav flex-column m-auto">
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
@@ -39,6 +39,13 @@ const DashSidebar = () => {
             <Book style={{ color: "white", fontSize: "19px" }} />
             <span>Courses</span>
           </NavLink>
+          <NavLink
+            className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
+            to="Students"
+          >
+            <PeopleFill style={{ color: "white", fontSize: "19px" }} />
+            <span>Students</span>
+          </NavLink>          
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
             to="Attendance"
@@ -65,6 +72,7 @@ const DashSidebar = () => {
             className="icon-link icon-link-hover link-opacity-50-hover fw-light mb-4"
             style={{ color: "red", cursor: "pointer" }}
             onClick={handleLogout} // Logout handler on click
+
           >
             <ArrowBarLeft style={{ color: "red", fontSize: "19px" }} />
             <span>Log Out</span>

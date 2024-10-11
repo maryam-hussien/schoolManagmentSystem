@@ -1,28 +1,48 @@
+import { useState } from 'react';
+import { FaFilter } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom'; 
+import './FilterButton.css'; 
 
-import { FaFilter } from 'react-icons/fa'; 
+function FilterButton({ onFilterChange }) {
+  const [selectedFilter, setSelectedFilter] = useState('My Courses');
+  const navigate = useNavigate();
 
-function FilterButton() {
+  const filterRoutes = {
+    'Courses': '/course', 
+    Kindergarten: 'kindergaten',
+    Primary: 'primary',
+    Preparatory: 'preparatory',
+    Secondary: 'secondary',
+  };
+
+  const handleFilterChange = (filter) => {
+    setSelectedFilter(filter);
+    onFilterChange(filter); 
+    navigate(filterRoutes[filter]); 
+  };
+
   return (
-    <button
-      style={{
-        padding: '10px 20px',
-        backgroundColor: 'white',
-        color: '#333',
-        border: '1px solid #ddd',
-        borderRadius: '12px', 
-        cursor: 'pointer',
-        fontSize: '22px',
-        fontFamily:'bold',
-        display: 'flex',
-        alignItems: 'center',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', 
-      }}
-    >
-     
-      <FaFilter style={{ marginRight: '8px' }} />
-      Filters
-    </button>
+    <div className="filter-container">
+      <FaFilter className="filter-icon" />
+      <span className="filter-title">Filter by:</span>
+      <div className="button-group">
+        {['Courses', 'Kindergarten', 'Primary', 'Preparatory', 'Secondary'].map((filter) => (
+          <button
+            key={filter}
+            className={`filter-button ${selectedFilter === filter ? 'active' : ''}`}
+            onClick={() => handleFilterChange(filter)}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
+
+FilterButton.propTypes = {
+  onFilterChange: PropTypes.func.isRequired,
+};
 
 export default FilterButton;

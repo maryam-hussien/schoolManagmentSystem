@@ -11,7 +11,7 @@ function Authentication() {
   const navigate = useNavigate();
 
   const goBack = () => {
-    console.log("Go Back button clicked"); // Debugging
+    console.log("Go Back button clicked"); 
     navigate('/');
   };
 
@@ -28,7 +28,6 @@ function Authentication() {
   const handleSignIn = (e) => {
     e.preventDefault();
     
-    // Simple validation before form submission
     const errors = {};
 
     const isValidEmail = /\S+@\S+\.\S+/.test(email);
@@ -79,6 +78,9 @@ function Authentication() {
             />
             <small className="password-error">{passwordError}</small>
 
+            <div className="password-link-container"> 
+  <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
+</div>
             <button className="button" type="submit">
               Sign In
             </button>
