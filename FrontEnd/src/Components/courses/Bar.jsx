@@ -9,10 +9,10 @@ const Bar = () => {
   // Links for the different courses
   const links = [
     { to: '/course', label: 'My course' },
-    { to: '/kindergaten', label: 'Kindergarten' },
-    { to: '/primary', label: 'Primary' },
-    { to: '/preparatory', label: 'Preparatory' },
-    { to: '/secondary', label: 'Secondary' },
+    { to: 'kindergaten', label: 'Kindergarten' },
+    { to: 'primary', label: 'Primary' },
+    { to: 'preparatory', label: 'Preparatory' },
+    { to: 'secondary', label: 'Secondary' },
   ];
 
   // Function to handle filter change (this gets called by FilterButton)
