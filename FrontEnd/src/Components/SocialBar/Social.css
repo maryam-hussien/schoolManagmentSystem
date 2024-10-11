@@ -1,0 +1,39 @@
+.SocialBar{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #ececec;
+  border-radius: 12px;
+}
+.SocialBar div {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: black;
+}
+
+/* Hover state */
+.SocialBar div:hover {
+  background-color: rgb(178, 200, 206); /* Light blue on hover */
+  color: white; /* Optional: Change text color */
+  border-radius: 15px;
+
+}
+
+/* Active state */
+.SocialBar div.active {
+  background-color: #0d6efd; /* Blue background when active */
+  color: white; /* White text when active */
+  border-radius: 15px;
+}
+@media (max-width: 768px) {
+  .SocialBar {
+width: 60%;
+padding: 0.2rem 0.5rem;
+
+  }
+
+}
+@media (max-width: 375px) {
+
+
+}
