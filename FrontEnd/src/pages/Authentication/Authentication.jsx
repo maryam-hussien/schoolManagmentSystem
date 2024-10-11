@@ -78,6 +78,9 @@ function Authentication() {
             />
             <small className="password-error">{passwordError}</small>
 
+            <div className="password-link-container"> 
+  <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
+</div>
             <button className="button" type="submit">
               Sign In
             </button>
