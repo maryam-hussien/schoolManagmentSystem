@@ -1,13 +1,11 @@
-import Header from "../../Components/Header/Header";
-import Footer from '../../Components/Footer/Footer';
-
+import SocialNav from "../../Components/SocailNav/SocialNav";
 import "./Social.css"
+
 const Social = () => {
   return (
     <>
-    <Header/>
+    <SocialNav/>
       <div className="Social">Social</div>
-      <Footer/>
     </>
   )
 }

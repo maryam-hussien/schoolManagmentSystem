@@ -1,7 +1,8 @@
 
 import './DashSidebar.css';
-import { Boxes, PersonFill, Book, CalendarCheckFill, ClipboardData, Grid3x3GapFill, ArrowBarLeft ,PeopleFill} from 'react-bootstrap-icons';
+import { Boxes, PersonFill, Book, CalendarCheckFill, ClipboardData, Grid3x3GapFill,ArrowBarLeft ,PeopleFill} from 'react-bootstrap-icons';
 import { NavLink ,useNavigate  } from 'react-router-dom';
+import Back from '../BackButton/Back';
 
 
 const DashSidebar = () => {
@@ -68,15 +69,11 @@ const DashSidebar = () => {
             <span>Schedule</span>
           </NavLink>
  
-          <div
-            className="icon-link icon-link-hover link-opacity-50-hover fw-light mb-4"
-            style={{ color: "red", cursor: "pointer" }}
-            onClick={handleLogout} // Logout handler on click
-
-          >
-            <ArrowBarLeft style={{ color: "red", fontSize: "19px" }} />
-            <span>Log Out</span>
-          </div>
+         <Back link='/login'
+               onClickAction={handleLogout}
+               Icon={ArrowBarLeft}
+               label='Log Out'
+         />
         </ul>
       </div>
     </div>
