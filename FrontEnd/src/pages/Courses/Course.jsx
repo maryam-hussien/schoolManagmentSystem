@@ -8,14 +8,14 @@ import KinderCourses from "../../Components/courses/KinderGarten"
 import PreparatoryCourses from "../../Components/courses/Preparatory"
 import SecondaryCourses from "../../Components/courses/Secondary"
 import MyCourses from '../../Components/courses/Mycourse'
-
+import links from '../../../public/data/courseroutes';
 const Course = () => {
   return (
     <>
       <Header />
       <div className="courses">
         <h2>Courses</h2>
-        <Bar />
+        <Bar links={links}/>
         <Routes>
               <Route path='/' element={<MyCourses/>}/>
               <Route path="kindergaten" element={<KinderCourses />} />

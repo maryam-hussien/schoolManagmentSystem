@@ -2,19 +2,11 @@ import  { useState } from 'react';
 import FilterButton from '../../Components/Filter/Filter';
 import { NavLink } from 'react-router-dom';
 import '../../pages/Courses/course.css';
-
-const Bar = () => {
+ 
+const Bar = ({links}) => {
   const [filter, setFilter] = useState('All '); 
 
-  const links = [
-
-    { to: '/course', label: 'My course' },
-    { to: 'kindergaten', label: 'Kindergarten' },
-    { to: 'primary', label: 'Primary' },
-    { to: 'preparatory', label: 'Preparatory' },
-    { to: 'secondary', label: 'Secondary' },
-  ];
-
+ 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);  
   };
