@@ -4,10 +4,14 @@ import { NavLink } from 'react-router-dom';
 import '../../pages/Courses/course.css';
 import courses from '../../../public/data/coursresapi';
 
-const Bar = () => {
-  const [filter, setFilter] = useState('');
-  const [selectedSection, setSelectedSection] = useState(''); // New state to track selected section
 
+ 
+const Bar = ({links}) => {
+  const [filter, setFilter] = useState(''); 
+    const [selectedSection, setSelectedSection] = useState(''); // New state to track selected section
+
+
+ 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
   };
