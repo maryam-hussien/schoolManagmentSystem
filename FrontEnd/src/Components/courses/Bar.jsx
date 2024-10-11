@@ -21,7 +21,7 @@ const Bar = ({links}) => {
     : [];
 
   const isPrimary = window.location.pathname.includes('primary');
-  const isKindergarten = window.location.pathname.includes('kindergarten');
+  const isKindergarten = window.location.pathname.includes('kindergaten');
   const isSecondaryOrPreparatory = window.location.pathname.includes('secondary') || window.location.pathname.includes('preparatory');
 
   return (
@@ -38,7 +38,7 @@ const Bar = ({links}) => {
         <NavLink to='kindergaten'>
           <button 
             className="btn btn-outline-primary"
-            onClick={() => setSelectedSection('kindergarten')} // Set section to "kindergarten"
+            onClick={() => setSelectedSection('kindergarten')} 
           >
             Kindergarten
           </button>
@@ -46,7 +46,7 @@ const Bar = ({links}) => {
         <NavLink to='primary'>
           <button 
             className="btn btn-outline-primary"
-            onClick={() => setSelectedSection('primary')} // Set section to "primary"
+            onClick={() => setSelectedSection('primary')} 
           >
             Primary
           </button>
@@ -54,7 +54,7 @@ const Bar = ({links}) => {
         <NavLink to='preparatory'>
           <button 
             className="btn btn-outline-primary"
-            onClick={() => setSelectedSection('preparatory')} // Set section to "preparatory"
+            onClick={() => setSelectedSection('preparatory')} 
           >
             Preparatory
           </button>
@@ -62,13 +62,12 @@ const Bar = ({links}) => {
         <NavLink to='secondary'>
           <button 
             className="btn btn-outline-primary"
-            onClick={() => setSelectedSection('secondary')} // Set section to "secondary"
+            onClick={() => setSelectedSection('secondary')} 
           >
             Secondary
           </button>
         </NavLink>
 
-        {/* Conditionally render FilterButton only for sections other than "myCourse" */}
         {(selectedSection === 'primary' || 
           selectedSection === 'kindergarten' || 
           selectedSection === 'secondary' || 
@@ -83,8 +82,8 @@ const Bar = ({links}) => {
       </section>
 
       <section className='courses'>
-        <div className="courseContainer mb-5 py-3 px-2">
-          <h2 className="text-center fw-medium">Filtered Courses ({filter || 'None'})</h2>
+        <div className="courseContainer ">
+        
           <div className='course-list'>
             {filteredCourses.length > 0 ? (
               filteredCourses.map(course => (

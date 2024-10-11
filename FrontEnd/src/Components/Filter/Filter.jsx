@@ -20,16 +20,16 @@ function FilterButton({ onFilterChange, isKindergarten, isPrimary, isSecondaryOr
 
   return (
     <div className="filter-container">
-      <button onClick={toggleDropdown} className="dropdown-toggle">
+      <button onClick={toggleDropdown} className="dropdow-toggle">
         <FaFilter className="filter-icon" />
         Filter By:
       </button>
       {isDropdownOpen && (
-        <div className="dropdown-menu">
+        <div className="dropdow-menu">
           {grades.map((grade) => (
             <button
               key={grade}
-              className="dropdown-button"
+              className="dropdow-button"
               onClick={() => {
                 onFilterChange(`Grade ${grade}`);
                 setDropdownOpen(false);
