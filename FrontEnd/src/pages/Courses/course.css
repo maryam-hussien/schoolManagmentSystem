@@ -10,6 +10,7 @@
     color: #191970;
     font-family: 'Courier New', Courier, monospace;
 }
+
 .first {
     display: flex;
     flex-direction: row;
