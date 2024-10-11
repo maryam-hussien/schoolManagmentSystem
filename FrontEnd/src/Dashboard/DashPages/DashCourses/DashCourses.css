@@ -1,0 +1,116 @@
+.dash-courses {
+  padding: 20px; /* Overall padding for the DashCourses component */
+}
+
+
+.add-course-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  margin-left: 800px;
+  margin-bottom: 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  margin-bottom: 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: #45a049;
+}
+.add-course-btn:hover {
+  background-color: #45a049;
+}
+/* DashCourses.css */
+
+/* DashCourses.css */
+
+.form-input {
+  width: 50%; /* Adjust the width as needed */
+  padding: 8px; /* Add some padding for better usability */
+  margin-bottom: 15px; /* Space between inputs */
+  border: 1px solid #ccc; /* Optional: Add border styling */
+  border-radius: 4px; /* Optional: Rounded corners */
+}
+
+label {
+  display: block; /* Ensures the label is on its own line */
+  margin-bottom: 5px; /* Space between label and input */
+  font-weight: bold; /* Optional: Makes the label text bold */
+}
+
+
+
+.first button {
+  margin: 10px;
+  border-radius: 12px;
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  background-color: #191970;
+  transition: all 0.3s ease;
+}
+
+.first button:hover {
+  background-color: #4b4b8c;
+}
+
+.course-card1 {
+  display: flex; /* Use flexbox to arrange items in a column */
+  flex-direction: row ; /* Stack elements vertically */
+  justify-content: space-between; /* Space out items */
+    height: 200px; /* Fixed height for square cards */
+  padding: 10px; /* Reduced padding */
+  background-color: #ffffff; /* White background for cards */
+  border: 1px solid #e0e0e0; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.course-card:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.course-image {
+  width: 100px; /* Set a fixed width for the image */
+  height: 100px; /* Set a fixed height for the image to make it square */
+  border-radius: 10px; /* Rounded corners for images */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.course-info {
+  text-align: center; /* Center text in the card */
+}
+
+.course-title {
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Adjust font size for course title */
+  color: #191970; /* Dark blue for course title */
+}
+
+.course-description {
+  font-size: 14px; /* Font size for course description */
+  color: #666; /* Gray color for description */
+  margin-bottom: 5px; /* Space below the description */
+}
+
+.course-creator {
+  font-size: 12px; /* Smaller font for creator's name */
+  color: #999; /* Light gray color for creator's name */
+  margin-bottom: 10px; /* Space below the creator's name */
+}
+
+

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { ArrowLeft } from "react-bootstrap-icons"; 
+import { useNavigate } from "react-router-dom"; 
 import "./EditProfile.css";
 
 const EditProfile = () => {
@@ -9,6 +11,8 @@ const EditProfile = () => {
     address: "285 N Broad St, Elizabeth, NJ 07208, USA",
     profileImage: null,
   });
+
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -41,8 +45,18 @@ const EditProfile = () => {
       alert("Your account has been deleted.");
     }
   };
+    const goBackToProfile = () => {
+    navigate('/dashboard/dashProfile'); // Navigating to the profile page
+  };
   return (
     <div className="edit-profile-container">
+
+      <div className="back-btn" onClick={goBackToProfile} style={{ cursor: "pointer", display: "flex", alignItems: "center" }}>
+        <ArrowLeft size={24} style={{ marginRight: "8px" }} />
+        <span>Back to Profile</span>
+      </div>
+
+
       <h2>Edit Profile</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
