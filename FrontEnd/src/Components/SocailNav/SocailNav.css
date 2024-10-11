@@ -1,0 +1,30 @@
+.SocialNav {
+  display: flex;
+  margin: 0.75rem;
+  justify-content: space-between;
+}
+
+.SocialNavbtn {
+  margin-right: 1.5rem;
+}
+
+/* Media query for medium screens */
+@media (max-width: 768px) {
+  .SocialNavbtn {
+    margin-right: 0rem; /* Adjust margin for medium screens */
+    padding: 0.5rem 0.5rem; /* Example: Adjust padding for medium screens */
+    font-size: 14px; /* Example: Adjust font size */
+  }
+
+}
+@media (max-width: 375px) {
+  .SocialNav {
+  margin: 0.5rem;
+  }
+  .SocialNavbtn {
+    margin-right: 0rem; /* Adjust margin for medium screens */
+    padding: 0.2rem 0.3rem; /* Example: Adjust padding for medium screens */
+    font-size: 14px; /* Example: Adjust font size */
+  }
+
+}

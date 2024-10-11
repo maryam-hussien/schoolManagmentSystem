@@ -5,7 +5,8 @@ const Social = () => {
   return (
     <>
     <SocialNav/>
-      <div className="Social">Social</div>
+      <div className="Social p-3">Social</div>
+      
     </>
   )
 }
