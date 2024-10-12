@@ -10,28 +10,28 @@ const Course=()=>  {
       };
     return (
      <>
-       <section className="course-section">
+       <section className="coursesection">
   <h2>Our Courses</h2>
   <div className="course-cards">
-    <div className="course-card" style={{ backgroundColor: 'rgb(235 169 105)' }}>
-      <img src={animationImage} alt="Animation" className="course-image" />
-      <h3 className="course-title">
+    <div className="coursecard" style={{ backgroundColor: 'rgb(235 169 105)' }}>
+      <img src={animationImage} alt="Animation" className="courseimage" />
+      <h3 className="coursetitle">
         Animation <span className="arrow-icon" style={{ color: 'rgb(235, 169, 105)' }}>&rarr;</span>
       </h3>
       <p>Learn the art of animation with our comprehensive course.</p>
     </div>
 
-    <div className="course-card" style={{ backgroundColor: '#0097E6' }}>
-      <img src={digitalSkillsImage} alt="Digital Skills" className="course-image" />
-      <h3 className="course-title">
+    <div className="coursecard" style={{ backgroundColor: '#0097E6' }}>
+      <img src={digitalSkillsImage} alt="Digital Skills" className="courseimage" />
+      <h3 className="coursetitle">
         Digital Skills <span className="arrow-icon" style={{ color: '#0097E6' }}>&rarr;</span>
       </h3>
       <p>Master essential digital skills in this tech-driven world.</p>
     </div>
 
-    <div className="course-card" style={{ backgroundColor: 'rgb(103 181 92)' }}>
-      <img src={aiImage} alt="AI" className="course-image" />
-      <h3 className="course-title">
+    <div className="coursecard" style={{ backgroundColor: 'rgb(103 181 92)' }}>
+      <img src={aiImage} alt="AI" className="courseimage" />
+      <h3 className="coursetitle">
         AI <span className="arrow-icon" style={{ color: 'rgb(103 181 92)' }}>&rarr;</span>
       </h3>
       <p>Delve into the world of AI with cutting-edge concepts.</p>
