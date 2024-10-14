@@ -6,7 +6,7 @@ import aiImage from '../../../public/assets/1c6921a6de046156b675b130f60868dd.jpg
 const Course=()=>  {
     const navigate = useNavigate();
     const handlecourseLearnMoreClick = () => {
-        navigate('/courses');
+        navigate('/course');
       };
     return (
      <>

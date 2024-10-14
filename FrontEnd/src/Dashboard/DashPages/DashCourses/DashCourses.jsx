@@ -75,7 +75,7 @@ const DashCourses = () => {
     <div className="dash-courses-container">
       <h2>My Courses</h2>
       <section className='first'>  
-        <NavLink to='/course' >       
+        <NavLink to='/dashboard/courses' >       
             <button>My course</button>
           </NavLink>                
           <NavLink to='kindergaten' >       

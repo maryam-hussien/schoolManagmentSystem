@@ -1,7 +1,15 @@
 .SocialNav {
   display: flex;
-  margin: 0.75rem;
+  margin: 0.75rem 0 0.5rem 0;
   justify-content: space-between;
+  padding: 0.2rem 0.2rem 0.2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  opacity: 90%;
 }
 
 .SocialNavbtn {
@@ -10,6 +18,9 @@
 
 /* Media query for medium screens */
 @media (max-width: 768px) {
+  .SocialNav{
+    margin: 0.5rem;
+  }
   .SocialNavbtn {
     margin-right: 0rem; /* Adjust margin for medium screens */
     padding: 0.5rem 0.5rem; /* Example: Adjust padding for medium screens */
@@ -19,12 +30,18 @@
 }
 @media (max-width: 375px) {
   .SocialNav {
-  margin: 0.5rem;
+  margin: 0.25rem ;
   }
   .SocialNavbtn {
     margin-right: 0rem; /* Adjust margin for medium screens */
     padding: 0rem 0.3rem; /* Example: Adjust padding for medium screens */
-    font-size: 13px; /* Example: Adjust font size */
   }
 
+}
+/* Media query for smaller screens */
+@media (min-width: 425px) {
+  /* Hide the text in the sidebar */
+  .icon-link span {
+    display: block;
+  }
 }

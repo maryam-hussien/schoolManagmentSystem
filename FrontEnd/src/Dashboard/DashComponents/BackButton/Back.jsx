@@ -23,7 +23,7 @@ const Back = ({
 
   return (
     <div
-      className="icon-link icon-link-hover link-opacity-50-hover fw-light mb-4"
+      className="icon-link icon-link-hover link-opacity-50-hover fw-light "
       style={{ color: color || "red", cursor: "pointer" }} // Default color if not provided
       onClick={onClick}
     >
