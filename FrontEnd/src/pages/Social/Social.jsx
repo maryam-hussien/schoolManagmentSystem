@@ -1,4 +1,3 @@
-import  { useState } from 'react';
 import SocialNav from "../../Components/SocailNav/SocialNav";
 import { Route, Routes } from "react-router-dom";
 import "./Social.css";

@@ -41,7 +41,7 @@
 /* Media query for smaller screens */
 @media (min-width: 425px) {
   /* Hide the text in the sidebar */
-  .icon-link span {
+  .SocialNav .icon-link span {
     display: block;
   }
 }
