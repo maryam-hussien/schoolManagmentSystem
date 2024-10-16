@@ -1,6 +1,5 @@
 import  { useState } from "react";
 import "./PostCard.css";
-import img from "../../../public/assets/2b4615cb03fc9f64ffa02e2328769047.jpg";
 import { ChatSquareDots, HeartFill, Heart } from "react-bootstrap-icons";
 
 const PostCard = ({ post }) => {
@@ -49,7 +48,7 @@ const PostCard = ({ post }) => {
     <li className="list-group-item PostCard">
       <div className="d-flex justify-content-between align-items-center">
         <div className="socialTopCard">
-          <img src={img} alt="none" />
+          <img src={post.image} alt="none" />
           <div>{post.author}</div>
         </div>
         <div className="text-muted text-end">({post.date})</div>
@@ -57,7 +56,7 @@ const PostCard = ({ post }) => {
 
       <div className="socialpostsection">
         <p>{post.content}</p>
-        {post.image && <img src={img} alt="Post" />}
+        {post.image && <img src={post.image} alt="Post" />}
       </div>
 
       <div className="mt-2 d-flex flex-row ms-2">

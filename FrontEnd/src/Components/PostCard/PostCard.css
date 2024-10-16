@@ -2,8 +2,8 @@
   background-color: #fff; /* White background for the card */
   border: 1px solid #e0e0e0; /* Light gray border */
   border-radius: 15px;
-  padding: 0.5rem;
-  width: 88%; /* Full width for smaller screens */
+  padding: 0.6rem;
+  width: 85%; /* Full width for smaller screens */
   margin: 0.5rem auto;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */

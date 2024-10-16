@@ -9,7 +9,7 @@ const postsData  = [
       { id: 1, commenter: "Jane Smith", comment: "Same here! Can't wait!" },
       { id: 2, commenter: "Bob Johnson", comment: "It's going to be awesome!" }
     ],
-    image: "school_event.png",
+    image: "/assets/2021f398be5e10ac967420161f0f8120.jpg",
     sharedBy: []
   },
   {
@@ -35,7 +35,7 @@ const postsData  = [
       { id: 1, commenter: "Rachel Adams", comment: "I'm in! Let’s do it!" },
       { id: 2, commenter: "Chris Miller", comment: "Count me in!" }
     ],
-    image: null,
+    image: "/assets/2021f398be5e10ac967420161f0f8120.jpg",
     sharedBy: []
   },
   {
@@ -48,7 +48,7 @@ const postsData  = [
       { id: 1, commenter: "Jake Taylor", comment: "It was so much fun!" },
       { id: 2, commenter: "Anna King", comment: "Thanks for sharing!" }
     ],
-    image: "sports_day_photos.jpg",
+    image: "/assets/0daad3630b85891d51f05fc25aba5985.jpg",
     sharedBy: []
   },
   {
@@ -74,7 +74,7 @@ const postsData  = [
       { id: 1, commenter: "Mia Brown", comment: "Thanks for the reminder!" },
       { id: 2, commenter: "Henry White", comment: "Almost done with mine!" }
     ],
-    image: "art_project_reminder.png",
+    image: "/assets/0daad3630b85891d51f05fc25aba5985.jpg",
     sharedBy: []
   }
 ];
