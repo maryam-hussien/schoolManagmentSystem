@@ -1,4 +1,27 @@
 
+.password-link-container {
+  display: flex;       
+  justify-content: flex-end;  
+  width: 100%;          
+}
+
+.forgot-password-link {
+  display: block; 
+  color: #007bff;
+  text-decoration: none; 
+  font-size: 14px;
+}
+
+.containen .forgot-password-link:hover { 
+  text-decoration: underline;
+  color: black; 
+}
+
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+  color: black !important; 
+}
 
 
 
@@ -184,25 +207,7 @@ small {
   background-color: #BE4040;
 }
 
-.btn {
-  width: 157px;
-  background-color: #BE4040;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  outline: none;
-  height: 48px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 10px 0;
-  margin-bottom: 9px;
-  cursor: pointer;
-  transition: 0.5s;
-}
 
-.btn:hover {
-  background-color: #BE4040;
-}
 
 .panels-containen {
   position: absolute;
@@ -296,27 +301,6 @@ input {
   padding: 0.7rem 0;
 }
 
-.btn.transparent {
-  margin: 3px;
-  background: none;
-  border: 2px solid #fff;
-  width: 170px;
-  height: 41px;
-  font-weight: 600;
-  font-size: 0.8rem;
-  font-family: "Poppins", sans-serif;
-}
-
-.btn.transparent:hover {
-  background-color: #fff;
-  border: 2px solid #fff;
-  color: #BE4040;
-  width: 170px;
-  height: 41px;
-  font-weight: 600;
-  font-size: 0.8rem;
-  transition: 0.5s ease-in-out;
-}
 
 .href {
   font-family: "Poppins", sans-serif;
@@ -429,13 +413,7 @@ input {
     padding: 0.5rem 0;
   }
 
-  .btn.transparent {
-    width: 140px;
-    height: 35px;
-    margin: 3px;
-    font-size: 0.7rem;
-  }
-
+  
   .containen:before {
     width: 1500px;
     height: 1500px;

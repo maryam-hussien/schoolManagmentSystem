@@ -15,7 +15,7 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 90px;
+  gap: 10px;
 }
 
 .contaier p {
@@ -28,7 +28,7 @@ html, body {
   align-items: center; 
   background-color: #fff;
   justify-content: center; 
-  gap: 70px; 
+  gap: 50px; 
 }
 
 .center {
@@ -61,13 +61,13 @@ html, body {
 }
 
 .history p {
-  width: 500px;
+  width: 450px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
 }
 
 .school p {
-  width: 500px;
+  width: 450px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
 }
@@ -145,7 +145,7 @@ html, body {
 
 @media (max-width: 768px) {
   .about {
-    margin-top: 180px; 
+    margin-top: 140px; 
   }
   
   .center {
@@ -188,13 +188,13 @@ html, body {
   }
   
   .history p {
-    width: 500px;
+    width: 450px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
   }
   
   .school p {
-    width: 500px;
+    width: 450px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
   }
@@ -237,9 +237,23 @@ html, body {
 
 @media (max-width: 468px) {
   .about {
-    margin-top: 280px ; 
+    margin-top: 250px ; 
+  }
+  .logo {
+    border-radius: 12px;
+    height: 350px;
+    width: 90%;
   }
   
+  .logo2 {
+    border-radius: 12px;
+    height: 350px;
+    width: 90%;
+  }
+  .map{
+    width: 90%;
+    height: 300px;
+  }
   .contaier {
     display: flex;
     flex-direction: row;

@@ -73,7 +73,7 @@ const Header = () => {
                     <Link className="nav-link" to="/about" onClick={toggleMenu}>About Us</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/post" onClick={toggleMenu}>Timeline</Link>
+                    <Link className="nav-link" to="/social" onClick={toggleMenu}>SchoolSocial</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/profile" onClick={toggleMenu}>Profile</Link>

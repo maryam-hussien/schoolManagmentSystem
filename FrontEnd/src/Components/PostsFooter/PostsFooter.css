@@ -1,0 +1,16 @@
+.PostsFooter{
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  background-color: #eee;
+  opacity: 85%;
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+}
+.PostsFoot{
+  margin: 0 1.5rem 0 1.5rem;
+  cursor: pointer;
+}

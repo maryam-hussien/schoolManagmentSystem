@@ -1,28 +1,54 @@
+import { useState } from 'react';
+import { FaFilter } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import './FilterButton.css';
 
-import { FaFilter } from 'react-icons/fa'; 
+function FilterButton({ onFilterChange, isKindergarten, isPrimary, isSecondaryOrPreparatory }) {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-function FilterButton() {
+  const toggleDropdown = () => {
+    setDropdownOpen((prev) => !prev);
+  };
+
+ 
+  const grades = (() => {
+    if (isKindergarten) return [1, 2];
+    if (isSecondaryOrPreparatory) return [1, 2, 3];
+    if (isPrimary) return [1, 2, 3, 4, 5, 6];
+    return [];
+  })();
+
   return (
-    <button
-      style={{
-        padding: '10px 20px',
-        backgroundColor: 'white',
-        color: '#333',
-        border: '1px solid #ddd',
-        borderRadius: '12px', 
-        cursor: 'pointer',
-        fontSize: '22px',
-        fontFamily:'bold',
-        display: 'flex',
-        alignItems: 'center',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', 
-      }}
-    >
-     
-      <FaFilter style={{ marginRight: '8px' }} />
-      Filters
-    </button>
+    <div className="filter-container">
+      <button onClick={toggleDropdown} className="dropdow-toggle">
+        <FaFilter className="filter-icon" />
+        Filter By:
+      </button>
+      {isDropdownOpen && (
+        <div className="dropdow-menu">
+          {grades.map((grade) => (
+            <button
+              key={grade}
+              className="dropdow-button"
+              onClick={() => {
+                onFilterChange(`Grade ${grade}`);
+                setDropdownOpen(false);
+              }}
+            >
+              Grade {grade}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
+
+FilterButton.propTypes = {
+  onFilterChange: PropTypes.func.isRequired,
+  isKindergarten: PropTypes.bool.isRequired,
+  isPrimary: PropTypes.bool.isRequired,
+  isSecondaryOrPreparatory: PropTypes.bool.isRequired,
+};
 
 export default FilterButton;
