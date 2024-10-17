@@ -91,7 +91,7 @@ const PostCard = ({ post }) => {
       {areCommentsVisible && (
         <ul className="list-unstyled ms-4 mt-2 socialComments">
           {Array.isArray(post.comments) && post.comments.length > 0 ? (
-            post.comments.map((comment) => (
+            comments.map((comment) => (
               <li key={comment.id} className="mb-1">
                 <strong>{comment.commenter}:</strong> {comment.comment}
               </li>
