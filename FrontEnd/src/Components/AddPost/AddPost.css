@@ -2,7 +2,7 @@
   background-color: white;
   border-radius: 15px;
   padding: 0.25rem;
-  width: 65%; /* Full width for smaller screens */
+  width: 60%; /* Full width for smaller screens */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

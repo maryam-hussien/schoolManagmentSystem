@@ -9,7 +9,7 @@ const Post = () => {
 
   // Handler function to add a new post
   const handleAddPost = (newPost) => {
-    setPosts((prevPosts) => [...prevPosts, newPost]); // Update the posts state with the new post
+    setPosts((prevPosts) => [newPost , ...prevPosts]); // Update the posts state with the new post
   };
   return (
     <>
