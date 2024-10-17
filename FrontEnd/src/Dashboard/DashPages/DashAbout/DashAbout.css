@@ -1,0 +1,103 @@
+.dashAbout {
+    display: flex;
+    padding: 0.25rem;
+    flex-direction: column;
+  }
+  
+  .aboutcards {
+    width: 60%;
+    padding: 0.25rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .abouttitle {
+    font-size: 23px;
+    text-align: center;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 1rem;
+    background-color: #BC7C7C;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 14px;
+  }
+  
+  /* Form items will now be in a row */
+  label {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping in smaller screens */
+    width: 100%;
+    margin-bottom: 1rem; /* Adds spacing between label blocks */
+  }
+  
+  label textarea, label input {
+    width: 70%; /* Adjust this width as needed */
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  label span {
+    width: 30%; /* Label title width */
+    font-weight: bold;
+    padding-right: 1rem;
+  }
+  
+  .btn {
+    background-color: #A2D2DF;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .abouttitle {
+      font-size: 18px;
+    }
+    .aboutcards {
+      width: 100%;
+    }
+  
+    label textarea, label input {
+      width: 100%; /* Full width in smaller screens */
+    }
+  
+    label span {
+      width: 100%;
+      padding-bottom: 0.5rem; /* Add spacing between label and input on small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .abouttitle {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .abouttitle {
+      font-size: 15px;
+    }
+  }
+  
