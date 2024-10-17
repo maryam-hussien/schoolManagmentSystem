@@ -25,7 +25,7 @@ function AddAboutSchool() {
               placeholder="Enter about school"
             />
           </label>
-          <label style={{ display: "block" }}>Upload Photo:</label>
+          <label>Upload Photo:</label>
           <input
             type="file"
             accept="image/*"

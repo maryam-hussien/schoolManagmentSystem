@@ -25,7 +25,7 @@ function AddHistory() {
               placeholder="Enter history"
             />
           </label>
-          <label style={{ display: "block" }}>Upload Photo:</label>
+          <label>Upload Photo:</label>
           <input
             type="file"
             accept="image/*"

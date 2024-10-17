@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../../DashPages/DashAbout/DahAbout.css';
+
 
 function AddLocation() {
   const initialLocation = "Abou Al Hool Al Seiahi, Nazlet El-Semman, Al Haram, Giza Governorate 12557";
