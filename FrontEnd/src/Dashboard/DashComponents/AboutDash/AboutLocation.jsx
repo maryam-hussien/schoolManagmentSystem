@@ -20,7 +20,7 @@ function AddLocation() {
 
   return (
     <>
-      <h5 className="card-title">School Location</h5>
+      <h5 className="card-title">School Location:</h5>
       <div className="card">
         <form onSubmit={handleLocationSubmit}>
           <label>
