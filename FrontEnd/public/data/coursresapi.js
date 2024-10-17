@@ -36,7 +36,7 @@ const courses = [
     description: "Enhance reading, writing, and comprehension skills through engaging literature.",
     creator: "Ms. Angela",
     backgroundColor: "#dd9b9b",
-    image: "/assets/d05d3ef901464b34429d0b5e62068cbb.jpg",
+    image: "/assets/0daad3630b85891d51f05fc25aba5985.jpg",
   },
   {
     level: "Preparatory",

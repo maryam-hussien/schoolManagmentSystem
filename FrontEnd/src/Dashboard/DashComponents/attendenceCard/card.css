@@ -1,11 +1,19 @@
 .attendcard {
   border-radius: 12px;
-  background-color: #ffdbdb;
+  background-color: #ffffffee;
   color: black;
   padding: 0.5rem;
   margin: auto;
   margin-bottom: 0.75rem;
   text-align: center;
+  width: 80%;
+  box-shadow: 7px 7px 16px rgba(13, 23, 163, 0.4);
+  transition: box-shadow 0.4s ease; /* Smooth shadow transition on hover */
+}
+
+/* Add hover effect for a more prominent shadow */
+.attendcard:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .student-photo {
@@ -14,11 +22,11 @@
   border-radius: 20px;
   object-fit: cover;
   margin-bottom: 10px;
+  margin: auto;
 }
 
 /* Button Styling */
 .attendcardbtn {
-  background-color: #476547;
   color: white;
   padding: 0.25rem 0.75rem;
   border: none;
@@ -26,9 +34,17 @@
   margin-left: 0.5rem;
 }
 
-.attendcardData {
+.attendcardData span{
   font-weight: 500;
   font-size: 1.3rem;
+  margin-left: 1rem;
+
+}
+.attendcardData {
+text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  justify-content: flex-start;
 }
 
 .attendcarddate {
@@ -41,74 +57,65 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-top: 10px;
-  gap: 2rem;
+  margin: 10px 0;
+  padding: 0 0.5rem;
+  gap: 1.5rem;
 }
 
 /* Media queries for medium screens (e.g., tablets) */
 @media (max-width: 768px) {
   .student-photo {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
   }
-
+  .attendcardData span{
+    font-size: 1.2rem;
+  }
   .attendcardData {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .attendcarddate {
     font-size: 0.9rem;
   }
 
-  .attendcardbtn {
-    width: 90px;
-    padding: 0.2rem 0.5rem;
-  }
-
-  .attendcardbtns {
-    justify-content: space-around; /* Spread buttons for medium screens */
-  }
 }
 
 /* Media queries for small screens (e.g., mobile phones) */
 @media (max-width: 425px) {
+  .attendcard{
+    width: 100%;
+  }
   .student-photo {
-    width: 70px;
+    width: 90px;
     height: 70px;
     margin: auto;
   }
 
+  .attendcardData span{
+    font-size: 1rem;
+  }
   .attendcardData {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .attendcarddate {
     font-size: 0.75rem;
+    padding-right: 0px;
   }
+.attendcardbtns{
+  margin: 0.5rem auto;
+  gap: 1rem;
 
-  .attendcardbtn {
-    width: 80px;
-    padding: 0.15rem 0.4rem;
-  }
+}
+.attendcardbtn{
+  margin: auto;
+} 
 
-  .attendcardbtns {
-    justify-content: center; /* Center buttons on small screens */
-    flex-direction: column; /* Stack buttons vertically */
-    gap:0.5rem
-  }
-
-  .attendcardbtn {
-    margin-left: 0; /* Remove left margin when stacked */
-    margin-bottom: 10px; /* Add spacing between buttons */
-  }
 }
 
 @media (max-width: 375px) {
-  .student-photo {
-    width: 70px;
-    height: 70px;
-    margin: auto;
-  }
+
 
   .attendcardData {
     font-size: 0.85rem;
@@ -118,33 +125,18 @@
     font-size: 0.7rem;
   }
 
-  .attendcardbtn {
-    width: 70px;
-    padding: 0.1rem 0.3rem;
-  }
-
-  .attendcardbtns {
-    justify-content: center;
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 320px) {
+  .attendcard{
+    width: 100%;
+  }
+  .attendcardData span {
+    font-size: 0.8rem;
+  }
   .attendcardData {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
-
-  .attendcarddate {
-    font-size: 0.6rem;
-  }
-
-  .attendcardbtn {
-    width: 60px;
-    padding: 0.1rem 0.2rem;
-  }
-
-  .attendcardbtns {
-    justify-content: center;
-    flex-direction: column;
-  }
+ 
+  
 }

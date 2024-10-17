@@ -1,0 +1,24 @@
+.reviewTitle{
+  font-weight: 500;
+  color: white;
+  
+}
+.reviewDiv {
+  width: 60%;
+  height: auto;
+  margin: 0 auto; /* Center the div horizontally */
+}
+
+/* Responsive styling for tablets and smaller devices */
+@media (max-width: 768px) {
+  .reviewDiv {
+    width: 80%; /* Increase the width for smaller screens */
+  }
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 480px) {
+  .reviewDiv {
+    width: 95%; /* Make it almost full width on very small screens */
+  }
+}
