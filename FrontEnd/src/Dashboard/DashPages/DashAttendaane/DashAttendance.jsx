@@ -1,6 +1,6 @@
 import "./DashAttandane.css"
 import Students from "../../../../public/data/studentsapi"
-import Card from "../../DashComponents/attendenceCard/card";
+import Card from "../../DashComponents/attendenceCard/Card";
 function DashAttendance() {
   return (
     <div className="dashAttendance w-100 ">

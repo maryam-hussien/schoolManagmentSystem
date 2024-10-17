@@ -53,15 +53,22 @@
     }
 }
 
-
+@media(width>=1440px){
+    .slick-initialized .slick-slide {
+        display: flex !important;
+       
+    }
+}
 @media (max-width: 480px) {
     .slick-slide {
         width: 100%; 
     }
 
     .slick-slide img {
-        max-width: 200px;
+        width: 90px;
         height: 90px; 
+        display: list-item;
+        margin: auto;
     }
 
     .slick-slide .p-4 {

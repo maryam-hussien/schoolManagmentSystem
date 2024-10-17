@@ -1,8 +1,11 @@
+// Step 2: Import the photo
+import defaultPhoto from '../assets/1249636d803793f0d04ae77ab50097c7.jpg'; // Adjust the path according to your folder structure
+
 const students = [
   {
     id: 1,
     name: "Ahmed Ali",
-    photo: "ahmed_photo.jpg",
+    photo: defaultPhoto, // Step 3: Use the imported photo
     level: "Primary",
     grade: 5,
     address: "123 Main St, Cairo, Egypt",
@@ -11,7 +14,7 @@ const students = [
   {
     id: 2,
     name: "Sara Ahmed",
-    photo: "sara_photo.jpg",
+    photo: defaultPhoto,
     level: "Secondary",
     grade: 6,
     address: "456 Elm St, Giza, Egypt",
@@ -20,7 +23,7 @@ const students = [
   {
     id: 3,
     name: "Mohamed Hassan",
-    photo: "mohamed_photo.jpg",
+    photo: defaultPhoto,
     level: "Preparatory",
     grade: 4,
     address: "789 Pine St, Alexandria, Egypt",
@@ -29,7 +32,7 @@ const students = [
   {
     id: 4,
     name: "Laila Omar",
-    photo: "laila_photo.jpg",
+    photo: defaultPhoto,
     level: "Kindergarten",
     grade: 1,
     address: "321 Oak St, Cairo, Egypt",
@@ -38,7 +41,7 @@ const students = [
   {
     id: 5,
     name: "Omar Khaled",
-    photo: "omar_photo.jpg",
+    photo: defaultPhoto,
     level: "Primary",
     grade: 2,
     address: "654 Willow St, Giza, Egypt",
@@ -47,7 +50,7 @@ const students = [
   {
     id: 6,
     name: "Fatma Mahmoud",
-    photo: "fatma_photo.jpg",
+    photo: defaultPhoto,
     level: "Secondary",
     grade: 3,
     address: "789 Cedar Ave, Alexandria, Egypt",
@@ -56,7 +59,7 @@ const students = [
   {
     id: 7,
     name: "Youssef Tarek",
-    photo: "youssef_photo.jpg",
+    photo: defaultPhoto,
     level: "Preparatory",
     grade: 5,
     address: "963 Maple St, Cairo, Egypt",
@@ -65,7 +68,7 @@ const students = [
   {
     id: 8,
     name: "Hana Saeed",
-    photo: "hana_photo.jpg",
+    photo: defaultPhoto,
     level: "Kindergarten",
     grade: 1,
     address: "852 Birch St, Giza, Egypt",
@@ -74,7 +77,7 @@ const students = [
   {
     id: 9,
     name: "Ali Kamal",
-    photo: "ali_photo.jpg",
+    photo: defaultPhoto,
     level: "Primary",
     grade: 4,
     address: "147 Chestnut St, Alexandria, Egypt",
@@ -83,7 +86,7 @@ const students = [
   {
     id: 10,
     name: "Mona Fathy",
-    photo: "mona_photo.jpg",
+    photo: defaultPhoto,
     level: "Secondary",
     grade: 6,
     address: "321 Oak St, Cairo, Egypt",

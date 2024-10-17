@@ -1,9 +1,150 @@
-.attendcard{
+.attendcard {
   border-radius: 12px;
   background-color: #ffdbdb;
   color: black;
   padding: 0.5rem;
   margin: auto;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
   text-align: center;
+}
+
+.student-photo {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Button Styling */
+.attendcardbtn {
+  background-color: #476547;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+}
+
+.attendcardData {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.attendcarddate {
+  text-align: end;
+  padding-right: 15px;
+  font-size: 1rem; /* Default font size */
+}
+
+.attendcardbtns {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 10px;
+  gap: 2rem;
+}
+
+/* Media queries for medium screens (e.g., tablets) */
+@media (max-width: 768px) {
+  .student-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .attendcardData {
+    font-size: 1rem;
+  }
+
+  .attendcarddate {
+    font-size: 0.9rem;
+  }
+
+  .attendcardbtn {
+    width: 90px;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .attendcardbtns {
+    justify-content: space-around; /* Spread buttons for medium screens */
+  }
+}
+
+/* Media queries for small screens (e.g., mobile phones) */
+@media (max-width: 425px) {
+  .student-photo {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+  }
+
+  .attendcardData {
+    font-size: 0.85rem;
+  }
+
+  .attendcarddate {
+    font-size: 0.75rem;
+  }
+
+  .attendcardbtn {
+    width: 80px;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .attendcardbtns {
+    justify-content: center; /* Center buttons on small screens */
+    flex-direction: column; /* Stack buttons vertically */
+    gap:0.5rem
+  }
+
+  .attendcardbtn {
+    margin-left: 0; /* Remove left margin when stacked */
+    margin-bottom: 10px; /* Add spacing between buttons */
+  }
+}
+
+@media (max-width: 375px) {
+  .student-photo {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+  }
+
+  .attendcardData {
+    font-size: 0.85rem;
+  }
+
+  .attendcarddate {
+    font-size: 0.7rem;
+  }
+
+  .attendcardbtn {
+    width: 70px;
+    padding: 0.1rem 0.3rem;
+  }
+
+  .attendcardbtns {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 320px) {
+  .attendcardData {
+    font-size: 0.7rem;
+  }
+
+  .attendcarddate {
+    font-size: 0.6rem;
+  }
+
+  .attendcardbtn {
+    width: 60px;
+    padding: 0.1rem 0.2rem;
+  }
+
+  .attendcardbtns {
+    justify-content: center;
+    flex-direction: column;
+  }
 }
