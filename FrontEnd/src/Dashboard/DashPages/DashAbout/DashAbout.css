@@ -1,6 +1,7 @@
 .dashAbout {
     display: flex;
     padding: 0.25rem;
+    align-items: center;
     flex-direction: column;
   }
   
@@ -15,7 +16,18 @@
   
   .abouttitle {
     font-size: 23px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    background:#BC7C7C;
+border-width:4px 30px 4px 30px;
+border-style: solid;
+border-color: #A2D2DF #A2D2DF #A2D2DF #A2D2DF;
+border-radius:0 120px 0 120px;
+-moz-border-radius:0 120px 0 120px;
+-webkit-border-radius:0 120px 0 120px;
   }
   
   .card {
