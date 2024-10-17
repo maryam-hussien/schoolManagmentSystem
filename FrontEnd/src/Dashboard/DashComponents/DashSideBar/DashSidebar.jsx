@@ -1,6 +1,6 @@
 
 import './DashSidebar.css';
-import { Boxes, PersonFill, Book, CalendarCheckFill, ClipboardData, Grid3x3GapFill,ArrowBarLeft ,PeopleFill} from 'react-bootstrap-icons';
+import { Boxes, PersonFill, Book,InfoCircle, CalendarCheckFill, ClipboardData, Grid3x3GapFill,ArrowBarLeft ,PeopleFill} from 'react-bootstrap-icons';
 import { NavLink ,useNavigate  } from 'react-router-dom';
 import Back from '../BackButton/Back';
 
@@ -40,6 +40,7 @@ const DashSidebar = () => {
             <Book style={{ color: "white", fontSize: "19px" }} />
             <span>Courses</span>
           </NavLink>
+       
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
             to="Students"
@@ -68,7 +69,13 @@ const DashSidebar = () => {
             <Grid3x3GapFill style={{ color: "white", fontSize: "19px" }} />
             <span>Schedule</span>
           </NavLink>
- 
+          <NavLink
+          className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
+          to="dashAbout"
+          >
+          <InfoCircle style={{ color: "white", fontSize: "19px" }} />
+          <span>About</span>
+         </NavLink>
          <Back link='/login'
                onClickAction={handleLogout}
                Icon={ArrowBarLeft}
