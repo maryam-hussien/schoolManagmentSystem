@@ -1,7 +1,7 @@
 .dashAbout {
     display: flex;
     padding: 0.25rem;
-    align-items: center;
+    font-family: Lucida Handwriting;
     flex-direction: column;
   }
   
@@ -16,18 +16,7 @@
   
   .abouttitle {
     font-size: 23px;
-    width: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    background:#BC7C7C;
-border-width:4px 30px 4px 30px;
-border-style: solid;
-border-color: #A2D2DF #A2D2DF #A2D2DF #A2D2DF;
-border-radius:0 120px 0 120px;
--moz-border-radius:0 120px 0 120px;
--webkit-border-radius:0 120px 0 120px;
   }
   
   .card {
@@ -59,20 +48,27 @@ border-radius:0 120px 0 120px;
   }
   
   label textarea, label input {
-    width: 70%; /* Adjust this width as needed */
+    width: 70%; 
     padding: 0.5rem;
     margin-top: 0.5rem;
     border-radius: 4px;
     border: 1px solid #ccc;
   }
-  
+  .input1{
+
+    width: 70%; 
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
   label span {
     width: 30%; /* Label title width */
     font-weight: bold;
     padding-right: 1rem;
   }
   
-  .btn {
+  .buttony {
     background-color: #A2D2DF;
     color: black;
     font-weight: bold;

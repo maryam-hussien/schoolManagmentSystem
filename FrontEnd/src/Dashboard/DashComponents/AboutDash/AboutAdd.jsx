@@ -26,12 +26,12 @@ function AddAboutSchool() {
             />
           </label>
           <label>Upload Photo:</label>
-          <input
+          <input className="input1"
             type="file"
             accept="image/*"
             onChange={(e) => setAboutPhoto(e.target.files[0])}
           />
-          <button type="submit" className="btn btn-primary mt-2">
+          <button type="submit" className="buttony buttony-primary mt-2">
             Submit
           </button>
         </form>
