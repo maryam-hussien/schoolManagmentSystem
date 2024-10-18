@@ -12,7 +12,7 @@ const EditProfile = () => {
     profileImage: null,
   });
 
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -34,19 +34,19 @@ const EditProfile = () => {
     e.preventDefault();
     console.log(formData);
 
-    // Display an alert to confirm the changes
+    
     alert("Your changes have been saved successfully!");
   };
 
   const handleDeleteAccount = () => {
     const confirmed = window.confirm("Are you sure you want to delete your account? This action cannot be undone.");
     if (confirmed) {
-      // Implement the logic to delete the account here.
+    
       alert("Your account has been deleted.");
     }
   };
     const goBackToProfile = () => {
-    navigate('/dashboard/dashProfile'); // Navigating to the profile page
+    navigate('/dashboard/dashProfile');
   };
   return (
     <div className="edit-profile-container">

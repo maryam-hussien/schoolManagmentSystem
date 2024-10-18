@@ -2,7 +2,12 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./DashCourses.css";
+import PrimaryCourses from "../../../Components/courses/Preparatory"
+import KinderCourses from "../../../Components/courses/KinderGarten"
+import PreparatoryCourses from "../../../Components/courses/Preparatory"
+import SecondaryCourses from "../../../Components/courses/Secondary"
 // import osImage from "../../../../public/assets/download.jpg";
 // import aiImage from "../../../../public/assets/download.jpg";
 // import seImage from "../../../../public/assets/download.jpg";
@@ -69,10 +74,8 @@ const DashCourses = () => {
 
   return (
     <div className="dashboard">
-      <h2>My Courses</h2>
-
-
-      <div className="filter-section">
+      <h2>My Courses</h2> 
+  <div className="filter-section">
         <div className="filter-group">
           <label>Filter by:</label>
           <section className="first">
@@ -137,20 +140,31 @@ const DashCourses = () => {
         </form>
       )}
 
-      <div className="courses-section">
-        {courses.map((course) => (
-          <div key={course.id} className="course-card">
-            <img
-              src={course.image}
-              alt={course.title}
-              className="course-image"
-            />
-            <h3>{course.title}</h3>
-            <p>{course.description}</p>
-            <p className="creator">Created by {course.creator}</p>
-          </div>
-        ))}
+<div className="courses-section">
+  {courses.map((course) => (
+    <div key={course.id} className="course-card">
+      <img
+        src={course.image}
+        alt={course.title}
+        className="course-image"
+      />
+      <div className="course-details">
+        <h3>{course.title}</h3>
+        <p>{course.description}</p>
+        <p className="creator">Created by {course.creator}</p>
       </div>
+    </div>
+  ))}
+</div>
+
+        <div>
+        <Routes>
+              
+              <Route path="kindergaten" element={<KinderCourses />} />
+              <Route path="primary" element={<PrimaryCourses />} />
+              <Route path="preparatory" element={<PreparatoryCourses />} />
+              <Route path="secondary" element={<SecondaryCourses />} />
+            </Routes>      </div>
     </div>
   );
 };
