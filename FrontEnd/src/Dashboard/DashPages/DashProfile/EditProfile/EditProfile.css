@@ -1,6 +1,7 @@
 
 .edit-profile-container {
   max-width: 600px;
+  
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -22,7 +23,7 @@ h2 {
   font-family: 'Poppins', sans-serif; 
   font-size: 28px;
   color: #333; 
-  background: linear-gradient(to right, #ff5f6d, #ffc371); 
+  background: linear-gradient(to right, #ff5f6d, #ffc371); /* Gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
 }
@@ -72,7 +73,7 @@ input[type="file"] {
   border: 3px solid #ff5f6d;
 }
 
-  mj
+/* Save Button */
 .save-btn {
   display: block;
   width: 100%;
