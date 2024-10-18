@@ -56,7 +56,7 @@ const Level = ({
       </select>
 
       {/* Grade Selection */}
-      {showGrade && level && (
+      {showGrade  && (
         <select
           name="grade"
           className="form-control"
