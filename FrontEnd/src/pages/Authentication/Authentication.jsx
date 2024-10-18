@@ -61,7 +61,7 @@ function Authentication() {
           <form onSubmit={handleSignIn} className="sign-in-form">
             <h2 className="title">Sign in now</h2>
 
-            <input
+            <input className="input3"
               type="email"
               spellCheck="false"
               placeholder="Enter Email"
@@ -70,7 +70,7 @@ function Authentication() {
             />
             <small className="email-error">{emailError}</small>
 
-            <input
+            <input className="input3"
               placeholder="Enter Password"
               type="password"
               onChange={(e) => setPassword(e.target.value)}

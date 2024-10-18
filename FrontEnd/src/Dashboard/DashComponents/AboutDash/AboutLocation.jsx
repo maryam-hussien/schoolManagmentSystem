@@ -41,7 +41,7 @@ function AddLocation() {
               placeholder="Enter Google Maps embed link"
             />
           </label>
-          <button type="submit" className="btn btn-primary mt-2">
+          <button type="submit" className="buttony buttony-primary mt-2">
             Submit
           </button>
         </form>
