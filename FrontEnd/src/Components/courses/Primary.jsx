@@ -2,7 +2,6 @@ import '../../../src/pages/Courses/course.css';
 import courses from  '../../../public/data/coursresapi';"../../../public/data/coursresapi"
 import Card from "./CourseCard"
 
-//className="course-card1"
 const Primary = () => {
   const filteredCourses = courses.filter(course => course.level === "Primary");
 

@@ -23,14 +23,14 @@ const Card = ({ student }) => {
       <div className="mainInfo d-flex flex-wrap">
         <img src={student.photo || img} alt={student.name} className="student-photo" />
         <div className="m-auto attendcardData">
-          <div>Name: {student.name}</div>
-          <div className="id">ID: {student.id}</div>
+          <div><span>Name:</span> {student.name}</div>
+          <div className="id"><span>ID:</span> {student.id}</div>
         </div>
       </div>
       <div className="d-flex flex-wrap attendcardbtns">
         {/* Adding onClick handlers to buttons */}
-        <button className="btn btn-success" onClick={handlePresent}>Present</button>
-        <button className="btn btn-danger" onClick={handleAbsent}>Absent</button>
+        <button className="btn attendcardbtn " onClick={handlePresent} style={{backgroundColor:'#6a8d6a'}}>Present</button>
+        <button className="btn attendcardbtn" onClick={handleAbsent}style={{backgroundColor:'#9e3e3e'}}>Absent</button>
       </div>
     </div>
   );

@@ -94,6 +94,7 @@ const DashCourses = () => {
           </section>
         </div>
         <FontAwesomeIcon icon={faFilter} className="filter-icon" />
+
       </div>
       <button
         className="add-course-btn"
