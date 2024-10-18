@@ -1,0 +1,131 @@
+
+/* Ensure the form inputs are displayed in a single row */
+.schedule-form .form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between form controls */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.schedule-form .form-control {
+  flex: 1; /* Ensure each form control takes up equal width */
+  min-width: 150px; /* Set a minimum width to avoid collapsing */
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table {
+  margin-top: 20px;
+  width: 80%; /* Keep the table centered with a reduced width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.schedulebtns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.scheduleedit-btn, .scheduledelete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.scheduleedit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.scheduledelete-btn {
+  background-color: #f44336;
+  color: white;
+}
+/* Center the table, reduce its width, and add margins */
+.table {
+  width: 80%; /* Reduce the table width */
+  margin: 0 auto; /* Center the table by adding automatic margins */
+  border-collapse: collapse;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.table th, .table td {
+  padding: 12px; /* Add padding for table cells */
+  text-align: left;
+  border: 1px solid #ddd; /* Add border to cells for clear separation */
+}
+
+/* Buttons inside table */
+.schedulebtns {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Add space between edit and delete buttons */
+}
+
+.scheduleedit-btn, .scheduledelete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scheduleedit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.scheduledelete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 425px) {
+  .table {
+    width: 100%; /* Allow table to take up full width on small screens */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    display: block; /* Display table as a block element to scroll */
+    margin: auto;
+  }
+
+  .table thead, .table tbody, .table th, .table td, .table tr {
+    display: block; /* Display table rows and cells as blocks */
+  }
+
+  .table tr {
+    margin-bottom: 10px; /* Add margin between rows */
+    
+  }
+
+  .table th {
+    position: absolute; /* Keep headers visible when scrolling */
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table td {
+    border: none;
+    padding: 8px;
+    position: relative;
+    padding-left: 50%;
+  }
+.scheduleedit-btn, .scheduledelete-btn {
+width: 30%;
+}
+.submit-btn {
+  width: fit-content;
+font-size: 12px;
+
+}
+}
