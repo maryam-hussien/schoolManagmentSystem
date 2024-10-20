@@ -1,10 +1,12 @@
-
 import './DashCont.css';
 import { Person, PersonAdd, People, CurrencyDollar } from 'react-bootstrap-icons';
 import AttendanceChart from '../../DashComponents/AboutDash/Attendance'; 
+import { useNavigate} from 'react-router-dom';
+
 
 const Dashcont = () => {
-    
+    const navigate = useNavigate();
+
     const attendanceData = [
         { day: 'Mon', present: 75, absent: 25 },
         { day: 'Tue', present: 50, absent: 50 },
@@ -12,6 +14,49 @@ const Dashcont = () => {
         { day: 'Thu', present: 70, absent: 30 },
         { day: 'Fri', present: 60, absent: 40 },
     ];
+
+    const handleAddTeacher = () => {
+        navigate('/dashboard/courses');
+    };
+
+    const handleAddStudent = () => {
+        navigate('/dashboard/students'); 
+    };
+
+    const teacherList = [
+        { name: 'Morris Johnson', class: 'Class 6', subject: 'English', email: 'morrisjohnson@gmail.com' },
+        { name: 'Jane Cooper', class: 'Class 5', subject: 'Music', email: 'janecooper@gmail.com' }
+    ];
+
+    const studentList = [
+        { name: 'Tom Smith', class: 'Class 4', subject: 'Mathematics', email: 'tomsmith@gmail.com' },
+        { name: 'Lucy Williams', class: 'Class 3', subject: 'Science', email: 'lucywilliams@gmail.com' }
+    ];
+
+    const renderTable = (list) => (
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {list.map((item, index) => (
+                    <tr key={index}>
+                        <td>{item.name}</td>
+                        <td>{item.class}</td>
+                        <td>{item.subject}</td>
+                        <td>{item.email}</td>
+                        <td>...</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    );
 
     return (
         <div className="dashboard-container">
@@ -75,46 +120,33 @@ const Dashcont = () => {
                     <div className="table-card">
                         <div className='teach' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             <h4>Teacher List</h4>
-                            <PersonAdd style={{ fontSize: '25px', color: 'black' }} />
+                            <PersonAdd style={{ fontSize: '25px', color: 'black', cursor: 'pointer' }} onClick={handleAddTeacher} />
                         </div>
                         <div className="table-responsive">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Class</th>
-                                        <th>Subject</th>
-                                        <th>Email</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Morris Johnson</td>
-                                        <td>Class 6</td>
-                                        <td>English</td>
-                                        <td>morrisjohnson@gmail.com</td>
-                                        <td>...</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jane Cooper</td>
-                                        <td>Class 5</td>
-                                        <td>Music</td>
-                                        <td>janecooper@gmail.com</td>
-                                        <td>...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            {renderTable(teacherList)}
                         </div>
                     </div>
                 </div>
+              
+                  </div>
+                <div className="chart-section">
+                    <div className="chart-card">
+                        <h1 style={{ textAlign: "left", marginBottom: "10px", marginLeft: '10px', fontSize: '24px', marginTop: '10px' }}>Attendance</h1>
+                        <AttendanceChart attendanceData={attendanceData} />
+                    </div>
+                    <div className="table-card">
+                        <div className='teach' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <h4>Student List</h4>
+                            <PersonAdd style={{ fontSize: '25px', color: 'black', cursor: 'pointer' }} onClick={handleAddStudent} />
+                        </div>
+                        <div className="table-responsive">
+                            {renderTable(studentList)}
+                        </div>
+                    </div>
+                </div>
+               
             </div>
-
-            <div className='att'>
-                <h1 style={{ textAlign: "left", marginBottom: "10px", marginLeft: '10px', fontSize: '24px', marginTop: '10px' }}>Attendance</h1>
-                <AttendanceChart attendanceData={attendanceData} />
-            </div>
-        </div>
+      
     );
 };
 
