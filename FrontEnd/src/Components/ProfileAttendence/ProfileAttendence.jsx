@@ -22,7 +22,7 @@ const attendanceData = [
 
 const ProfileAttendance = () => {
   return (
-    <div className='ProfileAttendance m-auto mt-5 px-3 py-3  fs-5 ' >
+    <div className='ProfileAttendance m-auto mt-3 px-3 py-3  fs-5 ' >
     <Calendar
       localizer={localizer}
       events={attendanceData}

@@ -43,7 +43,7 @@ left: 45%;
   width: 75%;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 0.5rem;
 
 }
 /* Media query for screens less than 1440px wide */

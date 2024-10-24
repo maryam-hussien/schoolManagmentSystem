@@ -18,12 +18,13 @@ const Profile = () => {
           <div className="profileImgCont">
             <img src={profileImg} className="profileImg m-auto"></img>
         </div>
-        <div className="  text-center fw-medium p-3  mx-auto profilename">UserName : Maryam Hussien</div>
+        <div className="  text-center fw-medium p-3  mx-auto profilename">Maryam Hussien</div>
         <div className="text-white fw-medium d-flex justify-content-around m-auto bar">
         <ProfileBar/>
         </div>
             <Routes>
               <Route path="/" element={<ProfileInfo />}/>
+              <Route path="info" element={<ProfileInfo />}/>
               <Route path="score" element={<ProfileScores />} />
               <Route path="attendence" element={<ProfileAttendence />} />
               <Route path="schedule" element={<ProfileShedule />} />
