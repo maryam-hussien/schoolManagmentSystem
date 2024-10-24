@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "./footer.css"
 import footerImg from "../../../public/assets/Cityscapes - Town.png"
 import { EnvelopeAt , TelephoneFill, SuitHeartFill  } from 'react-bootstrap-icons';
+import { Facebook, Twitter, Instagram } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
 
 
@@ -24,7 +25,8 @@ const footer = () => {
                 <TelephoneFill style={{ color: '#fddb88', fontSize: '20px' }} />
                 <span className="ms-2">01097315496</span>
               </div>
-
+              
+            
           </div>
         </div>
         <div  className='d-flex flex-column m-auto align-items-center '>
@@ -81,6 +83,24 @@ const footer = () => {
           <img src={footerImg} className='opacity-75 position-static img-fluid m-auto'/>
         </div>
       </div>
+      <div className="top-navbar">
+          <div className="container d-flex flex-column flex-md-row justify-content-end">
+            <div className="sicon d-flex flex-column flex-md-row align-items-left">
+            <div className="social-icons d-flex align-items-center">
+              <a href="#" className="text-light mx-2">
+                <Facebook style={{ color: '#fddb88', fontSize: '20px' }} />
+              </a>
+              <a href="#" className="text-light mx-2">
+                <Twitter style={{ color: '#fddb88', fontSize: '20px' }} />
+              </a>
+              <a href="#" className="text-light mx-2">
+                <Instagram style={{ color: '#fddb88', fontSize: '20px' }} />
+              </a>
+            </div>
+            </div>
+            
+          </div>
+        </div>
       <div className='d-flex flex-row footerSecColor p-1 justify-content-evenly footerFont'>
       <div className='text-start  footerText opacity-75 mt-2 '>
           CopyRight 2024 <span className='yellow'>@</span> All Rights Reserved
@@ -89,6 +109,7 @@ const footer = () => {
       <SuitHeartFill style={{ color: '#fd7899', fontSize: '20px' ,margin:'2px' }} />
         </div>       
       </div>
+      
       </div>
   )
 }
