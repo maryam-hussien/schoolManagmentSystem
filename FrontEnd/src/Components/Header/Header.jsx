@@ -26,7 +26,7 @@ const handlelogin=()=>{
           <div className="container navbar-container">
             <div className="navbar-brand" onClick={handlehome}>
               <img src={img} alt='nav-brand' className="logo-img" />
-              <span className='fw-semibold' style={{color:"#fff"}}>SCHOOL TEAM</span>
+              <span className='fw-semibold' style={{color:"#fff",marginTop:'6px'}}>SCHOOL TEAM</span>
             </div>
             <div className='navt'>
               <button className="navbar-toggler" type="button" onClick={toggleMenu}>
