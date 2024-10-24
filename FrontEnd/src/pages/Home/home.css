@@ -9,11 +9,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 130px;
+  margin-top: 10px;
   background: url('../../../public/assets/photo_2024-09-27_16-13-02.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 60px 20px;
+  margin-top: 70px;
   height: 520px;
   width: 100%;
   position: relative;
@@ -377,7 +378,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 130px;
+
     background: url('../../../public/assets/photo_2024-09-27_16-13-02.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
@@ -504,7 +505,7 @@
   }
   .hero-section {
     height: 500px;
-    margin-top: 180px;
+  
     padding: 20px 10px;
   }
 

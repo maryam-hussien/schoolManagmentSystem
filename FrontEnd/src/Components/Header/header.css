@@ -11,6 +11,7 @@
   color: #fff;
   padding: 10px 0;
 }
+
 .butt {
   width: 157px;
   background-color: #148B9c;
@@ -26,7 +27,6 @@
   transition: 0.5s;
 }
 
-
 .navyy {
   display: none;
   height: fit-content;
@@ -35,7 +35,6 @@
   border-radius: 5px;
   transition: 0.2s;
 }
-
 
 .navyy div {
   width: 30px;
@@ -55,12 +54,13 @@
 .social-icons {
   margin-right: auto;
 }
-
+.navt{
+  display: flex;
+  flex-direction: row;
+}
 .bheader {
-  
   position: fixed;
   width: 100%;
- 
   font-size: 20px;
   z-index: 1000;
   color: black;
@@ -70,13 +70,42 @@
   background-color: #fff; 
 }
 
-
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
+
+
+
+.login-icon {
+
+  color: #000; 
+padding: 0.5rem;
+  display: flex; 
+  align-items: center; 
+}
+
+.nohover {
+ 
+  color: #000;
+}
+
+
+.login-icon:hover {
+  color: #000; 
+  
+}
+
+.login-icon svg {
+  cursor: pointer;
+  margin: 0; 
+  padding: 0;
+  transition: none; 
+}
+
+
 
 
 .logo-img {
@@ -89,23 +118,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-
 
 .nav-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  position: relative;
   display: flex;
-  
 }
 
 .nav-menu ul li {
   padding: 15px;
- 
-  
 }
 
 .nav-menu ul li a {
@@ -121,39 +144,18 @@
   border-radius: 12px;
 }
 
-
 .nav-menu.open {
   display: flex;
   flex-direction: column; 
 }
 
-
 @media (max-width: 590.5px) {
   .navyy {
     display: block;
   }
-  .nav-menu ul li {
-    padding: 15px;
-    width: 100%;
-    border-bottom: 1px solid black;
-  }
-  
-  .bheader {
-  
-    position: fixed;
-    width: 100%;
- 
-    font-size: 20px;
-    z-index: 1000;
-    color: black;
-    font-weight: bold;
-    border-bottom: 1px solid rgb(219, 216, 216);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-  }
 
   .nav-menu {
-    display: none;
+    display: none; /* Hide by default */
     flex-direction: column; 
     position: absolute; 
     top: 100%;
@@ -170,33 +172,21 @@
     background-color: #148b9c;
     align-items: flex-start;
   }
+
+  .nav-menu ul li {
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
 }
-@media (1000px> width> 720.5px) {
+
+@media (min-width: 720.5px) and (max-width: 1000px) {
   .navyy {
     display: block;
   }
-  .nav-menu ul li {
-    padding: 15px;
-    width: 100%;
-    border-bottom: 1px solid black;
-  }
-  
-  .bheader {
-  
-    position: fixed;
-    width: 100%;
-  
-    font-size: 20px;
-    z-index: 1000;
-    color: black;
-    font-weight: bold;
-    border-bottom: 1px solid rgb(219, 216, 216);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-  }
 
   .nav-menu {
-    display: none;
+    display: none; /* Hide by default */
     flex-direction: column; 
     position: absolute; 
     top: 100%;
@@ -212,5 +202,11 @@
     display: flex; 
     background-color: #148b9c;
     align-items: flex-start;
+  }
+
+  .nav-menu ul li {
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid black;
   }
 }
