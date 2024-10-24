@@ -21,7 +21,7 @@ const DashSidebar = () => {
         <ul className="nav flex-column m-auto">
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-            to="dashmain"
+            to="/dashboard"
           >
             <Boxes style={{ color: "white", fontSize: "19px" }} />
             <span>Dashboard</span>
