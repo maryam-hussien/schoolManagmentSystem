@@ -1,14 +1,8 @@
-.dashboard {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  width: 100%;
-  background-color: #f4f6f9;
-  height: auto; 
-}
 
+.two{
+  display: flex;
+  flex-direction: row;
+}
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +48,7 @@
 
 .stat-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* Adapts number of columns */
   gap: 10px;
   margin-bottom: 20px;
   width: 100%; 
@@ -111,16 +105,6 @@
   width: 100%;
 }
 
-.att {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #fff;
-}
 
 .attendance-chart {
   display: flex;
@@ -276,7 +260,7 @@ table td {
 
 @media (max-width: 790px) {
   .stat-cards {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
   }
 
   .table-card {
@@ -296,6 +280,14 @@ table td {
   .user-name {
     font-size: 16px;
   }
+  .stat-cards {
+    grid-template-columns: 1fr; /* One column on smaller screens */
+  }
+
+  .stat-card {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+  }
+
 
   .user-role {
     font-size: 12px; 

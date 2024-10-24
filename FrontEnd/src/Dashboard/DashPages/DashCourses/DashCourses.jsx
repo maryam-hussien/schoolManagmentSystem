@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import links from '../../../../public/data/courseroutes';
+import Bar from '../../../Components/courses/Bar';
 import { Route, Routes } from "react-router-dom";
 import "./DashCourses.css";
-import PrimaryCourses from "../../../Components/courses/Preparatory"
+import PrimaryCourses from "../../../Components/courses/Primary"
 import KinderCourses from "../../../Components/courses/KinderGarten"
 import PreparatoryCourses from "../../../Components/courses/Preparatory"
 import SecondaryCourses from "../../../Components/courses/Secondary"
@@ -73,29 +72,9 @@ const DashCourses = () => {
   };
 
   return (
-    <div className="dashboard">
+    <div>
       <h2>My Courses</h2> 
-  <div className="filter-section">
-        <div className="filter-group">
-          <label>Filter by:</label>
-          <section className="first">
-            <NavLink to="kindergaten">
-              <button>Kindergarten</button>
-            </NavLink>
-            <NavLink to="primary">
-              <button>Primary</button>
-            </NavLink>
-            <NavLink to="preparatory">
-              <button>Preparatory</button>
-            </NavLink>
-            <NavLink to="secondary">
-              <button>Secondary</button>
-            </NavLink>
-          </section>
-        </div>
-        <FontAwesomeIcon icon={faFilter} className="filter-icon" />
-
-      </div>
+      <Bar links={links}/>
       <button
         className="add-course-btn"
         onClick={() => setIsFormVisible(!isFormVisible)}
