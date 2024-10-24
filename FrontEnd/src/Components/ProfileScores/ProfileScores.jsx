@@ -25,7 +25,7 @@ const ProfileScores = () => {
   };
 
   return (
-    <div className="d-flex flex-wrap flex-column text-capitalize ProfileScores container mt-5">
+    <div className="d-flex flex-wrap flex-column text-capitalize ProfileScores container mt-3">
       <h3 className="text-center">Student Grades</h3>
       {exams.map((exam, index) => (
         <div

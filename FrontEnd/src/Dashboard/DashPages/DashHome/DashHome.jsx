@@ -22,10 +22,10 @@ const DashHome = () => {
 
       <div className="dashboard">
         <Routes>
-        <Route path="dashmain" element={<Dashcont />} />
+        <Route path="/" element={<Dashcont />} />
           <Route path="dashProfile" element={<DashProfile />} />
-          <Route path="dashAbout" element={<DashAbout />} />
-          <Route path="courses" element={<DashCourses />} />
+          <Route path="courses/*" element={<DashCourses />} />
+            <Route path="dashAbout" element={<DashAbout />} />
           <Route path="attendance" element={<DashAttendance />} />
           <Route path="grades" element={<DashGrades />} />
           <Route path="schedule" element={<DashSchedule />} />

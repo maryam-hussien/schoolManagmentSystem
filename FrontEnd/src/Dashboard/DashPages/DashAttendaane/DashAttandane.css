@@ -3,37 +3,8 @@
   padding: 0.25rem;
   flex-direction: column;
 }
-.dashAttendance img{
-  max-width: 280px;
-  width: 100%;
-  height: auto;
-  margin: auto;
-}
 
-.attendcards {
-  width: 60%;
-  padding: 0.25rem;
-  margin: auto;
-}
 
-.attendtitle {
-  font-size: 23px;
-}
 
-/* Media query for small screens */
-@media (max-width: 768px) {
-  .attendtitle {
-    font-size: 18px; /* Adjust font size for smaller screens */
-  }
-}
 
-@media (max-width: 480px) {
-  .attendtitle {
-    font-size: 16px; /* Further adjust for very small screens (e.g., mobile) */
-  }
-}
-@media (max-width: 375px) {
-  .attendtitle {
-    font-size: 15px; /* Further adjust for very small screens (e.g., mobile) */
-  }
-}
+

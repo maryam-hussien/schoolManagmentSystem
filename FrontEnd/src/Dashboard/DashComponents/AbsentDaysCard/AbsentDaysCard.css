@@ -1,0 +1,33 @@
+.absent-days-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 300px;
+    text-align: center;
+  }
+  
+  .absent-days-card h3 {
+    margin-bottom: 10px;
+    color: #5955ff;
+  }
+  
+  .absent-days-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .absent-days-card button {
+    padding: 10px 20px;
+    background-color: #5955ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .absent-days-card button:hover {
+    background-color: #4a48e0;
+  }
+  

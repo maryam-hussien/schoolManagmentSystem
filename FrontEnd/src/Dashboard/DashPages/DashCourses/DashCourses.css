@@ -1,116 +1,198 @@
-.dash-courses {
-  padding: 20px; /* Overall padding for the DashCourses component */
+
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
 }
 
+.filter-section {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-group button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-icon {
+  font-size: 18px;
+  margin-left: 900px;
+  color: #6c757d;
+  cursor: pointer;
+}
 
 .add-course-btn {
   padding: 10px 20px;
-  background-color: #4CAF50;
-  margin-left: 800px;
-  margin-bottom: 15px;
+  background-color: #28a745;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
-.submit-btn {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  margin-bottom: 15px;
+
+@media (max-width: 768px) {
+  .add-course-btn {
+
+      align-items: center;
+      justify-content: center;
+  }
+}
+
+/* Course form */
+.course-form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.course-form input {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.course-form button {
+  padding: 10px;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.submit-btn:hover {
-  background-color: #45a049;
-}
-.add-course-btn:hover {
-  background-color: #45a049;
-}
-/* DashCourses.css */
-
-/* DashCourses.css */
-
-.form-input {
-  width: 50%; /* Adjust the width as needed */
-  padding: 8px; /* Add some padding for better usability */
-  margin-bottom: 15px; /* Space between inputs */
-  border: 1px solid #ccc; /* Optional: Add border styling */
-  border-radius: 4px; /* Optional: Rounded corners */
 }
 
-label {
-  display: block; /* Ensures the label is on its own line */
-  margin-bottom: 5px; /* Space between label and input */
-  font-weight: bold; /* Optional: Makes the label text bold */
+.courses-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-
-
-.first button {
-  margin: 10px;
-  border-radius: 12px;
-  width: 150px;
-  height: 50px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #191970;
-  transition: all 0.3s ease;
-}
-
-.first button:hover {
-  background-color: #4b4b8c;
-}
-
-.course-card1 {
-  display: flex; /* Use flexbox to arrange items in a column */
-  flex-direction: row ; /* Stack elements vertically */
-  justify-content: space-between; /* Space out items */
-    height: 200px; /* Fixed height for square cards */
-  padding: 10px; /* Reduced padding */
-  background-color: #ffffff; /* White background for cards */
-  border: 1px solid #e0e0e0; /* Light gray border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+.course-card {
+  display: flex;
+  align-items: center;
+  background-color: #045D56; /* Adjust based on your color palette */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white; /* Ensure text is visible */
 }
 
 .course-card:hover {
-  transform: translateY(-3px); /* Lift effect on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .course-image {
-  width: 100px; /* Set a fixed width for the image */
-  height: 100px; /* Set a fixed height for the image to make it square */
-  border-radius: 10px; /* Rounded corners for images */
-  margin-bottom: 10px; /* Space between image and text */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-right: 20px;
 }
 
-.course-info {
-  text-align: center; /* Center text in the card */
+.course-details {
+  flex-grow: 1;
 }
 
-.course-title {
-  margin: 0; /* Remove default margin */
-  font-size: 16px; /* Adjust font size for course title */
-  color: #191970; /* Dark blue for course title */
+.course-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: white; /* Change text color for better readability */
 }
 
-.course-description {
-  font-size: 14px; /* Font size for course description */
-  color: #666; /* Gray color for description */
-  margin-bottom: 5px; /* Space below the description */
+.course-card p {
+  font-size: 16px;
+  color: #ddd; /* Slightly dimmed color for course description */
 }
 
-.course-creator {
-  font-size: 12px; /* Smaller font for creator's name */
-  color: #999; /* Light gray color for creator's name */
-  margin-bottom: 10px; /* Space below the creator's name */
+.creator {
+  font-size: 14px;
+  color: #FFD700;
+  font-weight: bold;
 }
 
+/* Media Queries for Responsive Layout */
+@media (max-width: 768px) {
+  .course-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
 
+  .course-image {
+    margin-bottom: 15px;
+  }
+}
+
+  .filter-section {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start;
+  }
+
+  .add-course-btn {
+    align-self: flex-end; 
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .courses-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduce minimum size on smaller screens */
+  }
+
+
+@media (max-width: 480px) {
+  .add-course-btn {
+    
+    align-items: center;
+    justify-content: center;
+  }
+  .filter-group button {
+    width: 100%; /* Buttons take full width on very small screens */
+  }
+
+  .course-card {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .course-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .course-card h3 {
+    font-size: 16px;
+  }
+
+  .course-card p {
+    font-size: 12px;
+  }
+}
