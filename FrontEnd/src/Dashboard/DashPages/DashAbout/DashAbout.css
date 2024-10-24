@@ -19,7 +19,7 @@
     text-align: center;
   }
   
-  .card {
+  .dashAbout .card {
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 1rem;
@@ -27,17 +27,17 @@
     text-align: center;
   }
   
-  .card-title {
+  .dashAbout .card-title {
     font-size: 18px;
     font-weight: bold;
   }
   
-  .card-text {
+  .dashAbout .card-text {
     font-size: 14px;
   }
   
   /* Form items will now be in a row */
-  label {
+  .dashAbout  label {
     color: #fff;
     display: flex;
     align-items: center;
@@ -47,14 +47,14 @@
     margin-bottom: 1rem; /* Adds spacing between label blocks */
   }
   
-  label textarea, label input {
+  .dashAbout  label textarea, label input {
     width: 70%; 
     padding: 0.5rem;
     margin-top: 0.5rem;
     border-radius: 4px;
     border: 1px solid #ccc;
   }
-  .input1{
+  .dashAbout .input1{
 
     width: 70%; 
     padding: 0.5rem;
@@ -62,13 +62,13 @@
     border-radius: 4px;
     border: 1px solid #ccc;
   }
-  label span {
+  .dashAbout label span {
     width: 30%; /* Label title width */
     font-weight: bold;
     padding-right: 1rem;
   }
   
-  .buttony {
+  .dashAbout .buttony {
     background-color: #A2D2DF;
     color: black;
     font-weight: bold;
@@ -80,31 +80,31 @@
   
   /* Media query for small screens */
   @media (max-width: 768px) {
-    .abouttitle {
+    .dashAbout .abouttitle {
       font-size: 18px;
     }
-    .aboutcards {
+    .dashAbout .aboutcards {
       width: 100%;
     }
   
-    label textarea, label input {
+    .dashAbout label textarea,.dashAbout label input {
       width: 100%; /* Full width in smaller screens */
     }
   
-    label span {
+    .dashAbout label span {
       width: 100%;
       padding-bottom: 0.5rem; /* Add spacing between label and input on small screens */
     }
   }
   
   @media (max-width: 480px) {
-    .abouttitle {
+    .dashAbout .abouttitle {
       font-size: 16px;
     }
   }
   
   @media (max-width: 375px) {
-    .abouttitle {
+    .dashAbout .abouttitle {
       font-size: 15px;
     }
   }
