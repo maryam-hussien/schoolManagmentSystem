@@ -28,6 +28,24 @@ const footer = () => {
               
             
           </div>
+          <div className="top-navbar">
+          <div className="container d-flex flex-column flex-md-row justify-content-end">
+            <div className="sicon d-flex flex-column  align-items-left">
+            <div className="social-icons d-flex align-items-center">
+              <a href="#" className="text-light mx-2">
+                <Facebook style={{ color: '#fddb88', fontSize: '20px' }} />
+              </a>
+              <a href="#" className="text-light mx-2">
+                <Twitter style={{ color: '#fddb88', fontSize: '20px' }} />
+              </a>
+              <a href="#" className="text-light mx-2">
+                <Instagram style={{ color: '#fddb88', fontSize: '20px' }} />
+              </a>
+            </div>
+            </div>
+            
+          </div>
+        </div>
         </div>
         <div  className='d-flex flex-column m-auto align-items-center '>
         <div className='fs-5 fw-medium mb-1 '>Pages</div>
@@ -83,24 +101,7 @@ const footer = () => {
           <img src={footerImg} className='opacity-75 position-static img-fluid m-auto'/>
         </div>
       </div>
-      <div className="top-navbar">
-          <div className="container d-flex flex-column flex-md-row justify-content-end">
-            <div className="sicon d-flex flex-column flex-md-row align-items-left">
-            <div className="social-icons d-flex align-items-center">
-              <a href="#" className="text-light mx-2">
-                <Facebook style={{ color: '#fddb88', fontSize: '20px' }} />
-              </a>
-              <a href="#" className="text-light mx-2">
-                <Twitter style={{ color: '#fddb88', fontSize: '20px' }} />
-              </a>
-              <a href="#" className="text-light mx-2">
-                <Instagram style={{ color: '#fddb88', fontSize: '20px' }} />
-              </a>
-            </div>
-            </div>
-            
-          </div>
-        </div>
+     
       <div className='d-flex flex-row footerSecColor p-1 justify-content-evenly footerFont'>
       <div className='text-start  footerText opacity-75 mt-2 '>
           CopyRight 2024 <span className='yellow'>@</span> All Rights Reserved
