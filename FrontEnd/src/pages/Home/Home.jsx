@@ -7,14 +7,30 @@ import Core from '../../Components/Home/Core';
 import Logos from '../../Components/Home/Logos';
 import Test from '../../Components/Home/Test';
 import Course from '../../Components/Home/Course';
+import { useNavigate } from 'react-router-dom';
 const Home = () => {
+  const navigate = useNavigate();
+  const handleLearnMoreClick = () => {
+    navigate('/about');
+  };
+
  return (
     <>
       <Header />
       <div className="home">
         <section className="hero-section">
-          <h1 className='hero-text'>Welcome to School Team</h1>
+        
+          <div className="info-section">
+            <h2>Welcome to School Team</h2>
+            <p>
+              We understand that each of our students is a uniquely talented individual students are facilitated to develop positive relationships.
+            </p>
+            <button className="learn-more-button" onClick={handleLearnMoreClick}>
+              Learn More
+            </button>
+          </div>
         </section>
+      
          <First />
          <Smarty />
          <Core />

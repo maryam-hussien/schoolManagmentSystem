@@ -2,28 +2,15 @@ import { FaSchool, FaCertificate, FaBookOpen } from 'react-icons/fa';
 import { MdStars, MdLibraryBooks } from 'react-icons/md';
 import { BiMedal } from 'react-icons/bi';
 import '../../pages/Home/home.css';
-import { useNavigate } from 'react-router-dom';
-const First =()=>  {
-    const navigate = useNavigate();
 
-    const handleLearnMoreClick = () => {
-      navigate('/about');
-    };
+const First =()=>  {
+  
+
+   
     return (
     <>
      <div className='all'>
-        <section className="info-and-features ">
-          <div className="info-section m-auto">
-            <h2>Welcome to School Team, a prestigious school</h2>
-            <p>
-              We understand that each of our students is a uniquely talented individual. Within our supportive community, students are facilitated to develop positive relationships and grab the opportunity to realize their individual potential to the full.
-            </p>
-            <button className="learn-more-button" onClick={handleLearnMoreClick}>
-              Learn More
-            </button>
-          </div>
-
-        </section>
+       
           <div className="features">
             <div className="feature-card"><FaSchool className="feature-icon" /><h3>Our School</h3><p>We take pride in our famous teaching traditions & achievements.</p></div>
             <div className="feature-card"><MdStars className="feature-icon" /><h3>Why Choose Us?</h3><p>Our school ranked among the top 10 best schools for children aged 13-19.</p></div>
