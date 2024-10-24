@@ -1,13 +1,12 @@
 .profile{
   height: auto;
-  margin-top: 5% ;  
-  background-color: #148B9c;
+  margin-top: 1% ;  
   display: flex;
   justify-content: center;
 
 }
 .profileContinater{
-  width: 90%;
+  width: 100%;
   height: auto;
   margin-top: 12%;
   background-color: #fceeee;
@@ -15,8 +14,9 @@
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  border: 2px;
   border-radius: 30px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   position: relative;
 }
 .profileImgCont{
@@ -41,7 +41,7 @@ left: 45%;
   font-size: 1.25rem;
   background-color: #148B9c;
   border-radius: 13px;
-  width: 80%;
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
   padding: 0.5rem;
@@ -54,7 +54,7 @@ left: 45%;
 /* Media query for screens less than 1200px wide */
 @media (max-width: 1200px) {
   .profile {
-    margin-top: 15%;
+    margin-top: 3%;
   }
   .profileImg{
     width: 130px;
@@ -66,7 +66,7 @@ left: 45%;
 /* Media query for screens less than 768px wide (tablets) */
 @media (max-width: 768px) {
   .profile {
-    margin-top: 9%;
+    margin-top: 5%;
   }
   .profileContinater{
     margin-top: 17%;
@@ -82,9 +82,7 @@ left: 45%;
   }
 }
 @media (max-width: 668px) {
-  .profile {
-    margin-top: 28%;
-  }
+
   .profileContinater{
     margin-top: 23%;
   }
@@ -103,9 +101,7 @@ left: 45%;
 
 /* Media query for screens less than 576px wide (large mobile) */
 @media (max-width: 576px) {
-  .profile {
-    margin-top: 38%;
-  }
+ 
   .profileContinater{
     margin-top: 25%;
   }
@@ -115,9 +111,7 @@ left: 45%;
 }
 /* Media query for screens less than 480px wide (small mobile) */
 @media (max-width: 480px) {
-  .profile {
-    margin-top: 40%;
-  }
+  
   .profileContinater{
     margin-top: 25%;
   }
@@ -131,7 +125,7 @@ left: 45%;
 /* Media query for screens less than 480px wide (small mobile) */
 @media (max-width: 425px) {
   .profile {
-    margin-top: 15%;
+    margin-top: 11%;
   }
   .profileContinater{
     margin-top: 25%;
@@ -139,6 +133,11 @@ left: 45%;
   .profileImgCont{
     top:-43px;
     left: 40%;
+  }
+  .bar{
+    font-size: 1rem;
+    padding: 0.5rem;
+  
   }
 
 }
