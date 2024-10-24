@@ -338,16 +338,16 @@
   margin: 10px 0;
 }
 .logos{
-  margin: 0 auto 60px; 
+  margin: 30px auto 80px; 
   align-items: center;
   text-align: center;
 }
 .logos .img1{
-  width: 200px;
+  width: 300px;
 }
 .logos h2{
   color: black;
- text-shadow: 2px 2px 5px darkblue;
+ 
 
 }
 @media(max-width:1024px){
