@@ -13,12 +13,12 @@ const Profile = () => {
   return (
     <>
     <Header/>
-      <div className="profile  mb-5 w-100">
+      <div className="profile   w-100">
         <div className="profileContinater mb-5 py-3 px-2 ">
-          <div className="profileImgCont">
+          <div className="profileImgCont mx-auto">
             <img src={profileImg} className="profileImg m-auto"></img>
         </div>
-        <div className="  text-center fw-medium p-3  mx-auto profilename">Maryam Hussien</div>
+        <div className=" fw-medium p-3  mx-auto profilename">Maryam Hussien</div>
         <div className="text-white fw-medium d-flex justify-content-around m-auto bar">
         <ProfileBar/>
         </div>

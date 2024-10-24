@@ -1,6 +1,6 @@
 .profile{
   height: auto;
-  margin-top: 10% ;  
+  margin-top: 5% ;  
   background-color: #148B9c;
   display: flex;
   justify-content: center;
@@ -9,7 +9,7 @@
 .profileContinater{
   width: 90%;
   height: auto;
-  margin-top: 9%;
+  margin-top: 12%;
   background-color: #fceeee;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@
   width: fit-content;
   height: fit-content;
 position: absolute;
-top:-50px;
+top:-55px;
 left: 45%;
 }
 .profileImg{
@@ -33,14 +33,15 @@ left: 45%;
   border-color: #fddb88;
 }
 .profilename{
-  margin-top: 6%;
+  margin-top: 5%;
   font-size: calc(1.275rem + .3vw);
+  width: fit-content;
 }
 .bar{
   font-size: 1.25rem;
   background-color: #148B9c;
   border-radius: 13px;
-  width: 75%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   padding: 0.5rem;
@@ -60,27 +61,24 @@ left: 45%;
   }
 }
 
-/* Media query for screens less than 992px wide */
-@media (max-width: 992px) {
-  .profile {
-    margin-top: 18%;
-  }
- 
-}
+
 
 /* Media query for screens less than 768px wide (tablets) */
 @media (max-width: 768px) {
   .profile {
-    margin-top: 15%;
+    margin-top: 9%;
   }
   .profileContinater{
-    margin-top: 20%;
+    margin-top: 17%;
   }
   .profileImg{
     width: 120px;
   }
   .bar{
     font-size: 1.15rem;
+  }
+  .profileImgCont{
+    left: 43%;
   }
 }
 @media (max-width: 668px) {
@@ -97,6 +95,9 @@ left: 45%;
     width: 100%;
     padding: 1rem;
     margin: 0.5rem;
+  }
+  .profileImgCont{
+    left: 41%;
   }
 }
 
@@ -130,13 +131,14 @@ left: 45%;
 /* Media query for screens less than 480px wide (small mobile) */
 @media (max-width: 425px) {
   .profile {
-    margin-top: 56%;
+    margin-top: 15%;
   }
   .profileContinater{
-    margin-top: 15%;
+    margin-top: 25%;
   }
   .profileImgCont{
     top:-43px;
+    left: 40%;
   }
 
 }
@@ -145,10 +147,10 @@ left: 45%;
 /* Media query for screens less than 360px wide (very small mobile) */
 @media (max-width: 375px) {
   .profile {
-    margin-top: 60%;
+    margin-top: 18%;
   }
   .profileContinater{
-    margin-top: 18%;
+    margin-top: 27%;
   }
   .profileImgCont{
     top:-45px;
@@ -164,10 +166,10 @@ left: 45%;
 /* Media query for screens less than 320px wide (ultra-small mobile) */
 @media (max-width: 320px) {
   .profile {
-    margin-top: 64%;
+    margin-top: 18%;
   }
   .profileContinater{
-    margin-top: 28%;
+    margin-top: 40%;
   }
   .profileImgCont{
     top:-40px;
