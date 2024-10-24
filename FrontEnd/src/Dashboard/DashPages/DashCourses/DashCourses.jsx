@@ -73,7 +73,7 @@ const DashCourses = () => {
   };
 
   return (
-    <div className="dashboard">
+    <div>
       <h2>My Courses</h2> 
   <div className="filter-section">
         <div className="filter-group">

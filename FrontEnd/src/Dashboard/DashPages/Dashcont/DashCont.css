@@ -1,14 +1,4 @@
 
-.dashboard {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  width: 100%;
-  background-color: #f4f6f9;
-  height: auto; 
-}
 .two{
   display: flex;
   flex-direction: row;
