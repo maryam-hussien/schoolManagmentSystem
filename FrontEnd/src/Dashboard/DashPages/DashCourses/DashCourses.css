@@ -1,40 +1,7 @@
-
-
 h2 {
   font-size: 24px;
   font-weight: bold;
 }
-
-.filter-section {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.filter-group {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.filter-group button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.filter-icon {
-  font-size: 18px;
-  margin-left: 900px;
-  color: #6c757d;
-  cursor: pointer;
-}
-
 .add-course-btn {
   padding: 10px 20px;
   background-color: #28a745;
@@ -42,23 +9,19 @@ h2 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px auto; /* Center the button horizontally */
+  display: block; /* Ensures the button takes its full width for centering */
 }
 
-@media (max-width: 768px) {
-  .add-course-btn {
 
-      align-items: center;
-      justify-content: center;
-  }
-}
 
 /* Course form */
 .course-form {
   background-color: #f8f9fa;
   padding: 20px;
   margin-top: 20px;
-  margin-left: 200px;
+  margin-left: auto;  /* Remove fixed margins */
+  margin-right: auto; /* Center the form horizontally */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -149,35 +112,35 @@ h2 {
   .course-image {
     margin-bottom: 15px;
   }
-}
-
-  .filter-section {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-    align-items: flex-start;
+  .course-form {
+    max-width: 90%; /* Allow the form to be smaller on smaller screens */
+    margin-left: auto;  /* Center the form */
+    margin-right: auto; /* Center the form */
   }
 
   .add-course-btn {
-    align-self: flex-end; 
-    align-items: center;
+    width: auto; /* Keep button auto-width on smaller screens */
+    align-self: center; /* Center within flex parent */
     justify-content: center;
-
   }
 
   .courses-section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduce minimum size on smaller screens */
   }
 
-
+}
 @media (max-width: 480px) {
+  .course-form {
+    max-width: 100%; /* Make sure the form takes full width on small screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+    margin-left: auto; /* Center the form */
+    margin-right: auto; /* Center the form */
+  }
+  
   .add-course-btn {
-    
-    align-items: center;
-    justify-content: center;
+    width: 100%; /* Make button full width on very small screens */
+    text-align: center; /* Ensure text is centered */
   }
-  .filter-group button {
-    width: 100%; /* Buttons take full width on very small screens */
-  }
-
   .course-card {
     padding: 15px;
     margin-top: 20px;
