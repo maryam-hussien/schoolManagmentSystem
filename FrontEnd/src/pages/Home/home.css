@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: flex-start;
   margin-top: 10px;
-  background: url('../../../public/assets/photo_2024-09-27_16-13-02.jpg') no-repeat center center;
+  background: url('../../../public/assets/home3.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 60px 20px;
@@ -46,7 +46,7 @@
 .info-section h2 {
   max-width: 400px;
   font-size: 25px;
-  color: #fff;
+  color: #0d5d69;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -62,7 +62,7 @@
 }
 .info-section p {
   opacity: 50;
-  color: #d3cdcd;
+  color: #7c7979;
   text-align: left;
   max-width: 500px;
   
@@ -71,17 +71,16 @@
 .learn-more-button {
   padding: 10px 20px;
   border: 1px solid #000000d1;
-  color: #1c1f23fa;
+  color: white;
   font-weight: bold;
-  background: transparent;
+  background: #507687;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .learn-more-button:hover {
-  background-color: #507687;
-  color: #000;
+  background-color: #364e58;
 }
 
 .features {
@@ -364,7 +363,7 @@
     align-items: center;
     justify-content: flex-start;
 
-    background: url('../../../public/assets/photo_2024-09-27_16-13-02.jpg') no-repeat center center;
+    background: url('../../../public/assets/home3.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
     padding: 60px 20px;
