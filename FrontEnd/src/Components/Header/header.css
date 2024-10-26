@@ -6,26 +6,41 @@
   z-index: 1000;
 }
 
+.bheader {
+  position: fixed;
+  width: 100%;
+  font-size: 20px;
+  z-index: 1000;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 1px solid #148b9c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #148b9c; 
+}
+
 .top-navbar {
   background-color: #148b9c;
   color: #fff;
   padding: 10px 0;
 }
+
 .butt {
   width: 157px;
   background-color: #148B9c;
   border: 1px solid white;
   border-radius: 12px;
-  outline: none;
   height: 44px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   margin-top: 3px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: background-color 0.5s ease;
 }
 
+.butt:hover {
+  background-color: #117a8b; /* Darker shade on hover */
+}
 
 .navyy {
   display: none;
@@ -33,9 +48,8 @@
   cursor: pointer;
   padding: 3px 8px;
   border-radius: 5px;
-  transition: 0.2s;
+  transition: background-color 0.2s;
 }
-
 
 .navyy div {
   width: 30px;
@@ -44,116 +58,64 @@
   background: #212526;
 }
 
-.sicon {
-  flex-grow: 1;
-}
-
-.sicon .d-flex {
-  margin-right: 15px;
-}
-
-.social-icons {
-  margin-right: auto;
-}
-
-.bheader {
-  
-  position: fixed;
-  width: 100%;
- 
-  font-size: 20px;
-  z-index: 1000;
-  color: black;
-  font-weight: bold;
-  border-bottom: 1px solid rgb(219, 216, 216);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #fff; 
-}
-
-
-.navbar-container {
+.navt {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-
-.logo-img {
-  height: 50px;
-  max-width: 100%;
-  object-fit: contain;
+  flex-direction: row;
 }
 
 .nav-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-
 
 .nav-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  position: relative;
   display: flex;
-  
 }
 
 .nav-menu ul li {
   padding: 15px;
- 
-  
 }
 
 .nav-menu ul li a {
-  color: #000;
+  color: #fff;
   padding: 0;
   text-decoration: none;
   display: block;
 }
 
+/* Active link styling */
+.nav-link.active {
+  color: #fff; /* Text color for the active link */
+  border-radius: 12px; /* Add rounded corners to the active link */
+  background-color: #148b9c; /* Background color for the active link */
+}
+
+.fw-semibold:hover {
+  color: #fff;
+}
+
 .nav-menu ul li a:hover {
-  background-color: #fd7899;
+  background-color: #148b9c;
   color: #fff;
   border-radius: 12px;
 }
-
 
 .nav-menu.open {
   display: flex;
   flex-direction: column; 
 }
 
-
 @media (max-width: 590.5px) {
   .navyy {
     display: block;
   }
-  .nav-menu ul li {
-    padding: 15px;
-    width: 100%;
-    border-bottom: 1px solid black;
-  }
-  
-  .bheader {
-  
-    position: fixed;
-    width: 100%;
- 
-    font-size: 20px;
-    z-index: 1000;
-    color: black;
-    font-weight: bold;
-    border-bottom: 1px solid rgb(219, 216, 216);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-  }
 
   .nav-menu {
-    display: none;
+    display: none; /* Hide by default */
     flex-direction: column; 
     position: absolute; 
     top: 100%;
@@ -170,33 +132,21 @@
     background-color: #148b9c;
     align-items: flex-start;
   }
+
+  .nav-menu ul li {
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
 }
-@media (1000px> width> 720.5px) {
+
+@media (min-width: 720.5px) and (max-width: 1000px) {
   .navyy {
     display: block;
   }
-  .nav-menu ul li {
-    padding: 15px;
-    width: 100%;
-    border-bottom: 1px solid black;
-  }
-  
-  .bheader {
-  
-    position: fixed;
-    width: 100%;
-  
-    font-size: 20px;
-    z-index: 1000;
-    color: black;
-    font-weight: bold;
-    border-bottom: 1px solid rgb(219, 216, 216);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-  }
 
   .nav-menu {
-    display: none;
+    display: none; /* Hide by default */
     flex-direction: column; 
     position: absolute; 
     top: 100%;
@@ -213,4 +163,46 @@
     background-color: #148b9c;
     align-items: flex-start;
   }
+
+  .nav-menu ul li {
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+}
+
+.login-icon {
+  color: #000; 
+  padding: 0.5rem;
+  display: flex; 
+  align-items: center; 
+}
+
+.nohover {
+  color: #000;
+  font-weight: bold;
+}
+
+.login-icon:hover {
+  color: #000; 
+}
+
+.login-icon svg {
+  cursor: pointer;
+  margin: 0; 
+  padding: 0;
+  transition: none; 
+}
+
+.logo-img {
+  height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.navbar-brand{
+  cursor: pointer;
+}
+
+.logo-img:hover {
+  background-color: none;
 }

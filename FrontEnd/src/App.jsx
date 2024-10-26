@@ -10,6 +10,7 @@ import Course from "./pages/Courses/Course"
 import Chatbot from "./pages/Chatbot/Chatbot";
 import Social from "./pages/Social/Social"
 
+
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Authentication />} />
         <Route path='/course/*' element={<Course/>}/>
         <Route path="/dashboard/*" element={<DashHome />} />
+        
         <Route path ="/chatbot" element ={<Chatbot/>} />
       </Routes>
     </Router>

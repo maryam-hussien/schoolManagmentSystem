@@ -7,23 +7,23 @@ const Slide = () => {
     const slides = [
         {
             imgSrc: "/assets/download (1).jpg",
-            title: "John Doe",
+            title: "Jenny Doe",
         },
         {
             imgSrc: "/assets/download (2).jpg",
-            title: "Jane Smith",
+            title: "Olivia Davis",
         },
         {
             imgSrc: "/assets/download (3).jpg",
-            title: "Emily Johnson",
-        },
-        {
-            imgSrc: "/assets/download.jpg",
             title: "Michael Brown",
         },
         {
+            imgSrc: "/assets/download.jpg",
+            title: "Emily Johnson",
+        },
+        {
             imgSrc: "/assets/images.jpg",
-            title: "Olivia Davis",
+            title: "Jane Smith",
         },
     ];
 

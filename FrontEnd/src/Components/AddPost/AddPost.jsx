@@ -36,13 +36,13 @@ const AddPost = ({ onAddPost }) => {
   return (
     <div className="card mb-4 AddPost">
       <div className="card-body">
-        <h5 className="card-title mb-4 ">New Post</h5>
+        <h5 className="card-title mb-4 ">Add Post</h5>
 
         <form onSubmit={handleSubmit}>
-          <div className="d-flex align-items-start mb-3 flex-wrap mt-1"> 
+          <div className="d-flex align-items-start mb-3 flex-wrap mt-1 w-75"> 
             <img
               src="https://via.placeholder.com/40"
-              alt="Profile"
+              alt="none"
               className="rounded-circle me-3"
             />
             <div className="flex-grow-1">

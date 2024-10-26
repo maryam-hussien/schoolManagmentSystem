@@ -26,7 +26,7 @@
 
 
 .containen {
-  font-family: Lucida Handwriting;
+  font-family: sans-serif;
   position: relative;
   width: 100%;
   background-color: #fff;
@@ -61,7 +61,7 @@
 }
 
 .signin-signup {
-  font-family: Lucida Handwriting;
+  font-family: sans-serif;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -176,6 +176,20 @@ small {
   width: 250px;
   font-size: 13px;
 }
+input[type="email"].input3, input[type="text"].input3, input[type="tel"].input3 {
+  width: 100%;
+  background-color: #fff; 
+  margin: 16px 0;
+  font-family: sans-serif, cursive;
+  height: 62px;
+  text-decoration: none;
+  border: 1px solid #148B9c;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
 
 #checkbox-error {
   color: #BE4040;
@@ -238,7 +252,7 @@ small {
   height: 20px;
 }
 
-input {
+.input3 {
   width: 100%;
   background-color: #fff; 
   margin: 16px 0;
