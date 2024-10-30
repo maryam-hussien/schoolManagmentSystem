@@ -3,6 +3,7 @@ import Students from "../../../../public/data/studentsapi";
 import Level from '../../DashComponents/selectedLevel/Level'; // Import the Level component
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "./DashAttandane.css"
 
 
 function DashAttendance() {
@@ -57,9 +58,11 @@ function DashAttendance() {
         />
       </form>
 
-      <div className="attend-table">
+      <div className="dashAttendance">
+        <h5 className="text-center mt-4 mb-2">Existing Students</h5>
         <table className="table table-responsive">
         <thead>
+
             <tr>
               <th>ID</th>
               <th>Name</th>
@@ -70,6 +73,7 @@ function DashAttendance() {
             </tr>
           </thead>
           <tbody>
+
             {filteredStudents.length > 0 ? (
               filteredStudents.map((student) => (
                 <tr key={student.id}>

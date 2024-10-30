@@ -81,7 +81,7 @@ const DashSchedule = () => {
 
       <h5 className="text-center mt-4 mb-2">Existing Schedules</h5>
       {/* Display added schedules */}
-      <table className="table">
+      <table className="table table-responsive">
         <thead>
           <tr>
             <th>Level</th>
