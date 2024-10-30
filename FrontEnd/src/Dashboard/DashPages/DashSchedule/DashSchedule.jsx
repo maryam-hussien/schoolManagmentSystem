@@ -79,7 +79,7 @@ const DashSchedule = () => {
         showSubject={true}
       />
 
-      <h5 className="text-center mt-4 mb-2">Existing Schedules</h5>
+      <h5 className="text-center mt-4 mb-2">Students Schedules Dashboard :</h5>
       {/* Display added schedules */}
       <table className="table table-responsive">
         <thead>
