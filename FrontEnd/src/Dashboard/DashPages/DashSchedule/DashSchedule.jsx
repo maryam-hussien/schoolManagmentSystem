@@ -1,6 +1,8 @@
 import { useState } from "react";
 import './DashSchedule.css';
 import Level from '../../DashComponents/selectedLevel/Level'; // Import the new component
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DashSchedule = () => {
   const [level, setLevel] = useState("");
@@ -16,7 +18,11 @@ const DashSchedule = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+    const { level, grade, timeSlot, subject, day } = formData;
+  if (!level || !grade || !timeSlot || !subject || !day) {
+    toast.error('Please fill in all fields before submitting');
+    return;
+  }
     if (editingIndex !== null) {
       // Update the existing schedule entry
       setSchedule((prevSchedules) => {
@@ -24,10 +30,11 @@ const DashSchedule = () => {
         updatedSchedules[editingIndex] = formData; // Update the specific entry
         return updatedSchedules;
       });
-      setEditingIndex(null); // Reset editing index
+      toast.success('Schedule updated successfully');
+      setEditingIndex(null);
     } else {
-      // Add new schedule
       setSchedule((prevSchedules) => [...prevSchedules, formData]);
+      toast.success('Schedule added successfully');
     }
   
     // Reset the form fields
@@ -49,10 +56,14 @@ const DashSchedule = () => {
 
   const handleDelete = (index) => {
     setSchedule((prevSchedules) => prevSchedules.filter((_, i) => i !== index));
+    toast.info('Schedule deleted');
+
   };
 
   return (
     <div className="manage-schedules">
+                  <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
+
       <h3 className="text-start mb-4">Manage Schedules</h3>
 
       <Level 

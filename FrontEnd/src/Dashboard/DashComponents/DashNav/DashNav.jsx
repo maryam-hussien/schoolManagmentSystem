@@ -12,7 +12,7 @@ const DashNav = () => {
   return (
     <div className='d-flex topSideBar' onClick={handleClick} style={{ cursor: 'pointer' }}>
       <img src={img} alt="Brand Logo" className="logo-img" />
-      <span className='fw-semibold'>SCHOOL TEAM</span>
+      <span className='fw-semibold dashNavTitle'>SCHOOL TEAM</span>
     </div>
   );
 }

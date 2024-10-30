@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Students from "../../../../public/data/studentsapi";
 import Level from '../../DashComponents/selectedLevel/Level'; // Import the Level component
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function DashAttendance() {
   const [level, setLevel] = useState("");
@@ -21,16 +24,24 @@ function DashAttendance() {
       ));    
       // Optional: Log the filtered students for debugging
     } else {
-      alert("Please select both level and grade."); // Alert if either is not selected
-    }
+        toast.error("Please select both level and grade.");
+          }
   };
   
   const markAttendance = (studentId, attended) => {
+    toast.info(`Student ID: ${studentId} marked as ${attended ? 'Attended' : 'Absent'}`);
+
+    // Remove the student from the filtered list
+    setFilteredStudents(prevStudents => 
+      prevStudents.filter(student => student.id !== studentId)
+    );
    console.log(studentId , attended);
    
   };
   return (
     <div className="dashAttendance w-100 ">
+            <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
+
         <h3 className=" text-start mb-4">Student Attendance Dashboard:</h3>
 
       <form className="filters mb-3">
