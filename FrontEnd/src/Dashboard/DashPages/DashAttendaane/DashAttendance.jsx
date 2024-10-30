@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import Students from "../../../../public/data/studentsapi";
 import Level from '../../DashComponents/selectedLevel/Level'; // Import the Level component
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "./DashAttandane.css"
+
 
 function DashAttendance() {
   const [level, setLevel] = useState("");
@@ -21,17 +25,25 @@ function DashAttendance() {
       ));    
       // Optional: Log the filtered students for debugging
     } else {
-      alert("Please select both level and grade."); // Alert if either is not selected
-    }
+        toast.error("Please select both level and grade.");
+          }
   };
   
   const markAttendance = (studentId, attended) => {
+    toast.info(`Student ID: ${studentId} marked as ${attended ? 'Attended' : 'Absent'}`);
+
+    // Remove the student from the filtered list
+    setFilteredStudents(prevStudents => 
+      prevStudents.filter(student => student.id !== studentId)
+    );
    console.log(studentId , attended);
    
   };
   return (
     <div className="dashAttendance w-100 ">
-        <h3 className=" text-start mb-4">Student Attendance Dashboard:</h3>
+            <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
+
+        <h3 className=" text-start mb-4">Students Attendance Dashboard:</h3>
 
       <form className="filters mb-3">
         {/* Use Level component for level and grade selection */}
@@ -46,9 +58,11 @@ function DashAttendance() {
         />
       </form>
 
-      <div className="attend-table">
+      <div className="dashAttendance">
+        <h5 className="text-center mt-4 mb-2">Existing Students</h5>
         <table className="table table-responsive">
         <thead>
+
             <tr>
               <th>ID</th>
               <th>Name</th>
@@ -59,6 +73,7 @@ function DashAttendance() {
             </tr>
           </thead>
           <tbody>
+
             {filteredStudents.length > 0 ? (
               filteredStudents.map((student) => (
                 <tr key={student.id}>

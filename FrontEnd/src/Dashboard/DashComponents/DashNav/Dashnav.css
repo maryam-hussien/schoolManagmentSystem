@@ -9,6 +9,9 @@
   text-decoration: none; /* Remove underline from links */
   color: inherit; /* Use the inherited text color */
 }
+.dashNavTitle:hover{
+color: black;
+}
 
 /* Media query for small screens */
 @media (max-width: 768px) {
