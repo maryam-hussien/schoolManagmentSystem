@@ -1,5 +1,7 @@
 .header {
   position: fixed;
+  
+ font-family: 'Outfit';
   top: 0;
   left: 0;
   width: 100%;
@@ -13,16 +15,12 @@
   z-index: 1000;
   color: #fff;
   font-weight: bold;
-  border-bottom: 1px solid #148b9c;
+  border-bottom: 1px solid #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #148b9c; 
+  background-color: #fff; 
 }
 
-.top-navbar {
-  background-color: #148b9c;
-  color: #fff;
-  padding: 10px 0;
-}
+
 
 .butt {
   width: 157px;
@@ -81,7 +79,7 @@
 }
 
 .nav-menu ul li a {
-  color: #fff;
+  color: #000;
   padding: 0;
   text-decoration: none;
   display: block;

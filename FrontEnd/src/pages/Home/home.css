@@ -55,11 +55,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.all{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
+
 .info-section p {
   opacity: 50;
   color: #d3cdcd;
@@ -101,10 +97,11 @@
   border-radius: 10px;
   padding: 15px;
   width: calc(50% - 20px);
-  max-width: 250px;
+  max-width: 290px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  height: 200px;
 }
 
 .feature-card h3 {
@@ -350,7 +347,7 @@
  
 
 }
-@media(max-width:1024px){
+@media(max-width:1500px){
   .info-section{
     padding: 50px;
   }
@@ -358,6 +355,10 @@
     padding: 50px 90px;
     background-color: #f9f9f9;
     text-align: center;
+  }
+  .feature-card {
+    width: calc(100% - 20px);
+    max-width: 190px;
   }
   .hero-section {
     display: flex;
@@ -439,9 +440,10 @@
     padding: 15px;
   }
   .feature-card {
-    width: calc(50% - 20px);
-    min-width: 200px;
-  }
+    width: calc(20% - 20px); /* Adjusted for better distribution */
+    max-width: 220px; /* Ensures a minimum size */
+}
+
   .hero-text{
     max-width: 300px;
   }
@@ -495,10 +497,17 @@
     left: 10px;
   }
 
-.feature-card {
-    width: calc(100% - 20px);
-    min-width: 150px;
-  }
+  .feature-card {
+    width: 100%; /* Take full width of the slider */
+    max-width: 190px; /* Optional: restricts max width */
+    margin: 0 auto; /* Center card */
+    padding: 20px; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for a better look */
+    text-align: center; /* Center text */
+    background: #fff; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+}
+
 }
 
 .smarty-programs {
@@ -549,3 +558,29 @@
     height: 480px;
   }
 }
+
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.slick-slider {
+  width: 100%;
+}
+
+
+
+.feature-card:hover {
+  transform: scale(1.05); 
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #148B9c;
+  margin-bottom: 10px;
+}
+
+
+
