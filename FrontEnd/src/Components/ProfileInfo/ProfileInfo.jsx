@@ -21,9 +21,13 @@ const ProfileInfo = () => {
       <div>6</div>
     </div>
 
-    <div className=' opacity-75 mb-1'>
+    <div className=' opacity-75 border-bottom border-secondary mb-1'>
       <div className='fs-6 fw-medium'>Phone Number</div>
       <div>01100297301</div>
+    </div>
+    <div className=' opacity-75 mb-1'>
+      <div className='fs-6 fw-medium'>Address</div>
+      <div>cairo</div>
     </div>
     </div>
     <div className='ProfilecontentSection mt-3 px-4 py-3  fs-6 lh-lg m-auto'>
