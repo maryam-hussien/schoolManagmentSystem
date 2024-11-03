@@ -3,10 +3,9 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import Smarty from '../../Components/Home/Smarty';
 import First from '../../Components/Home/First';
-
 import Logos from '../../Components/Home/Logos';
 import Test from '../../Components/Home/Test';
-import Core from '../../Components/Home/Core';
+import Core from '../../features/home/Core'
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const navigate = useNavigate();
@@ -33,10 +32,10 @@ const Home = () => {
       
          <First />
          <Smarty />
-
+         <Core />
          <Logos />
          <Test />
-         <Core />
+         
         </div>
       <Footer />
     </>

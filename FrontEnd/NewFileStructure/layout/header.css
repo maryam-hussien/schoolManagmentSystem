@@ -1,4 +1,4 @@
-@import url('../../../../FrontEnd/public/assets/Global.css');
+@import url('../assets/Global.css');
 .header {
   font-family: var(--titleFont);
   position: fixed;

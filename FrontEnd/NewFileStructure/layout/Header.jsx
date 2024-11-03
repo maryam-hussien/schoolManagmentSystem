@@ -1,8 +1,8 @@
 import './header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import img from '../../../public/assets/730005bd39661bcd3959d4dad27f9d5b-removebg-preview.png';
-import imag from '../../../public/assets/33f54f271b2de59273f34e582a00e05e.png'
+import img from '../../assets/Images/730005bd39661bcd3959d4dad27f9d5b-removebg-preview.png';
+import imag from '../../assets/Images/33f54f271b2de59273f34e582a00e05e.png'
 import { NavLink, useNavigate } from 'react-router-dom'; 
 import { useState } from 'react';
 
