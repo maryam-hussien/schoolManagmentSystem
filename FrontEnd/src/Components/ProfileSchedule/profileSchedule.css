@@ -4,12 +4,12 @@
   padding: 1.5rem;
 }
 /* Default table styling */
-table.table th, table.table td {
+.ProfileScheduleSection  table.table th, table.table td {
   text-align: center; /* Center align text in all cells */
   vertical-align: middle; /* Vertically center text */
 }
 
-table.table thead th {
+.ProfileScheduleSection table.table thead th {
   background-color: #148B9c; /* Dark green for header background */
   color: white; /* White text in the header */
 }
@@ -22,11 +22,11 @@ table.table thead th {
   }
 
   /* Make table more compact on small screens */
-  table.table {
+  .ProfileScheduleSection table.table {
     font-size: 0.85rem; /* Reduce font size further */
   }
 
-  table.table td, table.table th {
+  .ProfileScheduleSection table.table td, table.table th {
     padding: 0.2rem; /* Reduce padding */
     width: auto; /* Let the width of cells adjust dynamically */
   }
@@ -40,28 +40,28 @@ table.table thead th {
   }
 
   /* Decrease font size and remove padding */
-  table.table {
+  .ProfileScheduleSection table.table {
     font-size: 0.75rem; /* Reduce font size more for phones */
   }
 
-  table.table td, table.table th {
+  .ProfileScheduleSection table.table td, table.table th {
     padding: 0.15rem; /* Further reduce padding */
     width: auto; /* Adjust width dynamically */
   }
 
-  table.table td {
+  .ProfileScheduleSection table.table td {
     word-break: break-word; /* Break long words for better wrapping */
   }
 
   /* Wrap the table on smaller screens */
-  .table-responsive {
+  .ProfileScheduleSection .table-responsive {
     overflow-x: auto;
     display: block;
     white-space: nowrap; /* Prevent columns from being squeezed */
   }
 
   /* Ensure td wraps when necessary */
-  table.table td, table.table th {
+  .ProfileScheduleSection table.table td, table.table th {
     white-space: normal; /* Allow the content to wrap in cells */
   }
 }

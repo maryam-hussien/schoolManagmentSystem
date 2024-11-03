@@ -1,5 +1,4 @@
 
-
 .submit-btn {
   margin-top: 10px;
   padding: 0.5rem;
@@ -8,13 +7,6 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.table {
-  margin-top: 20px;
-  width: 80%; /* Keep the table centered with a reduced width */
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .schedulebtns {
@@ -41,14 +33,14 @@
   color: white;
 }
 /* Center the table, reduce its width, and add margins */
-.table {
+.manage-schedules.table {
   width: 80%; /* Reduce the table width */
-  margin: 0 auto; /* Center the table by adding automatic margins */
+  margin: 20px auto; /* Center the table by adding automatic margins */
   border-collapse: collapse;
   overflow-x: auto; /* Enable horizontal scrolling */
 }
 
-.table th, .table td {
+.manage-schedules .table th,.manage-schedules .table td {
   padding: 12px; /* Add padding for table cells */
   text-align: left;
   border: 1px solid #ddd; /* Add border to cells for clear separation */
@@ -78,42 +70,33 @@
   color: white;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 425px) {
-  .table {
-    width: 100%; /* Allow table to take up full width on small screens */
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    display: block; /* Display table as a block element to scroll */
-    margin: auto;
+
+/* Styling for extra small screens (phones and below) */
+@media (max-width: 576px) {
+
+
+  /* Decrease font size and remove padding */
+  .manage-schedules .table {
+    font-size: 0.75rem; /* Reduce font size more for phones */
   }
 
-  .table thead, .table tbody, .table th, .table td, .table tr {
-    display: block; /* Display table rows and cells as blocks */
+  .manage-schedules table.table td, .manage-schedules table.table th {
+    padding: 0.15rem; /* Further reduce padding */
+    width: auto; /* Adjust width dynamically */
   }
 
-  .table tr {
-    margin-bottom: 10px; /* Add margin between rows */
-    
+  
+
+  /* Wrap the table on smaller screens */
+  .manage-schedules .table-responsive {
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap; /* Prevent columns from being squeezed */
   }
 
-  .table th {
-    position: absolute; /* Keep headers visible when scrolling */
-    top: -9999px;
-    left: -9999px;
+  /* Ensure td wraps when necessary */
+  .manage-schedules table.table td, table.table th {
+    white-space: normal; /* Allow the content to wrap in cells */
   }
-
-  .table td {
-    border: none;
-    padding: 8px;
-    position: relative;
-    padding-left: 50%;
-  }
-.scheduleedit-btn, .scheduledelete-btn {
-width: 30%;
 }
-.submit-btn {
-  width: fit-content;
-font-size: 12px;
 
-}
-}

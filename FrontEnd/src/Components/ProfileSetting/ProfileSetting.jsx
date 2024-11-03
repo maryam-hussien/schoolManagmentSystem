@@ -31,7 +31,7 @@ const ProfileSetting = () => {
           </div>
         </div>
         <div className="mt-4 d-flex justify-content-end">
-        <button className="btn btn-primary" type="button">Log Out</button>
+        <button className="btn btn-danger" type="button">Log Out</button>
 </div>
     </div>
   )

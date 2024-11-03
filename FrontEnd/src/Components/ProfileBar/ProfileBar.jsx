@@ -1,45 +1,55 @@
 import { NavLink } from 'react-router-dom';
-import './ProfileBar.css'
+import './ProfileBar.css';
+
 const ProfileBar = () => {
   return (
     <>
       <NavLink 
-        to="/profile" 
-        className="text-white text-decoration-none" 
-        activeClassName="active"
+        to="/profile/info" 
+        className={({ isActive }) => 
+          isActive ? "text-white text-decoration-none active" : "text-white text-decoration-none"
+        }
       >
         Info
       </NavLink>
+
       <NavLink 
-        to="schedule" 
-        className="text-white text-decoration-none" 
-        activeClassName="active"
+        to="/profile/schedule" 
+        className={({ isActive }) => 
+          isActive ? "text-white text-decoration-none active" : "text-white text-decoration-none"
+        }
       >
         Schedule
       </NavLink>
+
       <NavLink 
-        to="attendence" 
-        className="text-white text-decoration-none" 
-        activeClassName="active"
+        to="/profile/attendence" 
+        className={({ isActive }) => 
+          isActive ? "text-white text-decoration-none active" : "text-white text-decoration-none"
+        }
       >
         Attendance
       </NavLink>
+
       <NavLink 
-        to="score" 
-        className="text-white text-decoration-none" 
-        activeClassName="active"
+        to="/profile/score" 
+        className={({ isActive }) => 
+          isActive ? "text-white text-decoration-none active" : "text-white text-decoration-none"
+        }
       >
         Scores
       </NavLink>
+
       <NavLink 
-        to="settings" 
-        className="text-white text-decoration-none" 
-        activeClassName="active"
+        to="/profile/settings" 
+        className={({ isActive }) => 
+          isActive ? "text-white text-decoration-none active" : "text-white text-decoration-none"
+        }
       >
         Settings
       </NavLink>
     </>
-  )
+  );
 }
 
-export default ProfileBar
+export default ProfileBar;

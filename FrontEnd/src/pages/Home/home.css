@@ -9,42 +9,21 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 130px;
-  background: url('../../../public/assets/photo_2024-09-27_16-13-02.jpg') no-repeat center center;
+  margin-top: 10px;
+  background: url('../../../public/assets/home3.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 60px 20px;
-  height: 520px;
+  margin-top: 70px;
+  height: 620px;
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  font-family: Lucida Handwriting;
-  text-align: left;
-  z-index: 2;
-  max-width: 400px;
-  padding: 20px;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  animation: slideInFromLeft 2s ease-in-out;
-}
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+
+
 
 .smarty {
   align-items: center;
@@ -57,15 +36,18 @@
 }
 
 .info-section {
-  text-align: center;
-  padding: 50px;
-  background-color: #fff;
+  text-align: left;
+  padding: 145px;
+
   margin-top: 0;
-  max-width: 100%;
+  
 }
 
 .info-section h2 {
-  color: #333;
+  max-width: 400px;
+  font-size: 25px;
+  color: #0d5d69;
+  text-align: left;
   margin-bottom: 20px;
 }
 .info-and-features{
@@ -73,36 +55,35 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.all{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
+
 .info-section p {
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto 20px;
+  opacity: 50;
+  color: #7c7979;
+  text-align: left;
+  max-width: 500px;
+  
 }
 
 .learn-more-button {
   padding: 10px 20px;
-  border: 1px solid #007bff;
-  color: #007bff;
-  background: transparent;
+  border: 1px solid #000000d1;
+  color: white;
+  font-weight: bold;
+  background: #507687;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .learn-more-button:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #364e58;
 }
 
 .features {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
   margin-top: 40px;
 }
 .feature-card:hover{
@@ -115,10 +96,11 @@
   border-radius: 10px;
   padding: 15px;
   width: calc(50% - 20px);
-  max-width: 250px;
+  max-width: 290px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  height: 200px;
 }
 
 .feature-card h3 {
@@ -219,7 +201,6 @@
   color: #333;
   text-align: center;
   margin-bottom: 30px;
-  text-shadow: 2px 2px 5px #dc3545;
 }
 
 .testimonial-container {
@@ -232,7 +213,6 @@
   background-color: #fff;
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
   margin-bottom: 20px;
@@ -296,7 +276,6 @@
   color: #333;
   margin-bottom: 30px;
   text-align: center;
-  text-shadow: 2px 2px 5px #148B9c;
 }
 
 .course-cards {
@@ -355,30 +334,37 @@
   margin: 10px 0;
 }
 .logos{
-  margin: 0 auto 60px; 
+  margin: 30px auto 80px; 
   align-items: center;
   text-align: center;
 }
 .logos .img1{
-  width: 200px;
+  width: 250px;
 }
 .logos h2{
   color: black;
- text-shadow: 2px 2px 5px darkblue;
+ 
 
 }
-@media(max-width:1024px){
+@media(max-width:1500px){
+  .info-section{
+    padding: 50px;
+  }
   .core-values-section {
     padding: 50px 90px;
     background-color: #f9f9f9;
     text-align: center;
   }
+  .feature-card {
+    width: calc(100% - 20px);
+    max-width: 190px;
+  }
   .hero-section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 130px;
-    background: url('../../../public/assets/photo_2024-09-27_16-13-02.jpg') no-repeat center center;
+
+    background: url('../../../public/assets/home3.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
     padding: 60px 20px;
@@ -389,10 +375,8 @@
   }
 }
 @media (max-width: 850px) {
-  .all{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .info-section{
+    padding: 30px;
   }
   .coursecard {
     width: calc(100% - 40px);
@@ -455,15 +439,19 @@
     padding: 15px;
   }
   .feature-card {
-    width: calc(50% - 20px);
-    min-width: 200px;
-  }
+    width: calc(20% - 20px); /* Adjusted for better distribution */
+    max-width: 220px; /* Ensures a minimum size */
+}
+
   .hero-text{
     max-width: 300px;
   }
 }
 
 @media (max-width: 480px) {
+  .info-section{
+    padding: 20px;
+  }
   .testimonial-card {
     padding: 15px;
   }
@@ -473,11 +461,7 @@
   .testimonial-section h2 {
     font-size: 2em;
   }
-  .all{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  
   .testimonial-image {
     width: 60px;
     height: 60px;
@@ -504,7 +488,7 @@
   }
   .hero-section {
     height: 500px;
-    margin-top: 180px;
+  
     padding: 20px 10px;
   }
 
@@ -512,10 +496,17 @@
     left: 10px;
   }
 
-.feature-card {
-    width: calc(100% - 20px);
-    min-width: 150px;
-  }
+  .feature-card {
+    width: 100%; /* Take full width of the slider */
+    max-width: 190px; /* Optional: restricts max width */
+    margin: 0 auto; /* Center card */
+    padding: 20px; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for a better look */
+    text-align: center; /* Center text */
+    background: #fff; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+}
+
 }
 
 .smarty-programs {
@@ -566,3 +557,29 @@
     height: 480px;
   }
 }
+
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.slick-slider {
+  width: 100%;
+}
+
+
+
+.feature-card:hover {
+  transform: scale(1.05); 
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #148B9c;
+  margin-bottom: 10px;
+}
+
+
+
