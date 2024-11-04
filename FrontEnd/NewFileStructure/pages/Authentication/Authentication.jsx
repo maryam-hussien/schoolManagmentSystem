@@ -2,8 +2,7 @@ import { useState } from "react";
 import './authentication.css';
 import { useNavigate } from 'react-router-dom'; 
 import { Envelope, Lock } from 'react-bootstrap-icons';
-import img from '../../../public/assets/child1.jpg';
-
+import img from '../../assets/Images/child1.jpg';
 function Authentication() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

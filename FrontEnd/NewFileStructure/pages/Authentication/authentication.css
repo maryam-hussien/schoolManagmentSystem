@@ -1,4 +1,4 @@
-@import url('../../../public/assets/Global.css');
+@import url('../../assets/Global.css');
 
 .container {
   display: flex;
