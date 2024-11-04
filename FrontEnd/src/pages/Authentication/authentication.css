@@ -28,7 +28,7 @@
   box-sizing: border-box;
 }
 
-.image-container {
+.imagecont {
   align-items: center;
   box-sizing: border-box;
 }
@@ -104,15 +104,16 @@
   background-color: #0e6e7a;
 }
 
-.image-container {
+.imagecont {
   display: none;
   background-color: #E5FCFF;
   align-items: center;
   justify-content: center;
 }
 
-.image-container img {
+.imagecont img {
   width: 100%;
+  height: 100%; 
   max-width: 600px;
   border-top-left-radius: 50px;
   object-fit: cover;
@@ -123,11 +124,11 @@
     flex-direction: row;
   }
 
-  .form-container, .image-container {
+  .form-container, .imagecont {
     width: 50%; 
   }
 
-  .image-container {
+  .imagecont {
     display: flex; 
   }
 }

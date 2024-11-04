@@ -69,7 +69,7 @@ function Authentication() {
             <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
           </form>
         </div>
-        <div className="image-container">
+        <div className="imagecont">
           <img src={img} alt="Student" />
         </div>
       </div>
