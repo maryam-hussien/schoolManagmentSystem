@@ -34,7 +34,7 @@ function Authentication() {
   };
 
   return (
-    <div className="container">
+    <div className="containen">
       <div className="mixed">
         <div className="form-container">
           <h1>Welcome to School Team</h1>
