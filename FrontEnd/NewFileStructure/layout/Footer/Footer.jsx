@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "./footer.css"
-import footerImg from "../../assets/images/public/assets/Cityscapes - Town.png"
+import footerImg from "../../assets/images/Cityscapes - Town.png"
 import { EnvelopeAt , TelephoneFill, SuitHeartFill  } from 'react-bootstrap-icons';
 import { Facebook, Twitter, Instagram } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className="position-static bottom-0 w-100  footerColor pt-2  d-flex flex-column ">
       <div className='d-flex flex-row justify-content-evenly align-items-center footerFont flex-wrap '>
@@ -115,4 +115,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer

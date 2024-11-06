@@ -5,6 +5,7 @@ import First from '../../features/home/First';
 import Logos from '../../features/home/Logos';
 import Test from '../../features/home/Test';
 import Core from '../../features/home/Core'
+import Footer from '../../layout/Footer/Footer'
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Home = () => {
          <Test />
          
         </div>
+        <Footer/>
     </>
   );
 };
