@@ -1,14 +1,14 @@
-import coreValue1 from '../../../public/assets/4488f2b7aa2c953fbadd15fc51ce62bf.jpg';
-import coreValue2 from '../../../public/assets/1249636d803793f0d04ae77ab50097c7.jpg';
-import coreValue3 from '../../../public/assets/ai-generated-8659303_1280.jpg';
-import coreValue4 from '../../../public/assets/child-2835430_1280.jpg';
+import coreValue1 from '../../assets/Images/4488f2b7aa2c953fbadd15fc51ce62bf.jpg';
+import coreValue2 from '../../assets/Images/1249636d803793f0d04ae77ab50097c7.jpg';
+import coreValue3 from '../../assets/Images/ai-generated-8659303_1280.jpg';
+import coreValue4 from '../../assets/Images/assets/child-2835430_1280.jpg';
 import '../../pages/Home/home.css';
 const  Core =()=>  {
 
     return (
      <>
       <section className="core-values-section ">
-  <h2>Our <span style={{color:'rgb(10, 80, 91)'}}>Core</span> Values</h2>
+      <h2>Our <span style={{color:'rgb(10, 80, 91)'}}>Core</span> Values</h2>
   <div className="core-values-grid ">
     <div className="core-value-card">
       <img src={coreValue1} alt="Learning & Fun" className="core-value-image" />

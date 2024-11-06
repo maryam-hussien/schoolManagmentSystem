@@ -1,6 +1,6 @@
 import '../../pages/Home/home.css';
-import parent1 from '../../../public/assets/4eb3c3ef5c0cd7a4b05da47602427c97.jpg';
-import parent2 from '../../../public/assets/e26a33b95639e3b1621446a42f47faaa.jpg';
+import parent1 from '../../assets/Images/4eb3c3ef5c0cd7a4b05da47602427c97.jpg';
+import parent2 from '../../assets/Images/e26a33b95639e3b1621446a42f47faaa.jpg';
 import { useNavigate } from 'react-router-dom';
 const Test=()=> {
     const navigate = useNavigate();

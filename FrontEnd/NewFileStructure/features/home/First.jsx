@@ -25,13 +25,13 @@ const First = () => {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3, // Show 2 slides on smaller tablets
+                    slidesToShow: 3,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1, // Show 1 slide on small screens
+                    slidesToShow: 1,
                 }
             }
         ]
@@ -40,9 +40,7 @@ const First = () => {
     return (
         <>
         <h1 style={{textAlign:'center',marginTop:'50px',display:'flex',alignItems:'center',justifyContent:'center'}}>Discover Our <span style={{color:' #0A505B',marginLeft:'8px',marginRight:'8px'}}>High</span> Quality</h1>
-       
         <div className='all'>
-        
             <Slider {...settings}>
                 <div className="feature-card">
                     <FaSchool className="feature-icon" />

@@ -1,6 +1,6 @@
-@import url('../../../public/assets/Global.css');
+@import url('../../assets/Global.css');
 
-.containen {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
   box-sizing: border-box;
 }
 
-.imagecont {
+.image-container {
   align-items: center;
   box-sizing: border-box;
 }
@@ -104,16 +104,15 @@
   background-color: #0e6e7a;
 }
 
-.imagecont {
+.image-container {
   display: none;
   background-color: #E5FCFF;
   align-items: center;
   justify-content: center;
 }
 
-.imagecont img {
+.image-container img {
   width: 100%;
-  height: 100%; 
   max-width: 600px;
   border-top-left-radius: 50px;
   object-fit: cover;
@@ -124,11 +123,11 @@
     flex-direction: row;
   }
 
-  .form-container, .imagecont {
+  .form-container, .image-container {
     width: 50%; 
   }
 
-  .imagecont {
+  .image-container {
     display: flex; 
   }
 }
