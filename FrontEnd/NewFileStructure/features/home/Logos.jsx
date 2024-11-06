@@ -1,8 +1,8 @@
 
-import school1 from '../../assets/Images/download (1).png';
-import school2 from '../../assets/Images/download (2).png';
-import school3 from '../../assets/Images/download3.jpg';
-import school4 from '../../assets/Images/download (4).jpg';
+import school1 from '../../assets/images/download (1).png';
+import school2 from '../../assets/images/download (2).png';
+import school3 from '../../assets/images/download3.jpg';
+import school4 from '../../assets/images/download (4).jpg';
 import '../../pages/Home/home.css';
 
 const Logos=()=> {

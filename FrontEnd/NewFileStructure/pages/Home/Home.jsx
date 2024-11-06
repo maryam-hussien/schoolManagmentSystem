@@ -1,10 +1,9 @@
 import './home.css';
-import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';
-import Smarty from '../../Components/Home/Smarty';
-import First from '../../Components/Home/First';
-import Logos from '../../Components/Home/Logos';
-import Test from '../../Components/Home/Test';
+import Header from '../../layout/NavBar/Header';
+import Smarty from '../../features/home/Smarty';
+import First from '../../features/home/First';
+import Logos from '../../features/home/Logos';
+import Test from '../../features/home/Test';
 import Core from '../../features/home/Core'
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
@@ -37,7 +36,6 @@ const Home = () => {
          <Test />
          
         </div>
-      <Footer />
     </>
   );
 };

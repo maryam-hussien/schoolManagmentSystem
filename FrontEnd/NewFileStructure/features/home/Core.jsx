@@ -1,7 +1,7 @@
-import coreValue1 from '../../assets/Images/4488f2b7aa2c953fbadd15fc51ce62bf.jpg';
-import coreValue2 from '../../assets/Images/1249636d803793f0d04ae77ab50097c7.jpg';
-import coreValue3 from '../../assets/Images/ai-generated-8659303_1280.jpg';
-import coreValue4 from '../../assets/Images/assets/child-2835430_1280.jpg';
+import coreValue1 from '../../assets/images/4488f2b7aa2c953fbadd15fc51ce62bf.jpg';
+import coreValue2 from '../../assets/images/1249636d803793f0d04ae77ab50097c7.jpg';
+import coreValue3 from '../../assets/images/ai-generated-8659303_1280.jpg';
+import coreValue4 from '../../assets/images/child-2835430_1280.jpg';
 import '../../pages/Home/home.css';
 const  Core =()=>  {
 
