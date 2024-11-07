@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "./footer.css"
-import footerImg from "../../assets/images/public/assets/Cityscapes - Town.png"
+import footerImg from "../../../public/assets/Cityscapes - Town.png"
 import { EnvelopeAt , TelephoneFill, SuitHeartFill  } from 'react-bootstrap-icons';
 import { Facebook, Twitter, Instagram } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
