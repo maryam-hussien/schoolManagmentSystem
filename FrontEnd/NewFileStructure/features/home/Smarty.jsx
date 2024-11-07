@@ -1,5 +1,5 @@
 import {  FaChalkboardTeacher,FaSchool, FaBabyCarriage, FaUserGraduate } from 'react-icons/fa';
-import img from '../../assets/Images/595ee28c9868540c16d3f047ce98e321.png';
+import img from '../../assets/images/595ee28c9868540c16d3f047ce98e321.png';
 import '../../pages/Home/home.css';
 const Smarty =()=> {
  

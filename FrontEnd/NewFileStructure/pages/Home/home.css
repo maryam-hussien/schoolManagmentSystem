@@ -1,4 +1,5 @@
-@import url('../../../public/assets/Global.css');
+@import url('../../assets/Global.css');
+
 .home {
   padding: 0;
   height: auto;
@@ -48,9 +49,10 @@
 .info-section h2 {
   max-width: 400px;
   font-size: 25px;
-  color: #000;
+  color:var(--black);
   text-align: left;
   margin-bottom: 20px;
+  font-family:var(--titleFont);
 }
 .info-and-features{
   display: flex;
@@ -60,7 +62,7 @@
 
 .info-section p {
   opacity: 50;
-  color: #000;
+  color: var(--black);
   text-align: left;
   max-width: 500px;
   
@@ -81,9 +83,9 @@
   border: 1px solid #0A505B;
 }
 .learn-more-button {
-  background: linear-gradient(90deg, #0A505B 0%, #148B9C 100%);
+  background: var(--linear-gradient);
   padding: 10px 20px;
-  border: 1px solid #000000d1;
+  border: 1px solid var(--black);
   color: white;
   font-weight: bold;
   border-radius: 5px;
