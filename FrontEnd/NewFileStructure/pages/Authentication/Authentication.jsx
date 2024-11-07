@@ -2,8 +2,7 @@ import { useState } from "react";
 import './authentication.css';
 import { useNavigate } from 'react-router-dom'; 
 import { Envelope, Lock } from 'react-bootstrap-icons';
-import img from '../../../public/assets/child1.jpg';
-
+import img from '../../assets/images/child1.jpg';
 function Authentication() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,7 +33,7 @@ function Authentication() {
   };
 
   return (
-    <div className="containen">
+    <div className="container">
       <div className="mixed">
         <div className="form-container">
           <h1>Welcome to School Team</h1>
@@ -69,7 +68,7 @@ function Authentication() {
             <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
           </form>
         </div>
-        <div className="imagecont">
+        <div className="image-container">
           <img src={img} alt="Student" />
         </div>
       </div>

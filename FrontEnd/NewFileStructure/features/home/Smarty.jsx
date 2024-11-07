@@ -1,12 +1,12 @@
 import {  FaChalkboardTeacher,FaSchool, FaBabyCarriage, FaUserGraduate } from 'react-icons/fa';
-import img from '../../../public/assets/595ee28c9868540c16d3f047ce98e321.png';
+import img from '../../assets/images/595ee28c9868540c16d3f047ce98e321.png';
 import '../../pages/Home/home.css';
 const Smarty =()=> {
  
     return (
     <>
     <section className="smarty-programs">
-          <img src={img} alt="Smarty Programs" style={{width:'300px',}} className="logo" />
+          <img src={img} alt="Smarty Programs" style={{width:'350px',}} className="logo" />
           <div className='fsmart'>
           <h2>Smarty Programs</h2>
           <div className="program-cards">

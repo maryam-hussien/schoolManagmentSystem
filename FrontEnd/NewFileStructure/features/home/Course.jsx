@@ -1,8 +1,8 @@
 import '../../pages/Home/home.css';
 import { useNavigate } from 'react-router-dom';
-import animationImage from '../../../public/assets/dbe952cfcd79ece5d17cb134ba35b587.jpg';
-import digitalSkillsImage from '../../../public/assets/f1c71ed1586390fe809406f5b31038d7.jpg';
-import aiImage from '../../../public/assets/1c6921a6de046156b675b130f60868dd.jpg';
+import animationImage from '../../assets/images/dbe952cfcd79ece5d17cb134ba35b587.jpg';
+import digitalSkillsImage from '../../assets/images/f1c71ed1586390fe809406f5b31038d7.jpg';
+import aiImage from '../../assets/images/1c6921a6de046156b675b130f60868dd.jpg';
 const Course=()=>  {
     const navigate = useNavigate();
     const handlecourseLearnMoreClick = () => {

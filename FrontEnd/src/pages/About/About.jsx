@@ -6,6 +6,7 @@ import Slide from '../../Components/Slider/Slide'
 import Header from '../../Components/Header/Header'
 import Footer  from '../../Components/Footer/Footer'
 import Image from '../../Components/About/Image'
+import Course from '../../Components/Home/Course'
 const About = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const About = () => {
     <Schoolabout />
     <h1 className='center'>HISTORY OF SCHOOL</h1>
    <Schoolhist />
+   <Course />
     <h1 className='center'>SCHOOL LOCATION</h1>
     <Schoolloc />
     <h1 className='center'>OUR TEACHERS</h1>
