@@ -1,7 +1,7 @@
 .dash-btn-add-course {
     position: fixed;
-    bottom: 50px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
+    margin-top: 365px;
+    margin-left: 890px;
     width: 50px; /* Button diameter */
     height: 50px; /* Button diameter */
     border-radius: 50%; /* Makes the button circular */
