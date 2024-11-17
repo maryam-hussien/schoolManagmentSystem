@@ -59,6 +59,7 @@
 
 .navt {
   display: flex;
+  
   flex-direction: row;
 }
 
@@ -98,9 +99,7 @@
   border-radius: 12px;
 }
 
-.fw-semibold:hover {
-  color: var(--white);
-}
+
 
 .nav-menu.open {
   display: flex;

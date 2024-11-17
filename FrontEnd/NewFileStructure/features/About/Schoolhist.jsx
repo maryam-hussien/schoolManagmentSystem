@@ -1,4 +1,4 @@
-import imag from '../../../NewFileStructure/assets/Images/175cb3ce86a19e7044c5ce612bef589d.jpg'
+import imag from '../../../public/assets/175cb3ce86a19e7044c5ce612bef589d.jpg'
 import '../../pages/About/about.css'
  const Schoolhist =()=>  {
 
