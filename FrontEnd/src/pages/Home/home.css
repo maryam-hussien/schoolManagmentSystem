@@ -124,7 +124,7 @@
 
 .feature-card p {
   font-size: 0.9em;
-  color: #666;
+  color: var(--greydark);
 }
 
 .feature-icon {
@@ -142,7 +142,7 @@
 .core-values-section h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
-  color: #333;
+  color: --greydark;
 }
 
 .core-values-grid {
@@ -185,13 +185,13 @@
 
 .core-value-card h3 {
   font-size: 20px;
-  color: #333;
+  color: --greydark;
   margin: 0 0 10px 0; 
 }
 
 .core-value-card p {
   font-size: 16px;
-  color: #666;
+  color: --greydark;
   margin: 0; 
 }
 
@@ -210,7 +210,7 @@
 
 .testimonial-section h2 {
   font-size: 2.5em;
-  color: #333;
+  color: --greydark;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -236,7 +236,7 @@
 
 .testimonial-card p {
   font-size: 1em;
-  color: #666;
+  color: --greydark;
   margin-bottom: 15px;
 }
 
@@ -263,7 +263,7 @@
 
 .testimonial-card h4 {
   font-size: 1.2em;
-  color: #333;
+  color: --greydark;
   margin-bottom: 5px;
 }
 
@@ -283,7 +283,7 @@
 }
 .coursesection h2 {
   font-size: 2.5em;
-  color: #333;
+  color: --greydark;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -339,7 +339,7 @@
 }
 
 .course-description {
-  color: #666;
+  color: --greydark;
   font-size: 1em;
   margin: 10px 0;
 }
@@ -558,7 +558,7 @@
 
 .program-icon {
   font-size: 36px;
-  color: #007bff;
+  color: var(--programicon);
   margin-bottom: 10px;
 }
 

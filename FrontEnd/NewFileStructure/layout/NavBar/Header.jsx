@@ -2,10 +2,9 @@ import './header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import img from '../../assets/images/730005bd39661bcd3959d4dad27f9d5b-removebg-preview.png';
-import imag from '../../assets/images/33f54f271b2de59273f34e582a00e05e.png'
+import imag from '../../assets/images/33f54f271b2de59273f34e582a00e05e.png';
 import { NavLink, useNavigate } from 'react-router-dom'; 
 import { useState } from 'react';
-
 
 const Header = () => {
   const navigate = useNavigate();
@@ -27,12 +26,12 @@ const Header = () => {
     <div className="header">
       <div className="bheader">
         <nav className="navbar navbar-expand-lg">
-           
           <div className="container navbar-container">
-          <div className="navbar-brand" onClick={handlehome}>
+            <div className="navbar-brand" onClick={handlehome}>
               <img src={img} alt='nav-brand' className="logo-img" />
-              <span className='fw-semibold' style={{ color: "#000", marginTop: '6px' }}>SCHOOL TEAM</span>
+              <span className='fw-semibold'>SCHOOL TEAM</span>
             </div>
+
             <div className='navt'>
               <button className="navbar-toggler" type="button" onClick={toggleMenu}>
                 <div className="navyy">
@@ -82,9 +81,9 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
+              
               <div className="login-icon" onClick={handlelogin}>
-              <img src={imag} alt='nav-brand' className="nohover"/>
-             
+                <img src={imag} alt='nav-brand' className="nohover" />
               </div>
             </div>
           </div>
