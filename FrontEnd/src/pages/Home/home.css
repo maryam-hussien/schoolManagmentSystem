@@ -14,7 +14,7 @@
   margin-top: 10px;
   background: url('../../../public/assets/home3.jpg') no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: var(--white);
   padding: 60px 20px;
   margin-top: 70px;
   height: 620px;
@@ -48,9 +48,10 @@
 .info-section h2 {
   max-width: 400px;
   font-size: 25px;
-  color: #000;
+  color:var(--black);
   text-align: left;
   margin-bottom: 20px;
+  font-family:var(--titleFont);
 }
 .info-and-features{
   display: flex;
@@ -60,7 +61,7 @@
 
 .info-section p {
   opacity: 50;
-  color: #000;
+  color: var(--black);
   text-align: left;
   max-width: 500px;
   
@@ -78,13 +79,13 @@
   border-radius: 20px;
   width: 150px;
   height: 60px;
-  border: 1px solid #0A505B;
+  border: 1px solid var(--font-high-light);
 }
 .learn-more-button {
-  background: linear-gradient(90deg, #0A505B 0%, #148B9C 100%);
+  background: var(--linear-gradient);
   padding: 10px 20px;
-  border: 1px solid #000000d1;
-  color: white;
+  border: 1px solid var(--black);
+  color: var(--white);
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
@@ -97,7 +98,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
   margin-top: 40px;
 }
 .feature-card:hover{
@@ -105,8 +105,8 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .feature-card {
-  background-color:#E5FCFF ;
-  border: 1px solid #e3e6e8;
+  background-color:var(--background-color) ;
+  border: 1px solid var(--background-color);
   border-radius: 10px;
   padding: 15px;
   width: calc(50% - 20px);
@@ -129,13 +129,13 @@
 
 .feature-icon {
   font-size: 36px;
-  color: #000;
+  color: var(--black);
   margin-bottom: 8px;
 }
 
 .core-values-section {
   padding: 50px 170px;
-  background-color: #fff;
+  background-color: var(--white);
   text-align: center;
 }
 
@@ -155,7 +155,7 @@
   display: flex; 
   flex-direction: row;
   align-items: stretch; 
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s ease; 
@@ -196,9 +196,9 @@
 }
 
 .testimonial-section {
-  background:  #E5FCFF;
+  background:  var(--background-color);
   background-size: cover;
-  color: #fff;
+  color: var(--white);
   padding: 60px 20px;
   position: relative;
   
@@ -222,7 +222,7 @@
   flex-wrap: nowrap;
 }
 .testimonial-card {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 15px;
   padding: 30px;
   max-width: 400px;
@@ -250,7 +250,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid var(--white);
   object-fit: cover;
   margin-right: 15px;
 }
@@ -272,8 +272,8 @@
   color: #999;
 }
 .coursesection {
-  background-color: #fff;
-  color: #fff;
+  background-color: var(--white);
+  color: var(--white);
   padding: 60px 20px;
   position: relative;
   z-index: 1;
@@ -296,8 +296,8 @@
 }
 
 .coursecard {
-  background-color: #fff;
-  border: 1px solid #e3e6e8;
+  background-color: var(--white);
+  border: 1px solid var(--background-color);
   border-radius: 10px;
   
   width: calc(50% - 40px);
@@ -323,14 +323,14 @@
 .arrow-icon {
   font-size: 30px; 
   font-weight: bold;
-  color: #000; 
+  color: var(--black); 
   display: inline-block;
   margin-left: 10px; 
   border-radius: 60%;
   width: 40px;
   height: 40px;
   margin-top: 10px;
-  background-color: #fff;
+  background-color: var(--white);
   transition: transform 0.3s ease; 
 }
 
@@ -353,7 +353,7 @@
 }
 .logos h2{
   font-size: 2.5em;
-  color: black;
+  color: var(--black);
   margin-bottom: 40px;
  
 
@@ -364,7 +364,7 @@
   }
   .core-values-section {
     padding: 50px 90px;
-    background-color: #fff;
+    background-color: var(--white);
     text-align: center;
   }
   .feature-card {
@@ -378,7 +378,7 @@
 
     background: url('../../../public/assets/home3.jpg') no-repeat center center;
     background-size: cover;
-    color: #fff;
+    color: var(--white);
     padding: 60px 20px;
     height: 650px;
     width: 100%;
@@ -395,7 +395,7 @@
 }
 .core-values-section {
   padding: 50px 60px;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   text-align: center;
 }
 
@@ -492,7 +492,7 @@
 
   .core-value-image {
     height: 180px;
-    border-bottom: 1px solid #e3e6e8;
+    border-bottom: 1px solid var(--background-color);
   }
 
   .core-value-content {
@@ -515,7 +515,7 @@
     padding: 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     text-align: center; 
-    background-color:#E5FCFF ;
+    background-color:var(--background-color) ;
     border-radius: 8px; 
 }
 
@@ -540,8 +540,8 @@
 
 .program-card {
   margin-bottom: 40px;
-  background-color: #fff;
-  border: 1px solid #e3e6e8;
+  background-color: var(--white);
+  border: 1px solid var(--background-color);
   border-radius: 10px;
   padding: 20px;
   width: calc(50% - 40px);
@@ -590,9 +590,12 @@
 
 .feature-icon {
   font-size: 40px;
-  color: #000;
+  color: var(--black);
   margin-bottom: 10px;
 }
+
+
+
 
 
 
