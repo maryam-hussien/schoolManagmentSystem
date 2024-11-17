@@ -20,6 +20,7 @@
   margin-top: 70px;
   height: 620px;
   width: 100%;
+  font-family: var(--heroDescrFont);
   position: relative;
   z-index: 1;
 }
@@ -41,7 +42,7 @@
 .info-section {
   text-align: left;
   padding: 145px;
-
+  font-family: var(--descrFont);
   margin-top: 0;
   
 }
