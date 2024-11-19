@@ -4,24 +4,28 @@ import "./courses.css";
 import Header from "../../layout/NavBar/Header";
 import Footer from "../../layout/Footer/Footer";
 import { FaSearch } from 'react-icons/fa';
+
 const Courses = () => {
   const [filter, setFilter] = useState(""); 
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1); 
   const itemsPerPage = 6; 
 
-  const filteredCourses = courses.filter((course) => {
-    const matchesLevel = filter ? course.level === filter : true;
-    const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase());
+  // Filter courses based on selected filter and search query
+  const filteredCourses = (courses || []).filter((course) => {
+    const matchesLevel = filter ? course.level?.toLowerCase() === filter.toLowerCase() : true;
+    const matchesSearch = course.title?.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesLevel && matchesSearch;
   });
 
+  // Pagination calculations
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
   const displayedCourses = filteredCourses.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
+  // Handle page change
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -42,8 +46,8 @@ const Courses = () => {
             </a>
             <a
               href="#"
-              className={filter ? 'active' : ''}
-              onClick={() => setFilter('more')}
+              className={filter === "more" ? "active" : ""}
+              onClick={() => setFilter("more")}
             >
               My Courses
             </a>
@@ -51,35 +55,45 @@ const Courses = () => {
         </div>
 
         <section className="fsec">
-          <button onClick={() => setFilter("Kindergarten")} className={filter === "Kindergarten" ? "active" : ""}>
+          <button 
+            onClick={() => setFilter("Kindergarten")} 
+            className={filter === "Kindergarten" ? "active" : ""}
+          >
             Kindergarten
           </button>
-          <button onClick={() => setFilter("Primary")} className={filter === "Primary" ? "active" : ""}>
+          <button 
+            onClick={() => setFilter("Primary")} 
+            className={filter === "Primary" ? "active" : ""}
+          >
             Primary
           </button>
-          <button onClick={() => setFilter("Preparatory")} className={filter === "Preparatory" ? "active" : ""}>
+          <button 
+            onClick={() => setFilter("Preparatory")} 
+            className={filter === "Preparatory" ? "active" : ""}
+          >
             Preparatory
           </button>
-          <button onClick={() => setFilter("Secondary")} className={filter === "Secondary" ? "active" : ""}>
+          <button 
+            onClick={() => setFilter("Secondary")} 
+            className={filter === "Secondary" ? "active" : ""}
+          >
             Secondary
           </button>
           <div className="search-container">
-
-  <input
-    type="text"
-    placeholder="Search my courses..."
-    value={searchQuery}
-    onChange={(e) => {
-      setSearchQuery(e.target.value);
-      setCurrentPage(1);
-    }}
-    className="search-input"
-  />
-    <FaSearch className="search-icon" />
-</div>
-
+          <FaSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search my courses.."
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setCurrentPage(1); 
+              }}
+              className="search-input"
+            />
+            
+          </div>
         </section>
-
 
         <div className="course-grid">
           {displayedCourses.length > 0 ? (
