@@ -1,4 +1,6 @@
 import './Level.css'; // Create a CSS file for styling if needed
+import Button from "../../../Components/Button/Button";
+
 
 const Level = ({ 
   level, 
@@ -128,9 +130,7 @@ const Level = ({
       )}
 
       {/* Add Schedule Button */}
-      <button type="button" className="submit-btn m-auto mt-2" onClick={handleSubmit}>
-        {buttonLabel}
-      </button>
+      <Button label={buttonLabel} color="primary" />
     </div>
   );
 };

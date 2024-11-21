@@ -47,7 +47,7 @@
 
 /* Button Styling */
 button {
-  background-color:var(--secondry);
+  background-color:var(--font-high-light);
   color: white;
   padding: 12px 20px;
   font-size: 1rem;
@@ -61,7 +61,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--gold);
+  background-color: var(--secondry);
 
 }
 

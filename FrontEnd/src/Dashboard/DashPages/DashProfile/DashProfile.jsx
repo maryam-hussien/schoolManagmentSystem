@@ -1,4 +1,5 @@
 import "./DashProfile.css";
+import Button from "../../../Components/Button/Button";
 import { NavLink } from "react-router-dom";
 
 const DashdashProfile = () => {
@@ -45,9 +46,9 @@ const DashdashProfile = () => {
         </div>
         <div className="dashProfile-actions">
           <NavLink to="/dashboard/edit">
-            <button className="edit-btn">Edit dashProfile</button>
+          <Button label="Edit Profile" color="primary" />
           </NavLink>
-          <button className="change-password-btn">Change Password</button>
+          <Button label="Change Password" color="secondary" />
         </div>
       </div>
     </div>

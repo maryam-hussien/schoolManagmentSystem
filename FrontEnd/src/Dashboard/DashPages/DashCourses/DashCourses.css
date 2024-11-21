@@ -30,6 +30,18 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  .text-start{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--font-high-light);
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-left: 150px;
+  }
   
   .add-course-form .form-group {
     margin-bottom: 15px;

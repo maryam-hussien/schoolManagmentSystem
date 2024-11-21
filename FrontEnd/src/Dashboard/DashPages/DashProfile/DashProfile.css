@@ -119,33 +119,7 @@
   margin-top: 25px;
 }
 
-button {
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
 
-.edit-btn {
-  background-color:var(--secondry);
-  color: white;
-}
-
-.edit-btn:hover {
-  background-color: var(--gold);
-}
-
-.change-password-btn {
-  background-color: var(--gold);
-  color: white;
-}
-
-.change-password-btn:hover {
-  background-color: var(--secondry);
-}
 
 /* Media Queries */
 @media (max-width: 768px) {
