@@ -33,9 +33,9 @@ function Authentication() {
   };
 
   return (
-    <div className="container">
+    <div className="conainer">
       <div className="mixed">
-        <div className="form-container">
+        <div className="form-conainer">
           <h1>Welcome to School Team</h1>
           <form onSubmit={handleSignIn}>
             <div className="input-with-icon">
@@ -68,7 +68,7 @@ function Authentication() {
             <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
           </form>
         </div>
-        <div className="image-container">
+        <div className="image-containennt">
           <img src={img} alt="Student" />
         </div>
       </div>
