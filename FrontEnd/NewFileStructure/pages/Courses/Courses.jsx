@@ -9,23 +9,24 @@ const Courses = () => {
   const [filter, setFilter] = useState(""); 
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1); 
-  const itemsPerPage = 6; 
-
-  // Filter courses based on selected filter and search query
+  const itemsPerPage = 7; 
   const filteredCourses = (courses || []).filter((course) => {
+    if (filter === "more") {
+      return course.creator === "Mr. John" && course.title?.toLowerCase().includes(searchQuery.toLowerCase());
+    }
     const matchesLevel = filter ? course.level?.toLowerCase() === filter.toLowerCase() : true;
     const matchesSearch = course.title?.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesLevel && matchesSearch;
   });
+  
 
-  // Pagination calculations
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
   const displayedCourses = filteredCourses.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
-  // Handle page change
+
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };

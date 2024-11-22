@@ -51,6 +51,8 @@
   padding-right: 140px;
   padding-bottom: 20px;
   align-items: center;
+  flex-wrap: wrap; /* Ensures the buttons wrap in small screens */
+  text-align: center; /* Center align buttons */
 }
 
 .fsec button,
@@ -59,14 +61,15 @@
   border: 1px solid var(--font-high-light);
   background-color: var(--white);
   min-width: 150px;
-  flex: 1 1 200px;
-  max-width: 300px; 
+  max-width: 100%; /* Ensures buttons take the full available width */
   font-size: 18px;
   font-weight: 500;
   font-family: var(--titleFont);
   color: var(--font-high-light);
   padding: 10px;
   text-align: center;
+  display: inline-block; /* Ensures buttons remain inline while expanding */
+  width: auto; /* Let buttons auto-size based on content */
 }
 
 .fsec button:hover {
@@ -101,7 +104,6 @@
   align-items: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
 
 .course-grid img {
   width: 100%;
@@ -153,12 +155,31 @@
   color: var(--greydark);
 }
 
-/* Mobile responsiveness */
+@media (width: 1024px) {
+  .fsection {
+    height: 230px;
+    background-color: var(--font-high-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 100px;
+    position: relative;
+  }
+}
+
 @media (max-width: 768px) {
   .fsection {
-    padding-left: 20px;
-    text-align: center;
+    height: 230px;
+    background-color: var(--font-high-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 100px;
+    position: relative;
   }
+
   .fsec input {
     border-radius: 25px;
     border-color: var(--font-high-light);
@@ -169,7 +190,6 @@
     font-family: var(--titleFont);
     color: var(--font-high-light);
   }
-  
 
   .nav-links a {
     font-size: 1rem;
@@ -186,14 +206,13 @@
     padding-bottom: 20px;
     align-items: center;
   }
-  
 
- .fsec input {
+  .fsec input {
     width: 100%;
     margin-top: 20px;
     font-size: 18px;
   }
- 
+
   .course-grid {
     padding: 10px;
   }
@@ -213,14 +232,15 @@
   }
 }
 
-/* Small mobile screens */
 @media (max-width: 480px) {
   .fsection h1 {
     font-size: 2rem;
   }
-.nav-links{
-  margin-top: 170px;
-}
+
+  .nav-links {
+    margin-top: 170px;
+  }
+
   .nav-links a {
     font-size: 1rem;
     margin: 5px 0;
