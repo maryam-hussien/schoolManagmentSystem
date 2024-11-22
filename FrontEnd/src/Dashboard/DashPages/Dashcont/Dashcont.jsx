@@ -60,7 +60,7 @@ const Dashcont = () => {
 
     return (
         <div className="dashboard-contain">
-            <h1 style={{ fontSize: "25px", marginBottom: "30px" }}>Dashboard</h1>
+            <h1 >Dashboard</h1>
             <div className="stat-cards">
                 <div className="stat-card student-card" style={{ backgroundColor: "#A2D2DF" }}>
                     <div className="icon-container student-icon-bg d-flex align-items-center">

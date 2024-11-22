@@ -5,12 +5,18 @@ import "./DashAbout.css";
 
 function DashAbout() {
   return (
-    <div className="dashAbout w-100">
-      <div className="abouttitle fw-bold text-center px-4 py-2 mb-2">About Dashboard</div>
+    <div className="dashAbout">
+      <div className="abouttitle">About Dashboard</div>
       <div className="aboutcards">
-        <AddAboutSchool />
-        <AddLocation />
-        <AddHistory />
+        <div className="card">
+          <AddAboutSchool />
+        </div>
+        <div className="card">
+          <AddLocation />
+        </div>
+        <div className="card">
+          <AddHistory />
+        </div>
       </div>
     </div>
   );

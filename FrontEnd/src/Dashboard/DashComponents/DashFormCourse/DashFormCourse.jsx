@@ -1,3 +1,4 @@
+import Button from "../../../Components/Button/Button";
 
 const DashFormCourse = ({ newCourse, handleCourseInputChange, handleAddCourse, handleImageUpload }) => {
   return (
@@ -102,9 +103,8 @@ const DashFormCourse = ({ newCourse, handleCourseInputChange, handleAddCourse, h
       )}
 
       {/* Submit Button */}
-      <button type="submit" className="btn btn-success">
-        Submit
-      </button>
+      <Button label="Submit" color="secondary" />
+
     </form>
   );
 };
