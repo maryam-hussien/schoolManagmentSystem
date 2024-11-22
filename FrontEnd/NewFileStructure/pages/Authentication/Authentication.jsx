@@ -65,7 +65,7 @@ function Authentication() {
             <small>{passwordError}</small>
 
             <button type="submit">Login</button>
-            <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
+            <a href="/forgot-password" className="forgot-password-link">Forget Password?</a>
           </form>
         </div>
         <div className="image-containennt">
