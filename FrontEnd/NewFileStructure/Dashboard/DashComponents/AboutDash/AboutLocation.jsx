@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "../../../Components/Button/Button";
+import Button from "../../../components/Button/Button";
 
 
 function AddLocation() {
@@ -42,7 +42,7 @@ function AddLocation() {
               placeholder="Enter Google Maps embed link"
             />
           </label>
-          <Button label="Submit" color="primary" />
+          <Button className="addbtn" label="Submit" color="primary" />
         </form>
       </div>
 

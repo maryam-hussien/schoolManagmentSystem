@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import Button from "../../../Components/Button/Button";
+import Button from "../../../components/Button/Button";
 
 function AddAboutSchool() {
   const [about, setAbout] = useState("");
@@ -32,7 +32,7 @@ function AddAboutSchool() {
             accept="image/*"
             onChange={(e) => setAboutPhoto(e.target.files[0])}
           />
-          <Button label="Submit" color="primary" />
+          <Button className="addbtn" label="Submit" color="primary" />
         </form>
       </div>
     </>

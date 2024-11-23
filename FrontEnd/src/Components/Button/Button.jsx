@@ -3,8 +3,8 @@ import "./Button.css";
 
 const Button = ({ label, color, onClick, className }) => {
   return (
-    <button
-      className={`btn ${color} ${className}`}
+    <button 
+      className={`btn comopnentbtn ${color} ${className}`}
       onClick={onClick}
     >
       {label}

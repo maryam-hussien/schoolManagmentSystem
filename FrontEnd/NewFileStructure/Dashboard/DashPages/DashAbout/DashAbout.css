@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  
 }
 
 /* Title Section */
@@ -46,7 +46,7 @@
 }
 
 /* Button Styling */
-button {
+.addbtn {
   background-color:var(--font-high-light);
   color: white;
   padding: 12px 20px;

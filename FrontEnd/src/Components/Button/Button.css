@@ -1,5 +1,5 @@
 /* Base button styles */
-.btn {
+.comopnentbtn {
     padding: 12px 20px;
     font-size: 1rem;
     border-radius: 8px;
@@ -12,43 +12,43 @@
   }
   
   /* Color variations */
-  .btn.primary {
+  .comopnentbtn.primary {
     background-color: var(--font-high-light);
     color: white;
   }
   
-  .btn.primary:hover {
+  .comopnentbtn.primary:hover {
     background-color: var(--secondry);
   }
   
-  .btn.secondary {
+  .comopnentbtn.secondary {
     background-color: var(--secondry);
     color: white;
   }
   
-  .btn.secondary:hover {
+  .comopnentbtn.secondary:hover {
     background-color: var(--font-high-light);
   }
   
-  .btn.tertiary {
+  .comopnentbtn.tertiary {
     background-color: var(--gold);
     color: black;
   }
   
-  .btn.tertiary:hover {
+  .comopnentbtn.tertiary:hover {
     background-color: var(--secondry);
   }
   
   /* For smaller screens */
   @media (max-width: 768px) {
-    .btn {
+    .comopnentbtn {
       font-size: 0.9rem;
       width: 160px;
     }
   }
   
   @media (max-width: 480px) {
-    .btn {
+    .comopnentbtn {
       width: 140px;
       font-size: 0.85rem;
     }

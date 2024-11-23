@@ -1,12 +1,6 @@
 
 
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: var(--background-color);
-  margin: 0;
-  padding: 0;
-}
+
 
 /* Edit Profile Container */
 .edit-profile-container {
@@ -19,6 +13,10 @@ body {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -93,17 +91,7 @@ input[type="file"]:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons */
-button {
-  padding: 12px 20px;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 20px;
-}
+
 
 .save-btn {
   background-color: var(--font-high-light);
