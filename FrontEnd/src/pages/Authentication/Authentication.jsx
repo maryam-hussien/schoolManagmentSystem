@@ -1,19 +1,16 @@
 import { useState } from "react";
 import './authentication.css';
-import login from '/assets/file.png';
 import { useNavigate } from 'react-router-dom'; 
+import { Envelope, Lock } from 'react-bootstrap-icons';
+import img from '../../../public/assets/child1.jpg';
 
 function Authentication() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false); 
   const navigate = useNavigate();
-
-  const goBack = () => {
-    console.log("Go Back button clicked"); 
-    navigate('/');
-  };
 
   const validatePassword = () => {
     const isValid = password.length >= 6;
@@ -27,74 +24,53 @@ function Authentication() {
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    
-    const errors = {};
-
-    const isValidEmail = /\S+@\S+\.\S+/.test(email);
-    if (!isValidEmail) {
-      errors.email = "Invalid email address";
-      setEmailError("Invalid email address");
-    } else {
-      setEmailError("");
-    }
-
-    const isValidPassword = password.length >= 6;
-    if (!isValidPassword) {
-      errors.password = "Password must be at least 6 characters";
-      setPasswordError("Password must be at least 6 characters");
-    } else {
-      setPasswordError("");
-    }
-
-    if (Object.keys(errors).length === 0) {
-      console.log("Sign-in successful with:", { email, password });
+    if (emailError === "" && passwordError === "") {
       navigate("/");
-    } else {
-      console.log("Validation errors:", errors);
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
   };
 
   return (
     <div className="containen">
-      <div className="forms-containen">
-        <div className="signin-signup">
-          <form onSubmit={handleSignIn} className="sign-in-form">
-            <h2 className="title">Sign in now</h2>
+      <div className="mixed">
+        <div className="form-container">
+          <h1>Welcome to School Team</h1>
+          <form onSubmit={handleSignIn}>
+            <div className="input-with-icon">
+              <Envelope className="input-icon" />
+              <input
+                style={{ borderRadius: '30px', width: "100%", border: "2px double #000", paddingLeft: '40px' }} 
+                type="email"
+                placeholder="Enter Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onBlur={validateEmail}
+              />
+            </div>
+            <small>{emailError}</small>
 
-            <input className="input3"
-              type="email"
-              spellCheck="false"
-              placeholder="Enter Email"
-              onChange={(e) => setEmail(e.target.value)}
-              onBlur={validateEmail}
-            />
-            <small className="email-error">{emailError}</small>
+            <div className="input-with-icon">
+              <Lock className="input-icon" onClick={togglePasswordVisibility} style={{ cursor: 'pointer'}} />
+              <input
+                style={{ borderRadius: '30px', width: "100%", border: "2px double #000", paddingLeft: '40px' }} 
+                type={isPasswordVisible ? "text" : "password"} 
+                placeholder="Enter Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                onBlur={validatePassword}
+              />
+            </div>
+            <small>{passwordError}</small>
 
-            <input className="input3"
-              placeholder="Enter Password"
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              onBlur={validatePassword}
-            />
-            <small className="password-error">{passwordError}</small>
-
-            <div className="password-link-container"> 
-  <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
-</div>
-            <button className="button" type="submit">
-              Sign In
-            </button>
+            <button type="submit">Login</button>
+            <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
           </form>
         </div>
-      </div>
-
-      <div className="panels-containen">
-        <div className="panel right-panel">
-          <div className="content">
-            <h3 style={{ color: 'black' }}>Have an account?</h3>
-            <button onClick={goBack} className="button" type="submit">Go Back</button>
-          </div>
-          <img src={login} className="image" alt="login" />
+        <div className="imagecont">
+          <img src={img} alt="Student" />
         </div>
       </div>
     </div>

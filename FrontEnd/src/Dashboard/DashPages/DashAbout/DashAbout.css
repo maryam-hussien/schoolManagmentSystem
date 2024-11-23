@@ -1,111 +1,78 @@
-.dashAbout {
-    display: flex;
-    padding: 0.25rem;
-    font-family: Lucida Handwriting;
-    flex-direction: column;
-  }
-  
-  .aboutcards {
-    width: 60%;
-    padding: 0.25rem;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .abouttitle {
-    font-size: 23px;
-    text-align: center;
-  }
-  
-  .dashAbout .card {
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    padding: 1rem;
-    background-color: #04252b93;
-    text-align: center;
-  }
-  
-  .dashAbout .card-title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .dashAbout .card-text {
-    font-size: 14px;
-  }
-  
-  /* Form items will now be in a row */
-  .dashAbout  label {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allows wrapping in smaller screens */
-    width: 100%;
-    margin-bottom: 1rem; /* Adds spacing between label blocks */
-  }
-  
-  .dashAbout  label textarea, label input {
-    width: 70%; 
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .dashAbout .input1{
 
-    width: 70%; 
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+.dashAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Title Section */
+.abouttitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--font-high-light);
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.aboutcards { 
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px; 
+  box-sizing: border-box;
+  align-items: center; 
+  margin-top: 20px;
+}
+
+
+/* Card Design */
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+button {
+  background-color:var(--font-high-light);
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 200px;
+
+}
+
+button:hover {
+  background-color: var(--secondry);
+
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .abouttitle {
+      font-size: 1.5rem;
+      padding: 10px 15px;
   }
-  .dashAbout label span {
-    width: 30%; /* Label title width */
-    font-weight: bold;
-    padding-right: 1rem;
+
+  .aboutcards {
+      grid-template-columns: 1fr;
   }
-  
-  .dashAbout .buttony {
-    background-color: #A2D2DF;
-    color: black;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* Media query for small screens */
-  @media (max-width: 768px) {
-    .dashAbout .abouttitle {
-      font-size: 18px;
-    }
-    .dashAbout .aboutcards {
-      width: 100%;
-    }
-  
-    .dashAbout label textarea,.dashAbout label input {
-      width: 100%; /* Full width in smaller screens */
-    }
-  
-    .dashAbout label span {
-      width: 100%;
-      padding-bottom: 0.5rem; /* Add spacing between label and input on small screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .dashAbout .abouttitle {
-      font-size: 16px;
-    }
-  }
-  
-  @media (max-width: 375px) {
-    .dashAbout .abouttitle {
-      font-size: 15px;
-    }
-  }
-  
+}

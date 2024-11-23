@@ -8,7 +8,7 @@ const  Core =()=>  {
     return (
      <>
       <section className="core-values-section ">
-  <h2>Our Core Values</h2>
+  <h2>Our <span style={{color:'rgb(10, 80, 91)'}}>Core</span> Values</h2>
   <div className="core-values-grid ">
     <div className="core-value-card">
       <img src={coreValue1} alt="Learning & Fun" className="core-value-image" />

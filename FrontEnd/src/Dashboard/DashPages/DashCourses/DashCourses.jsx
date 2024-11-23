@@ -1,150 +1,139 @@
-import { useState } from "react";
-import links from '../../../../public/data/courseroutes';
-import Bar from '../../../Components/courses/Bar';
-import { Route, Routes } from "react-router-dom";
-import "./DashCourses.css";
-import PrimaryCourses from "../../../Components/courses/Primary"
-import KinderCourses from "../../../Components/courses/KinderGarten"
-import PreparatoryCourses from "../../../Components/courses/Preparatory"
-import SecondaryCourses from "../../../Components/courses/Secondary"
-// import osImage from "../../../../public/assets/download.jpg";
-// import aiImage from "../../../../public/assets/download.jpg";
-// import seImage from "../../../../public/assets/download.jpg";
+import  { useState } from 'react';
+import Level from '../../DashComponents/selectedLevel/Level';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './DashCourses.css';
+import courseData from "../../../../public/data/coursresapi";
+import DashCardCourse from '../../DashComponents/DashCardCourse/DashCardCourse '; 
+import DashFormCourse from '../../DashComponents/DashFormCourse/DashFormCourse'; 
 
 const DashCourses = () => {
-  const initialCourses = [
-    // {
-    //   id: 1,
-    //   title: "Operating System",
-    //   description:
-    //     "Learn the basic operating system concepts with hands-on projects.",
-    //   creator: "Monk Lee",
-    //   image: osImage,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Artificial Intelligence",
-    //   description:
-    //     "Explore AI fundamentals and work on real-world applications.",
-    //   creator: "Jung Jinhyun",
-    //   image: aiImage,
-    // },
-    // {
-    //   id: 3,
-    //   title: "Software Engineering",
-    //   description:
-    //     "Master the best practices in software development and teamwork.",
-    //   creator: "Kim Taeyong",
-    //   image: seImage,
-    // },
-  ];
-
-  const [courses, setCourses] = useState(initialCourses);
-  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [level, setLevel] = useState("");
+  const [grade, setGrade] = useState("");
+  const [courses, setCourses] = useState([]);
+  const [filteredCourses, setFilteredCourses] = useState([]);
+  const [isAddCourseFormVisible, setIsAddCourseFormVisible] = useState(false);
   const [newCourse, setNewCourse] = useState({
-    title: "",
-    description: "",
-    creator: "",
-    image: "",
+    title: '',
+    description: '',
+    creator: '',
+    level: '',
+    grade: '',
+    backgroundColor: '#fff',
+    image: ''
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewCourse({ ...newCourse, [name]: value });
+  // Filter courses based on level and grade
+  const filterCourses = () => {
+    if (!level || !grade) {
+      toast.error("Please select both level and grade to filter the courses.");
+      return;
+    }
+    const gradeNumber = parseInt(grade, 10);
+    const filtered = courseData.filter(course => course.level === level && course.grade === gradeNumber);
+    setFilteredCourses(filtered);
+    if (filtered.length === 0) {
+      toast.info("No courses found for the selected level and grade.");
+    }
   };
+
+  // Toggle the visibility of the add course form
+  const toggleAddCourseForm = () => {
+    setIsAddCourseFormVisible(prevState => !prevState);
+  };
+
+  // Handle input changes for course
+  const handleCourseInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewCourse(prevCourse => ({ ...prevCourse, [name]: value }));
+  };
+
+  // Handle form submission to add a new course
+  const handleAddCourse = (e) => {
+    e.preventDefault();
+    setCourses([...courses, newCourse]);
+    toast.success("Course added successfully!");
+    setNewCourse({ title: '', description: '', creator: '', level: '', grade: '', backgroundColor: '#fff', image: '' });
+    toggleAddCourseForm();
+  };
+
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setNewCourse({ ...newCourse, image: reader.result }); 
-    };
     if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setNewCourse(prevCourse => ({ ...prevCourse, image: reader.result }));
+      };
       reader.readAsDataURL(file);
     }
   };
-  
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const newId = courses.length + 1;
-    setCourses([...courses, { id: newId, ...newCourse }]);
-    setNewCourse({ title: "", description: "", creator: "" });
-    setIsFormVisible(false);
+
+  // Handle course edit
+  const handleEditCourse = (index) => {
+    const courseToEdit = courses[index];
+    setNewCourse(courseToEdit);
+    toggleAddCourseForm();
+  };
+
+  // Handle course deletion
+  const handleDeleteCourse = (index) => {
+    const updatedCourses = courses.filter((_, i) => i !== index);
+    setCourses(updatedCourses);
+    toast.success("Course deleted successfully!");
   };
 
   return (
-    <div>
-      <h2>My Courses</h2> 
-      <Bar links={links}/>
-      <button
-        className="add-course-btn"
-        onClick={() => setIsFormVisible(!isFormVisible)}
-      >
-        {isFormVisible ? "Close" : "Add Course"}
-      </button>
+    <div className="dashAttendance w-100">
+      <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
+      <h2 className="text-start mb-4">Students Management Dashboard </h2>
 
-      {isFormVisible && (
-        <form className="course-form" onSubmit={handleFormSubmit}>
-          <label>Title:</label>
-          <input
-            type="text"
-            name="title"
-            value={newCourse.title}
-            onChange={handleInputChange}
-            required
-          />
-          <label>Description:</label>
-          <input
-            type="text"
-            name="description"
-            value={newCourse.description}
-            onChange={handleInputChange}
-            required
-          />
-          <label>Creator:</label>
-          <input
-            type="text"
-            name="creator"
-            value={newCourse.creator}
-            onChange={handleInputChange}
-            required
-          />
+      {/* Level and Grade Filters */}
+      <form className="filters mb-3">
+        <Level
+          level={level}
+          setLevel={setLevel}
+          formData={{ grade }}
+          setFormData={(data) => setGrade(data.grade)}
+          showGrade={true}
+          handleSubmit={filterCourses}
+          buttonLabel="Show Courses"
+        />
+      </form>
+      <button className="dash-btn-add-course" onClick={toggleAddCourseForm}>+</button>
+      {/* Show Course Cards */}
+      <div className="course-cards-container">
+        <h3 className="text-center mb-4">Courses</h3>
+        
 
-          <label>Upload Image:</label>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleImageUpload}
-            required
+        {/* Add Course Form */}
+        {isAddCourseFormVisible && (
+          <DashFormCourse
+            newCourse={newCourse}
+            handleCourseInputChange={handleCourseInputChange}
+            handleAddCourse={handleAddCourse}
+            handleImageUpload={handleImageUpload}
           />
-          <button type="submit">Submit</button>
-        </form>
-      )}
+        )}
 
-<div className="courses-section">
-  {courses.map((course) => (
-    <div key={course.id} className="course-card">
-      <img
-        src={course.image}
-        alt={course.title}
-        className="course-image"
-      />
-      <div className="course-details">
-        <h3>{course.title}</h3>
-        <p>{course.description}</p>
-        <p className="creator">Created by {course.creator}</p>
+        {/* Display Courses as Cards */}
+        <div className="row">
+          {(filteredCourses.length > 0 ? filteredCourses : courses).length === 0 ? (
+            <div className="col-12 text-center">
+              <p>No courses available for the selected level and grade.</p>
+            </div>
+          ) : (
+            (filteredCourses.length > 0 ? filteredCourses : courses).map((course, index) => (
+              <DashCardCourse
+                key={index}
+                course={course}
+                index={index}
+                handleEditCourse={handleEditCourse}
+                handleDeleteCourse={handleDeleteCourse}
+              />
+            ))
+          )}
+        </div>
       </div>
-    </div>
-  ))}
-</div>
-
-        <div>
-        <Routes>
-              
-              <Route path="kindergaten" element={<KinderCourses />} />
-              <Route path="primary" element={<PrimaryCourses />} />
-              <Route path="preparatory" element={<PreparatoryCourses />} />
-              <Route path="secondary" element={<SecondaryCourses />} />
-            </Routes>      </div>
     </div>
   );
 };

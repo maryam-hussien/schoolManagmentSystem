@@ -10,35 +10,37 @@ const Test=()=> {
     return (
      <>
      <section className="testimonial-section">
-          <h2>What Parents Say</h2>
+          <h2>What <span style={{color:'rgb(10, 80, 91)'}}>Parents</span> Say</h2>
           <div className="testimonial-container">
             <div className="testimonial-card">
-              <p>
-                As a parent, I have been thoroughly impressed with the quality of education my child receives at this school. The teachers are dedicated, approachable, and genuinely care about the students’ success.
-              </p>
-              <div className="card-image">
+            <div className="card-image">
                 <img src={parent1} alt="Parent Testimonial" className="testimonial-image" />
                 <h4>Ankeila Mokina</h4>
               </div>
+              <p>
+                As a parent, I have been thoroughly impressed with the quality of education my child receives at this school. The teachers are dedicated, approachable, and genuinely care about the students’ success.
+              </p>
+              
             </div>
             <div className="testimonial-card">
-              <p>
-                I am absolutely thrilled with the quality of education my child is receiving at this school. The teachers are not only highly qualified, but they also show a genuine passion for helping students to succeed.
-              </p>
-              <div className="card-image">
+            <div className="card-image">
                 <img src={parent2} alt="Parent Testimonial" className="testimonial-image" />
                 <h4>Mick Maxwell</h4>
               </div>
+              <p>
+                I am absolutely thrilled with the quality of education my child is receiving at this school. The teachers are not only highly qualified, but they also show a genuine passion for helping students to succeed.
+              </p>
+             
 
             </div>
           </div>
-          <span 
+          <button
                   className="learn-more-text" 
                   onClick={handleTestimonialLearnMoreClick}
-                  style={{ cursor: 'pointer', color: '#495057', textDecoration: 'none',textAlign:'center',marginTop:'15px' }}
+                 style={{color:"#0A505B",fontSize:"20px",fontWeight:"bold"}}
                 >
-                  {' '}Learn More...
-                </span>
+                 Learn More
+                </button>
         </section>
      </>
     )

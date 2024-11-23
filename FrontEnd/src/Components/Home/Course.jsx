@@ -11,12 +11,12 @@ const Course=()=>  {
     return (
      <>
        <section className="coursesection">
-  <h2>Our Courses</h2>
+  <h2>Discover Our <span style={{color:"rgb(10, 80, 91)"}}>Best</span> Courses</h2>
   <div className="course-cards">
     <div className="coursecard" style={{ backgroundColor: 'rgb(235 169 105)' }}>
       <img src={animationImage} alt="Animation" className="courseimage" />
       <h3 className="coursetitle">
-        Animation <span className="arrow-icon" style={{ color: 'rgb(235, 169, 105)' }}>&rarr;</span>
+        Animation 
       </h3>
       <p>Learn the art of animation with our comprehensive course.</p>
     </div>
@@ -24,7 +24,7 @@ const Course=()=>  {
     <div className="coursecard" style={{ backgroundColor: '#0097E6' }}>
       <img src={digitalSkillsImage} alt="Digital Skills" className="courseimage" />
       <h3 className="coursetitle">
-        Digital Skills <span className="arrow-icon" style={{ color: '#0097E6' }}>&rarr;</span>
+        Digital Skills 
       </h3>
       <p>Master essential digital skills in this tech-driven world.</p>
     </div>
@@ -32,18 +32,18 @@ const Course=()=>  {
     <div className="coursecard" style={{ backgroundColor: 'rgb(103 181 92)' }}>
       <img src={aiImage} alt="AI" className="courseimage" />
       <h3 className="coursetitle">
-        AI <span className="arrow-icon" style={{ color: 'rgb(103 181 92)' }}>&rarr;</span>
+        AI 
       </h3>
       <p>Delve into the world of AI with cutting-edge concepts.</p>
     </div>
   </div>
-  <span 
-    className="learn-more-text" 
-    onClick={handlecourseLearnMoreClick}
-    style={{ cursor: 'pointer', color: '#495057', textDecoration: 'none', textAlign: 'left' }}
-  >
-    {' '}Learn More...
-  </span>
+  <button
+                  className="learn-more-text" 
+                  onClick={handlecourseLearnMoreClick}
+                 style={{color:"#0A505B",fontSize:"20px",fontWeight:"bold",marginTop:"30px"}}
+                >
+                 More Courses
+                </button>
 </section>
      </>
     )
