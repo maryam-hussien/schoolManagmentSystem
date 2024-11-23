@@ -53,8 +53,8 @@
   padding-right: 140px;
   padding-bottom: 20px;
   align-items: center;
-  flex-wrap: wrap; /* Ensures the buttons wrap in small screens */
-  text-align: center; /* Center align buttons */
+  flex-wrap: wrap; 
+  text-align: center;
 }
 
 .fsec button,
@@ -63,15 +63,15 @@
   border: 1px solid var(--font-high-light);
   background-color: var(--white);
   min-width: 150px;
-  max-width: 100%; /* Ensures buttons take the full available width */
+  max-width: 100%;
   font-size: 18px;
   font-weight: 500;
   font-family: var(--titleFont);
   color: var(--font-high-light);
   padding: 10px;
   text-align: center;
-  display: inline-block; /* Ensures buttons remain inline while expanding */
-  width: auto; /* Let buttons auto-size based on content */
+  display: inline-block; 
+  width: auto; 
 }
 
 .fsec button:hover {
@@ -88,7 +88,12 @@
   gap: 10px; 
   padding: 10px;
 }
-
+.iconsearch{
+  position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+}
 .course-card {
   flex: 1 1 250px;
   max-width: 250px;
@@ -134,28 +139,7 @@
   color: var(--white);
 }
 
-.search-container {
-  position: relative;
-  display: inline-block;
-}
 
-.search-input {
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 8px 12px;
-  padding-left: 35px;
-  width: 250px;
-}
-
-.search-icon {
-  margin-top: 15px;
-  position: absolute;
-  right: 10px;
-  font-size: 20px;
-  top: 20%;
-  transform: translateY(-50%);
-  color: var(--greydark);
-}
 
 @media (width: 1024px) {
   .fsection {
@@ -170,7 +154,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
+  .iconsearch{
+    position: absolute;
+          top: 65%;
+          left: 10px;
+          transform: translateY(-50%);
+  }
   .fsection {
     height: 230px;
     background-color: var(--font-high-light);
@@ -224,17 +214,16 @@
     padding: 10px;
   }
 
-  .search-container {
-    width: 100%;
-    text-align: center;
-  }
-
-  .search-input {
-    width: 80%;
-  }
+ 
 }
 
 @media (max-width: 480px) {
+  .iconsearch{
+    position: absolute;
+          top: 65%;
+          left: 10px;
+          transform: translateY(-50%);
+  }
   .fsection h1 {
     font-size: 2rem;
   }
@@ -253,10 +242,7 @@
     width: 100%;
   }
 
-  .search-input {
-    width: 70%;
-    font-size: 16px;
-  }
+
 
   .pagination button {
     font-size: 14px;

@@ -11,7 +11,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(prev => !prev);
+    setMenuOpen((prev) => !prev);
   };
 
   const handlehome = () => {
@@ -25,14 +25,16 @@ const Header = () => {
   return (
     <div className="header">
       <div className="bheader">
+  
+        <div className="school-team" onClick={handlehome}>
+          <img src={img} alt="nav-brand" className="logo-img" />
+          <span className="fw-semibold">SCHOOL TEAM</span>
+        </div>
+
+     
         <nav className="navbar navbar-expand-lg">
           <div className="container navbar-container">
-            <div className="navbar-brand" onClick={handlehome}>
-              <img src={img} alt='nav-brand' className="logo-img" />
-              <span className='fw-semibold'>SCHOOL TEAM</span>
-            </div>
-
-            <div className='navt'>
+            <div className="navt">
               <button className="navbar-toggler" type="button" onClick={toggleMenu}>
                 <div className="navyy">
                   <div></div>
@@ -83,7 +85,7 @@ const Header = () => {
               </div>
               
               <div className="login-icon" onClick={handlelogin}>
-                <img src={imag} alt='nav-brand' className="nohover" />
+                <img src={imag} alt="nav-brand" className="nohover" />
               </div>
             </div>
           </div>
