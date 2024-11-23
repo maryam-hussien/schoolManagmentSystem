@@ -9,6 +9,7 @@
 }
 
 .bheader {
+  font-family: var(--titleFont);
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
