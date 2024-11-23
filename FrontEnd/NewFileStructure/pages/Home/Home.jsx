@@ -20,7 +20,7 @@ const Home = () => {
         <section className="hero-section">
         
           <div className="info-section">
-            <h2>Welcome to School Team</h2>
+            <h2>Welcome to School Teammm</h2>
             <p>
               We understand that each of our students is a uniquely talented individual students are facilitated to develop positive relationships.
             </p>

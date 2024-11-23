@@ -3,7 +3,7 @@
 .AddPost {
   background-color: var(--white);
   border-radius: 15px;
-  padding: 0.25rem;
+  padding: 0.5rem 0.75rem;
 margin: auto;
 width: 100%;
 }
@@ -37,7 +37,10 @@ font-family: var(--descrFont);
   .AddPost {
     width: 90%; /* Slightly smaller width on extra small screens */
   }
-
+  .addpostLastSec button{
+    width: 95%;
+    padding: 0.25rem;
+  }
 
   .image-icon {
     font-size: 20px; /* Smaller icon on smaller screens */

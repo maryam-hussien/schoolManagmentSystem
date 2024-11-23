@@ -101,7 +101,7 @@
 }
 @media (max-width: 768px) {
   .comment-section button {
-    width: 20%;  /* Further increase width for small mobile screens */
+    width: 30%;  /* Further increase width for small mobile screens */
     font-size: 12px; /* Reduce font size for smaller screens */
   }
 }

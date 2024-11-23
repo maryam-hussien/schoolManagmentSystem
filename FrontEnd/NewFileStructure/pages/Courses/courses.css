@@ -3,7 +3,6 @@
 .courses {
   min-height: 100vh;
 }
-
 .fsection {
   height: 230px;
   background-color: var(--font-high-light);
@@ -14,7 +13,6 @@
   padding-left: 190px;
   position: relative;
 }
-
 .fsection h1 {
   top: 120px;
   position: relative;
