@@ -1,11 +1,18 @@
+@import url('../../../assets/Global.css');
+
 .AddPost {
-  background-color: white;
+  background-color: var(--white);
   border-radius: 15px;
   padding: 0.25rem;
-  width: 85%; 
 margin: auto;
+width: 100%;
 }
-
+.AddPost h5{
+  font-family: var(--descrFont);
+}
+.AddPost textArea{
+font-family: var(--descrFont);
+}
 
 .addpostLastSec {
   width: 100%;

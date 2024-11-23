@@ -11,12 +11,20 @@
   position: relative;
   width: 90%;
 }
+.SocialDiv{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+  border-radius: 15px;
+}
 .SocialTitle{
   font-weight: 600;
   font-size: 1.3rem;
   margin-bottom: 0.7rem;
   padding: 0.25rem;
   color: white;
+  font-family: var(--titleFont);
 }
 
 
@@ -29,10 +37,7 @@
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-  .SocialDiv {
-    flex-direction: column; /* Stack elements on small screens */
-    align-items: center; /* Center align for smaller screens */
-  }
+  
 
   .SocialImg {
     max-width: 60%; /* Full width on smaller screens */

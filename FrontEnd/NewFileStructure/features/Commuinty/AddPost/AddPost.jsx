@@ -47,7 +47,7 @@ const AddPost = ({ onAddPost }) => {
             />
             <div className="flex-grow-1">
               <textarea
-                className="form-control border-0"
+                className="form-control border-0 "
                 id="content"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
