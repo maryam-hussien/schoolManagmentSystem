@@ -1,5 +1,5 @@
 import "./DashProfile.css";
-import Button from "../../../Components/Button/Button";
+import Button from "../../../components/Button/Button";
 import { NavLink } from "react-router-dom";
 
 const DashdashProfile = () => {
