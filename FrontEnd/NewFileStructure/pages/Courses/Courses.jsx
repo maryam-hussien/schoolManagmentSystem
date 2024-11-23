@@ -55,46 +55,64 @@ const Courses = () => {
           </div>
         </div>
 
-        <section className="fsec">
-          <button 
-            onClick={() => setFilter("Kindergarten")} 
-            className={filter === "Kindergarten" ? "active" : ""}
-          >
-            Kindergarten
-          </button>
-          <button 
-            onClick={() => setFilter("Primary")} 
-            className={filter === "Primary" ? "active" : ""}
-          >
-            Primary
-          </button>
-          <button 
-            onClick={() => setFilter("Preparatory")} 
-            className={filter === "Preparatory" ? "active" : ""}
-          >
-            Preparatory
-          </button>
-          <button 
-            onClick={() => setFilter("Secondary")} 
-            className={filter === "Secondary" ? "active" : ""}
-          >
-            Secondary
-          </button>
-          <div className="search-container">
-          <FaSearch className="search-icon" />
-            <input
-              type="text"
-              placeholder="Search my courses.."
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                setCurrentPage(1); 
-              }}
-              className="search-input"
-            />
-            
-          </div>
-        </section>
+        <section className="fsec" style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+  <button 
+    onClick={() => setFilter("Kindergarten")} 
+    className={filter === "Kindergarten" ? "active" : ""}
+    style={{ flex: "1 1 150px" }}
+  >
+    Kindergarten
+  </button>
+  <button 
+    onClick={() => setFilter("Primary")} 
+    className={filter === "Primary" ? "active" : ""}
+    style={{ flex: "1 1 150px" }}
+  >
+    Primary
+  </button>
+  <button 
+    onClick={() => setFilter("Preparatory")} 
+    className={filter === "Preparatory" ? "active" : ""}
+    style={{ flex: "1 1 150px" }}
+  >
+    Preparatory
+  </button>
+  <button 
+    onClick={() => setFilter("Secondary")} 
+    className={filter === "Secondary" ? "active" : ""}
+    style={{ flex: "1 1 150px" }}
+  >
+    Secondary
+  </button>
+
+
+  <div
+    style={{
+      flex: "1 1 150px", 
+      position: "relative",
+    }}
+  >
+    <FaSearch
+      className="iconsearch"
+    />
+    <input 
+      style={{
+        textAlign: "left",
+        paddingLeft: "35px",
+        width: "100%",     
+        height: "100%",    
+      }}
+      type="text"
+      placeholder="Search my courses..."
+      value={searchQuery}
+      onChange={(e) => {
+        setSearchQuery(e.target.value);
+        setCurrentPage(1); 
+      }} 
+      className="search-input"
+    />
+  </div>
+</section>
 
         <div className="course-grid">
           {displayedCourses.length > 0 ? (
