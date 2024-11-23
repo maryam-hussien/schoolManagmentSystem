@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
-
 :root {
     --background-color: #E5FCFF;
     --white: #FFFFFF;
@@ -11,11 +7,8 @@
     --gold:#FFCB5B;
     --green:#00A300;
     --red:D10003;
-    --linear-gradient: linear-gradient(90deg, #0A505B 0%, #148B9C 100%);    
+    --linear-gradient:linear-gradient(90deg, #0A505B 0%, #148B9C 100%);
     --titleFont:Outfit;
    --heroDescrFont: Inter;
    --descrFont:Roboto;
-   --greydark:#666;
-   --programicon:#007bff;
-   --red:#FF0000;
   }
