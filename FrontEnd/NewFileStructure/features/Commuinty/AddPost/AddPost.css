@@ -37,7 +37,10 @@ font-family: var(--descrFont);
   .AddPost {
     width: 90%; /* Slightly smaller width on extra small screens */
   }
-
+  .addpostLastSec button{
+    width: 95%;
+    padding: 0.25rem;
+  }
 
   .image-icon {
     font-size: 20px; /* Smaller icon on smaller screens */
