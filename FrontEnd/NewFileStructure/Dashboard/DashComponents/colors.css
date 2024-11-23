@@ -1,4 +1,5 @@
 :root {
+    --primary: #6c63ff;
     --background-color: #E5FCFF;
     --white: #FFFFFF;
     --black: #000000;
@@ -7,8 +8,6 @@
     --gold:#FFCB5B;
     --green:#00A300;
     --red:D10003;
-    --linear-gradient:(90deg, #0A505B 0%, #148B9C 100%);
-    --titleFont:Outfit;
-   --heroDescrFont: Inter;
-   --descrFont:Roboto;
-  }
+    --linear-gradient: linear-gradient(90deg, #0A505B 0%, #148B9C 100%);    
+    --font-high-light: #6c63ff;
+}
