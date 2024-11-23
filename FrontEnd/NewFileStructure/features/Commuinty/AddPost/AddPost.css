@@ -21,9 +21,14 @@ margin: auto;
 }
 
 /* Responsive adjustments */
+@media (max-width: 768px) {
+  .AddPost {
+    width: 90%; /* Slightly smaller width on extra small screens */
+  }
+}
 @media (max-width: 576px) {
   .AddPost {
-    width: 100%; /* Slightly smaller width on extra small screens */
+    width: 90%; /* Slightly smaller width on extra small screens */
   }
 
 

@@ -1,6 +1,7 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./PostCard.css";
 import { ChatSquareDots, HeartFill, Heart } from "react-bootstrap-icons";
+import image from "../../../assets/images/cat.jpeg";
 
 const PostCard = ({ post }) => {
   // State to track if the post is liked
@@ -13,8 +14,6 @@ const PostCard = ({ post }) => {
   const [newComment, setNewComment] = useState("");
   // State to track all comments
   const [comments, setComments] = useState(post.comments || []);
-
-
 
   // Handle the like button click
   const handleLike = () => {
@@ -30,49 +29,66 @@ const PostCard = ({ post }) => {
   const handleComment = () => {
     setAreCommentsVisible(!areCommentsVisible); // Toggle visibility of comments
   };
-    // Handle new comment submission
-    const handleAddComment = () => {
-      if (newComment.trim()) {
-        const newCommentObj = {
-          id: comments.length + 1, // Simple ID generation, replace with unique ID if needed
-          commenter: "User", // Hardcoded for now, replace with actual user data
-          comment: newComment
-        };
-        setComments([...comments, newCommentObj]); // Add new comment to comments list
-        setNewComment(""); // Reset the input field
-      }
-    };
-  
+  // Handle new comment submission
+  const handleAddComment = () => {
+    if (newComment.trim()) {
+      const newCommentObj = {
+        id: comments.length + 1, // Simple ID generation, replace with unique ID if needed
+        commenter: "User", // Hardcoded for now, replace with actual user data
+        comment: newComment,
+      };
+      setComments([...comments, newCommentObj]); // Add new comment to comments list
+      setNewComment(""); // Reset the input field
+    }
+  };
 
   return (
     <li className="list-group-item PostCard">
       <div className="d-flex justify-content-between align-items-center">
         <div className="socialTopCard">
-          <img src={post.image} alt="none" />
+          <img src={image} alt="none" />
           <div>{post.author}</div>
         </div>
         <div className="text-muted text-end">({post.date})</div>
       </div>
+      <hr className="socialdivider"></hr>
 
       <div className="socialpostsection">
         <p>{post.content}</p>
-        {post.image && <img src={post.image} alt="Post" />}
+        {post.image && <img src={image} alt="Post" />}
       </div>
+      
+      <div className="ActionNumbers">
+        <span className="ms-2 socialLikes"> {likes} Likes On This Post</span>
+        <span className="ms-2 socialLikes">
+          {Array.isArray(post.comments) ? post.comments.length : 0} Comments
+        </span>
+      </div>
+      <hr className="socialdivider"></hr>
 
-      <div className="mt-2 d-flex flex-row ms-2">
+      <div className="mt-2 d-flex flex-row ms-2 Postactions">
         <div className="d-flex align-items-center">
           {isLiked ? (
-            <HeartFill style={{ color: "red", fontSize: "18px",cursor:'pointer' }} onClick={handleLike} />
+            <HeartFill
+              style={{ color: "red", fontSize: "18px", cursor: "pointer" }}
+              onClick={handleLike}
+            />
           ) : (
-            <Heart style={{ color: "black", fontSize:"18px",cursor:'pointer' }} onClick={handleLike} />
+            <Heart
+              style={{ color: "black", fontSize: "18px", cursor: "pointer" }}
+              onClick={handleLike}
+            />
           )}
-          <span className="ms-2 socialLikes">Likes: {likes}</span>
+          <span className="ms-2 socialLikes">Likes</span>
         </div>
 
         <div className="d-flex align-items-center ms-4">
-          <ChatSquareDots style={{ color: "blue", fontSize: "18px" ,cursor:'pointer'}} onClick={handleComment} />
+          <ChatSquareDots
+            style={{ color: "blue", fontSize: "18px", cursor: "pointer" }}
+            onClick={handleComment}
+          />
           <span className="ms-2 socialLikes">
-            Comments: {Array.isArray(post.comments) ? post.comments.length : 0}
+            Comments
           </span>
         </div>
       </div>
@@ -99,7 +115,6 @@ const PostCard = ({ post }) => {
           ) : (
             <li>No comments yet</li>
           )}
-
         </ul>
       )}
     </li>

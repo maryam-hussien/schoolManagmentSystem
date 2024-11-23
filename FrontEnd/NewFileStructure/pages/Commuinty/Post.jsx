@@ -22,7 +22,7 @@ const Post = () => {
         <AddPost onAddPost={handleAddPost} />
       </div>
       <div className="SocialTitle text-center mt-2">POSTS</div>
-      <div>
+      <div className="pt-2">
         {posts.length === 0 ? (
           <p>No posts yet.</p>
         ) : (
