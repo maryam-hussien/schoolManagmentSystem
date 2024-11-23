@@ -85,7 +85,7 @@ const DashCourses = () => {
   return (
     <div className="dashAttendance w-100">
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
-      <h3 className="text-start mb-4">Students Management Dashboard:</h3>
+      <h2 className="text-start mb-4">Students Management Dashboard </h2>
 
       {/* Level and Grade Filters */}
       <form className="filters mb-3">

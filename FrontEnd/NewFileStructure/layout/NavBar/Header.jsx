@@ -47,11 +47,11 @@ const Header = () => {
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <NavLink 
-                      to="/social" 
+                      to="/community" 
                       className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
                       onClick={toggleMenu}
                     >
-                      SchoolSocial
+                      Community
                     </NavLink>
                   </li>
                   <li className="nav-item">

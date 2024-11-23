@@ -10,6 +10,6 @@
 .footerText{
   font-size: smaller;
 }
-.yellow{
+.footerText.yellow{
   color: #fddb88;
 }
