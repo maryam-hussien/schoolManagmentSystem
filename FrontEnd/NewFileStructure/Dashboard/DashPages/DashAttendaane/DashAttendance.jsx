@@ -43,7 +43,7 @@ function DashAttendance() {
     <div className="dashAttendance w-100 ">
             <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
 
-        <h3 className=" text-start mb-4">Students Attendance Dashboard:</h3>
+        <h3 className=" text-start mb-4 dashComponentTitle">Students Attendance Dashboard:</h3>
 
       <form className="filters mb-3">
         {/* Use Level component for level and grade selection */}

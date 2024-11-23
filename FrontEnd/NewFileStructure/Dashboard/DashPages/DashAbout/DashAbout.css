@@ -8,7 +8,7 @@
 }
 
 /* Title Section */
-.abouttitle {
+.dashAbout .abouttitle {
   font-size: 2rem;
   font-weight: 700;
   color: var(--font-high-light);
@@ -32,7 +32,7 @@
 
 
 /* Card Design */
-.card {
+.dashAbout .card {
   background-color: var(--white);
   border-radius: 10px;
   padding: 20px;

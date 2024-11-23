@@ -64,7 +64,7 @@ const DashSchedule = () => {
     <div className="manage-schedules">
                   <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
 
-      <h3 className="text-start mb-4">Manage Schedules</h3>
+      <h3 className="text-start mb-4 dashComponentTitle">Manage Schedules</h3>
 
       <Level 
         level={level} 
