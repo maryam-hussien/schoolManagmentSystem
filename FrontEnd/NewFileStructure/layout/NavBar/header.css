@@ -9,33 +9,46 @@
 }
 
 .bheader {
+  font-family: var(--titleFont);
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
   position: fixed;
   width: 100%;
+  top: 0;
+  height: 70px;
   font-size: 20px;
-  z-index: 1000;
-  color: #fff;
+  color: var(--white);
   font-weight: bold;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #fff; 
+  background-color: var(--white);
+  padding: 0 20px; 
 }
 
-.butt {
-  width: 157px;
-  background-color: #148B9c;
-  border: 1px solid white;
-  border-radius: 12px;
-  height: 44px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-top: 3px;
+.school-team {
+  display: flex; 
+  align-items: center;
+  gap: 10px; 
+  margin-left: 10px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
 }
 
-.butt:hover {
-  background-color: #117a8b; 
+.school-team img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.school-team span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.navt {
+  display: flex;
+  flex-direction: row;
+  gap: 15px; 
 }
 
 .navyy {
@@ -51,12 +64,7 @@
   width: 30px;
   height: 2px;
   margin: 6px 0;
-  background: #212526;
-}
-
-.navt {
-  display: flex;
-  flex-direction: row;
+  background: var(--black);
 }
 
 .nav-menu {
@@ -77,46 +85,49 @@
 }
 
 .nav-menu ul li a {
-  color: #000;
-  padding: 0;
+  color: var(--black);
   text-decoration: none;
   display: block;
 }
+
 .navbar-nav .nav-item .nav-link.active {
-  color: #148b9c;
+  color: var(--secondry);
   font-weight: bold;
   border-radius: 12px;
 }
 
 .nav-link.active {
-  color: #148b9c; 
+  color: var(--secondry);
   font-weight: bold;
-  border-radius: 12px; 
-}
-
-
-.fw-semibold:hover {
-  color: #fff;
+  border-radius: 12px;
 }
 
 .nav-menu.open {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 @media (max-width: 590.5px) {
   .navyy {
     display: block;
   }
-
+  .school-team {
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
+    font-size: 20px;
+    margin-left: 0px;
+    margin-right: 50px;
+    cursor: pointer;
+  }
   .nav-menu {
-    display: none; /* Hide by default */
-    flex-direction: column; 
-    position: absolute; 
+    display: none;
+    flex-direction: column;
+    position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #fff; 
+    background-color: var(--white);
     padding-top: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     z-index: 999;
@@ -124,14 +135,14 @@
 
   .nav-menu.open {
     display: flex; 
-    background-color: #148b9c;
+    background-color: var(--secondry);
     align-items: flex-start;
   }
 
   .nav-menu ul li {
     padding: 15px;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--black);
   }
 }
 
@@ -141,13 +152,13 @@
   }
 
   .nav-menu {
-    display: none; /* Hide by default */
-    flex-direction: column; 
-    position: absolute; 
+    display: none;
+    flex-direction: column;
+    position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #fff; 
+    background-color: var(--white);
     padding-top: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     z-index: 999;
@@ -155,40 +166,40 @@
 
   .nav-menu.open {
     display: flex; 
-    background-color: #148b9c;
+    background-color: var(--secondry);
     align-items: flex-start;
   }
 
   .nav-menu ul li {
     padding: 15px;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--black);
   }
 }
 
 .login-icon {
-  color: #000; 
+  color: var(--black);
   padding: 0.5rem;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
 .nohover {
   width: 40px;
   border-radius: 50%;
-  color: #000;
+  color: var(--black);
   font-weight: bold;
 }
 
 .login-icon:hover {
-  color: #000; 
+  color: var(--black);
 }
 
 .login-icon svg {
   cursor: pointer;
   margin: 0; 
   padding: 0;
-  transition: none; 
+  transition: none;
 }
 
 .logo-img {
