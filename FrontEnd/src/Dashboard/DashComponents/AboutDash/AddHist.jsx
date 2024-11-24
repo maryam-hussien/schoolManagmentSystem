@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../../../Components/Button/Button";
 
 function AddHistory() {
   const [history, setHistory] = useState("");
@@ -31,9 +32,7 @@ function AddHistory() {
             accept="image/*"
             onChange={(e) => setHistoryPhoto(e.target.files[0])}
           />
-          <button type="submit" className="buttony buttony-primary mt-2">
-            Submit
-          </button>
+          <Button label="Submit" color="primary" />
         </form>
       </div>
     </>
