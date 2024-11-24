@@ -1,5 +1,5 @@
 import './Level.css'; // Create a CSS file for styling if needed
-import Button from "../../../Components/Button/Button";
+import Button from "../../../components/Button/Button";
 
 
 const Level = ({ 
