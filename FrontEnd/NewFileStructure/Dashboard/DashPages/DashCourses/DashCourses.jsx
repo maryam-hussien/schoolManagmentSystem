@@ -3,7 +3,7 @@ import Level from '../../DashComponents/selectedLevel/Level';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './DashCourses.css';
-import courseData from "../../../../public/data/coursresapi";
+import courseData from "../../../data/coursresapi";
 import DashCardCourse from '../../DashComponents/DashCardCourse/DashCardCourse '; 
 import DashFormCourse from '../../DashComponents/DashFormCourse/DashFormCourse'; 
 
