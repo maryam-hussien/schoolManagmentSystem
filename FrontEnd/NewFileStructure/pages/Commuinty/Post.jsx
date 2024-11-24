@@ -20,7 +20,7 @@ const Post = () => {
       <div className="d-flex flex-wrap px-3 SocialDiv">
        <div className="SocialTitle">School Social Community : </div>
         <AddPost onAddPost={handleAddPost} />
-      <div className="SocialTitle text-center mt-2">POSTssssS :</div>
+      <div className="SocialTitle text-center mt-2">POSTS :</div>
       <div >
         {posts.length === 0 ? (
           <p>No posts yet.</p>
