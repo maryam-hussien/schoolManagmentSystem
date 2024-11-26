@@ -1,5 +1,5 @@
 import "./card.css";
-import img from "../../../../public/assets/0daad3630b85891d51f05fc25aba5985.jpg"; // Fallback image
+import img from "../../../assets/Images/1249636d803793f0d04ae77ab50097c7.jpg"; // Fallback image
 import  { useState } from "react";
 
 const Card = ({ student }) => {
