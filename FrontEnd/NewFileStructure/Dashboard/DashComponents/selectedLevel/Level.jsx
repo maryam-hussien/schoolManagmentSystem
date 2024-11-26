@@ -39,6 +39,10 @@ const Level = ({
         return []; // No options if no level is selected
     }
   };
+  const handleSubmitWrapper = (event) => {
+    event.preventDefault(); // Prevent default form submission (page reload)
+    handleSubmit(); // Call the handleSubmit passed as a prop (it can contain any custom logic)
+  };
 
   return (
     <div className="form-row">
@@ -130,7 +134,7 @@ const Level = ({
       )}
 
       {/* Add Schedule Button */}
-      <Button label={buttonLabel} color="primary" />
+      <Button label={buttonLabel} color="primary" onClick={handleSubmitWrapper} />
     </div>
   );
 };

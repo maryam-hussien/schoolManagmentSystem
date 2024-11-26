@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import "./Button.css";
 
 const Button = ({ label, color, onClick, className }) => {
+  
   return (
     <button
       className={`btn ${color} ${className}`}
