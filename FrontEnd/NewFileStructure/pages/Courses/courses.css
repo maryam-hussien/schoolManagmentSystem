@@ -2,6 +2,7 @@
 
 .courses {
   min-height: 100vh;
+  font-family: var(--titleFont);
 }
 .fsection {
   height: 230px;
@@ -98,15 +99,12 @@
   margin: 10px; 
   height: 350px;
   background: var(--white);
-  border: 1px solid #ccc;
   padding: 15px;
   background-color: var(--background-color);
   border-radius: 10px;
-  text-align: center;
+ 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
