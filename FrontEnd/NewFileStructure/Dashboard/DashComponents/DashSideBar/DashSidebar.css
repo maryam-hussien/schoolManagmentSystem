@@ -4,7 +4,7 @@
   border-radius: 7px;
   width: 20%;
   opacity: 90%;
-  height :auto ;
+  min-height :100vh;
 }
 .logo-img {
   height: 40px;
