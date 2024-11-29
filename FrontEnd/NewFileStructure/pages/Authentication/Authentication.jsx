@@ -49,7 +49,7 @@ function Authentication() {
                 onBlur={validateEmail}
               />
             </div>
-            <small>{emailError}</small>
+            <small style={{color:'red'}}>{emailError}</small>
 
             <div className="input-with-icon">
               <Lock className="input-icon" onClick={togglePasswordVisibility} style={{ cursor: 'pointer'}} />
@@ -62,7 +62,7 @@ function Authentication() {
                 onBlur={validatePassword}
               />
             </div>
-            <small>{passwordError}</small>
+            <small style={{color:'red'}}>{passwordError}</small>
 
             <button type="submit">Login</button>
             <a href="/forgot-password" className="forgot-password-link">Forget Password?</a>

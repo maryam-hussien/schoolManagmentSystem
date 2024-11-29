@@ -1,4 +1,4 @@
-@import url('../../assets/Global.css');
+@import url('../../assets/global.css');
 
 .conainer {
   display: flex;
@@ -50,7 +50,6 @@
 .input-with-icon {
   position: relative;
   width: 100%;
-  margin: 15px 0;
 }
 
 .input-icon {

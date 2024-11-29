@@ -16,8 +16,7 @@ const DashSchedule = () => {
     day: "",
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     const { level, grade, timeSlot, subject, day } = formData;
   if (!level || !grade || !timeSlot || !subject || !day) {
     toast.error('Please fill in all fields before submitting');
@@ -64,7 +63,7 @@ const DashSchedule = () => {
     <div className="manage-schedules">
                   <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
 
-      <h3 className="text-start mb-4 dashComponentTitle">Manage Schedules</h3>
+      <h3 className="text-start mb-4 dashComponentTitle">Manage Schedulessssssssss</h3>
 
       <Level 
         level={level} 

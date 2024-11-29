@@ -1,7 +1,8 @@
-@import url('../../assets/Global.css');
+@import url('../../assets/global.css');
 
 .courses {
   min-height: 100vh;
+  font-family: var(--titleFont);
 }
 .fsection {
   height: 230px;
@@ -98,24 +99,25 @@
   margin: 10px; 
   height: 350px;
   background: var(--white);
-  border: 1px solid #ccc;
   padding: 15px;
   background-color: var(--background-color);
   border-radius: 10px;
-  text-align: center;
+ 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.course-grid img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
+.course-grid .imagcourse img {
+  width: 150px;
 }
-
+.imagcourse{
+  height: 200px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color);
+}
 .pagination {
   display: flex;
   justify-content: center;
