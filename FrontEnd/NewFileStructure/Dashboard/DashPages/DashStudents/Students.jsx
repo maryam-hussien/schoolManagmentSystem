@@ -1,141 +1,143 @@
-import  { useState } from 'react';
-import Level from '../../DashComponents/selectedLevel/Level';
+import { useState } from 'react';
+import Students from "../../../data/studentsapi";
+import Level from '../../DashComponents/selectedLevel/Level'; // Import the Level component
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './Students.css';
-import courseData from "../../../data//coursresapi";
-import DashCardCourse from '../../DashComponents/DashCardCourse/DashCardCourse '; 
-import DashFormCourse from '../../DashComponents/DashFormCourse/DashFormCourse'; 
+import "../DashAttendaane/DashAttendance";
+import '../DashAttendaane/DashAttendance'; // Import the custom CSS file for table row height
 
-const Student = () => {
+function DashAttendance() {
   const [level, setLevel] = useState("");
   const [grade, setGrade] = useState("");
-  const [courses, setCourses] = useState([]);
-  const [filteredCourses, setFilteredCourses] = useState([]);
-  const [isAddCourseFormVisible, setIsAddCourseFormVisible] = useState(false);
-  const [newCourse, setNewCourse] = useState({
-    title: '',
-    description: '',
-    creator: '',
-    level: '',
-    grade: '',
-    backgroundColor: '#fff',
-    image: ''
-  });
+  const [filteredStudents, setFilteredStudents] = useState([]); // State to hold filtered students
+  const [newStudent, setNewStudent] = useState({ id: "", name: "", level: "", grade: "" }); // State for new student form
 
-  // Filter courses based on level and grade
-  const filterCourses = () => {
-    if (!level || !grade) {
-      toast.error("Please select both level and grade to filter the courses.");
+  const filterStudents = () => {
+    if (level && grade) {
+      setFilteredStudents(
+        Students.filter(
+          student => student.level === level && student.grade === parseInt(grade)
+        )
+      );
+    } else {
+      toast.error("Please select both level and grade.");
+    }
+  };
+
+  const markAttendance = (studentId) => {
+    toast.info(`Student ID: ${studentId} has been removed`);
+    setFilteredStudents(prevStudents =>
+      prevStudents.filter(student => student.id !== studentId)
+    );
+  };
+
+  const handleAddStudent = () => {
+    const { id, name, level, grade } = newStudent;
+    if (!id || !name || !level || !grade) {
+      toast.error("Please fill in all fields for the new student.");
       return;
     }
-    const gradeNumber = parseInt(grade, 10);
-    const filtered = courseData.filter(course => course.level === level && course.grade === gradeNumber);
-    setFilteredCourses(filtered);
-    if (filtered.length === 0) {
-      toast.info("No courses found for the selected level and grade.");
+
+    if (filteredStudents.some(student => student.id === id)) {
+      toast.error("A student with this ID already exists.");
+      return;
     }
-  };
 
-  // Toggle the visibility of the add course form
-  const toggleAddCourseForm = () => {
-    setIsAddCourseFormVisible(prevState => !prevState);
-  };
-
-  // Handle input changes for course
-  const handleCourseInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewCourse(prevCourse => ({ ...prevCourse, [name]: value }));
-  };
-
-  // Handle form submission to add a new course
-  const handleAddCourse = (e) => {
-    e.preventDefault();
-    setCourses([...courses, newCourse]);
-    toast.success("Course added successfully!");
-    setNewCourse({ title: '', description: '', creator: '', level: '', grade: '', backgroundColor: '#fff', image: '' });
-    toggleAddCourseForm();
-  };
-
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setNewCourse(prevCourse => ({ ...prevCourse, image: reader.result }));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  // Handle course edit
-  const handleEditCourse = (index) => {
-    const courseToEdit = courses[index];
-    setNewCourse(courseToEdit);
-    toggleAddCourseForm();
-  };
-
-  // Handle course deletion
-  const handleDeleteCourse = (index) => {
-    const updatedCourses = courses.filter((_, i) => i !== index);
-    setCourses(updatedCourses);
-    toast.success("Course deleted successfully!");
+    setFilteredStudents(prevStudents => [
+      ...prevStudents,
+      { id, name, level, grade: parseInt(grade) }
+    ]);
+    toast.success("Student added successfully!");
+    setNewStudent({ id: "", name: "", level: "", grade: "" });
   };
 
   return (
     <div className="dashAttendance w-100">
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
-      <h3 className=" mb-4 dashComponentTitle">Students Management Dashboard:</h3>
-
-      {/* Level and Grade Filters */}
+      <h3 className="text-start mb-4 dashComponentTitle">Students Attendance Dashboard:</h3>
       <form className="filters mb-3">
-        <Level
-          level={level}
-          setLevel={setLevel}
-          formData={{ grade }}
-          setFormData={(data) => setGrade(data.grade)}
+        <Level 
+          level={level} 
+          setLevel={setLevel} 
+          formData={{ grade }} 
+          setFormData={(data) => setGrade(data.grade)} 
           showGrade={true}
-          handleSubmit={filterCourses}
-          buttonLabel="Show Courses"
+          handleSubmit={filterStudents}
+          buttonLabel='Show Students'
         />
       </form>
-      <button className="dash-btn-add-course" onClick={toggleAddCourseForm}>+</button>
-      {/* Show Course Cards */}
-      <div className="course-cards-container">
-        <h3 className="text-center mb-4">Courses</h3>
-        
-
-        {/* Add Course Form */}
-        {isAddCourseFormVisible && (
-          <DashFormCourse
-            newCourse={newCourse}
-            handleCourseInputChange={handleCourseInputChange}
-            handleAddCourse={handleAddCourse}
-            handleImageUpload={handleImageUpload}
+      <div className="dashAttendance">
+        <h5 className="text-center mt-4 mb-2">Existing Students</h5>
+        <table className="table table-responsive">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Level</th>
+              <th>Grade</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredStudents.length > 0 ? (
+              filteredStudents.map((student) => (
+                <tr key={student.id}>
+                  <td>{student.id}</td>
+                  <td>{student.name}</td>
+                  <td>{student.level}</td>
+                  <td>{student.grade}</td>
+                  <td>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => markAttendance(student.id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5">No students found for the selected level and grade.</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+      <div className="add-student mt-5">
+        <h5 className="text-center mb-3">Add New Student</h5>
+        <form className="d-flex justify-content-center gap-3">
+          <input
+            type="text"
+            placeholder="ID"
+            value={newStudent.id}
+            onChange={(e) => setNewStudent({ ...newStudent, id: e.target.value })}
           />
-        )}
-
-        {/* Display Courses as Cards */}
-        <div className="row">
-          {(filteredCourses.length > 0 ? filteredCourses : courses).length === 0 ? (
-            <div className="col-12 text-center">
-              <p>No courses available for the selected level and grade.</p>
-            </div>
-          ) : (
-            (filteredCourses.length > 0 ? filteredCourses : courses).map((course, index) => (
-              <DashCardCourse
-                key={index}
-                course={course}
-                index={index}
-                handleEditCourse={handleEditCourse}
-                handleDeleteCourse={handleDeleteCourse}
-              />
-            ))
-          )}
-        </div>
+          <input
+            type="text"
+            placeholder="Name"
+            value={newStudent.name}
+            onChange={(e) => setNewStudent({ ...newStudent, name: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Level"
+            value={newStudent.level}
+            onChange={(e) => setNewStudent({ ...newStudent, level: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Grade"
+            value={newStudent.grade}
+            onChange={(e) => setNewStudent({ ...newStudent, grade: e.target.value })}
+          />
+          <button type="button" className="btn btn-success" onClick={handleAddStudent}>
+            Add Student
+          </button>
+        </form>
       </div>
     </div>
   );
-};
+}
 
-export default Student;
+export default DashAttendance;
