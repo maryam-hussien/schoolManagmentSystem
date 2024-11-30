@@ -66,20 +66,21 @@ const CoursesPage = () => {
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
         />
-        <div className="course-grid">
-          {displayedCourses.length > 0 ? (
-            displayedCourses.map((course) => (
-              <CourseCard
-                key={`${course.level}-${course.grade}`}
-                course={course}
-                rating={ratings[`${course.level}-${course.grade}`] || 0}
-                handleStarClick={handleStarClick}
-              />
-            ))
-          ) : (
-            <p>No courses available.</p>
-          )}
-        </div>
+       <div className="course-grid">
+  {displayedCourses.length > 0 ? (
+    displayedCourses.map((course) => (
+      <CourseCard
+        key={`${course.level}-${course.grade}`}
+        course={course}
+        rating={filter === "more" ? ratings[`${course.level}-${course.grade}`] || 0 : null} // Only pass rating for "My Courses"
+        handleStarClick={filter === "more" ? handleStarClick : null} // Pass the handler only for "My Courses"
+      />
+    ))
+  ) : (
+    <p>No courses available.</p>
+  )}
+</div>
+
         <Pagination
           totalPages={totalPages}
           currentPage={currentPage}
