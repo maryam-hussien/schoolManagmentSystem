@@ -9,4 +9,6 @@ a.active {
 
 .bar a{
   padding: 3px 8px;
+  font-family: var(--titleFont);
+  font-weight: 500;
 }
