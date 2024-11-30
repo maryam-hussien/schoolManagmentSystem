@@ -18,7 +18,7 @@ const Profile = () => {
           <div className="profileImgCont mx-auto">
             <img src={profileImg} className="profileImg m-auto"></img>
         </div>
-        <div className=" fw-medium p-3  mx-auto profilename">Maryam Hussien</div>
+        <div className=" p-3  mx-auto profilename">Maryam Hussien</div>
         <div className="text-white fw-medium d-flex justify-content-around m-auto bar">
         <ProfileBar/>
         </div>

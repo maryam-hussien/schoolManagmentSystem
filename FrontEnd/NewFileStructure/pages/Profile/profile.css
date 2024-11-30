@@ -1,6 +1,7 @@
+@import url('../../assets/global.css');
+
 .profile{
   height: auto;
-  margin-top: 1% ;  
   display: flex;
   justify-content: center;
 
@@ -9,7 +10,6 @@
   width: 100%;
   height: auto;
   margin-top: 12%;
-  background-color: #fceeee;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -36,6 +36,8 @@ left: 45%;
   margin-top: 5%;
   font-size: calc(1.275rem + .3vw);
   width: fit-content;
+  font-family: var(--titleFont);
+  font-weight: 500;
 }
 .bar{
   font-size: 1.25rem;
