@@ -1,16 +1,48 @@
 import { useState } from 'react';
 import Students from "../../../data/studentsapi";
-import Level from '../../DashComponents/selectedLevel/Level'; // Import the Level component
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "../DashAttendaane/DashAttendance";
-import '../DashAttendaane/DashAttendance'; // Import the custom CSS file for table row height
+import "bootstrap/dist/css/bootstrap.min.css"; // Use Bootstrap for styling
+import "./Students.css"
 
-function DashAttendance() {
+// Reusable Select Dropdown Component
+const SelectDropdown = ({ label, value, options, onChange }) => (
+  <div className="form-group">
+    <label className="form-label">{label}</label>
+    <select className="form-select" value={value} onChange={onChange}>
+      <option value="">Select {label}</option>
+      {options.map((option, index) => (
+        <option key={index} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  </div>
+);
+
+function Student() {
   const [level, setLevel] = useState("");
   const [grade, setGrade] = useState("");
   const [filteredStudents, setFilteredStudents] = useState([]); // State to hold filtered students
-  const [newStudent, setNewStudent] = useState({ id: "", name: "", level: "", grade: "" }); // State for new student form
+  const [newStudent, setNewStudent] = useState({
+    id: "",
+    name: "",
+    level: "",
+    grade: "",
+    dob: "",
+    gender: "",
+    phoneNumber: "",
+    address: "",
+    fatherNumber: "",
+    motherNumber: "",
+    bloodGroup: "",
+  }); // State for new student form
+  const [editingStudent, setEditingStudent] = useState(null); // State for editing a student
+
+  const levels = [...new Set(Students.map(student => student.level))];
+  const grades = [...new Set(Students.map(student => student.grade))].sort((a, b) => a - b);
+  const genders = ["Male", "Female", "Other"];
+  const bloodGroups = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"];
 
   const filterStudents = () => {
     if (level && grade) {
@@ -24,7 +56,7 @@ function DashAttendance() {
     }
   };
 
-  const markAttendance = (studentId) => {
+  const handleDeleteStudent = (studentId) => {
     toast.info(`Student ID: ${studentId} has been removed`);
     setFilteredStudents(prevStudents =>
       prevStudents.filter(student => student.id !== studentId)
@@ -32,8 +64,8 @@ function DashAttendance() {
   };
 
   const handleAddStudent = () => {
-    const { id, name, level, grade } = newStudent;
-    if (!id || !name || !level || !grade) {
+    const { id, name, level, grade, dob, gender, phone, address, fatherNumber, motherNumber, bloodGroup } = newStudent;
+    if (!id || !name || !level || !grade || !dob || !gender || !phone || !address || !fatherNumber || !motherNumber || !bloodGroup) {
       toast.error("Please fill in all fields for the new student.");
       return;
     }
@@ -45,36 +77,80 @@ function DashAttendance() {
 
     setFilteredStudents(prevStudents => [
       ...prevStudents,
-      { id, name, level, grade: parseInt(grade) }
+      { id, name, level, grade: parseInt(grade), dob, gender, phone, address, fatherNumber, motherNumber, bloodGroup }
     ]);
     toast.success("Student added successfully!");
-    setNewStudent({ id: "", name: "", level: "", grade: "" });
+    setNewStudent({
+      id: "",
+      name: "",
+      level: "",
+      grade: "",
+      dob: "",
+      gender: "",
+      phoneNumber: "",
+      address: "",
+      fatherNumber: "",
+      motherNumber: "",
+      bloodGroup: "",
+    });
+  };
+
+  const handleEditStudent = (student) => {
+    setEditingStudent(student);
+    setNewStudent({ ...student });
+  };
+
+  const handleUpdateStudent = () => {
+    const updatedStudents = filteredStudents.map(student =>
+      student.id === editingStudent.id ? { ...newStudent } : student
+    );
+    setFilteredStudents(updatedStudents);
+    setEditingStudent(null);
+    toast.success("Student updated successfully!");
+    setNewStudent({
+      id: "",
+      name: "",
+      level: "",
+      grade: "",
+      dob: "",
+      gender: "",
+      phoneNumber: "",
+      address: "",
+      fatherNumber: "",
+      motherNumber: "",
+      bloodGroup: "",
+    });
   };
 
   return (
-    <div className="dashAttendance w-100">
+    <div className="dashAttendance w-100 p-3">
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
       <h3 className="text-start mb-4 dashComponentTitle">Students Attendance Dashboard:</h3>
-      <form className="filters mb-3">
-        <Level 
-          level={level} 
-          setLevel={setLevel} 
-          formData={{ grade }} 
-          setFormData={(data) => setGrade(data.grade)} 
-          showGrade={true}
-          handleSubmit={filterStudents}
-          buttonLabel='Show Students'
-        />
+
+      <form className="filters mb-3 d-flex gap-3">
+        <SelectDropdown label="Level" value={level} options={levels} onChange={(e) => setLevel(e.target.value)} />
+        <SelectDropdown label="Grade" value={grade} options={grades} onChange={(e) => setGrade(e.target.value)} />
+        <button type="button" className="btn btn-primary" onClick={filterStudents}>
+          Show Students
+        </button>
       </form>
-      <div className="dashAttendance">
+
+      <div>
         <h5 className="text-center mt-4 mb-2">Existing Students</h5>
-        <table className="table table-responsive">
+        <table className="table table-striped table-bordered table-sm">
           <thead>
             <tr>
               <th>ID</th>
               <th>Name</th>
               <th>Level</th>
               <th>Grade</th>
+              <th>Date of Birth</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th> Father's Number</th>
+              <th> Mother's Number</th>
+              <th>Blood Group</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -86,58 +162,97 @@ function DashAttendance() {
                   <td>{student.name}</td>
                   <td>{student.level}</td>
                   <td>{student.grade}</td>
+                  <td>{student.dob}</td>
+                  <td>{student.gender}</td>
+                  <td>{student.phoneNumber}</td>
+                  <td>{student.address}</td>
+                  <td>{student.fatherNumber}</td>
+                  <td>{student.motherNumber}</td>
+                  <td>{student.bloodGroup}</td>
                   <td>
-                    <button
-                      className="btn btn-danger"
-                      onClick={() => markAttendance(student.id)}
-                    >
+                    <button className="btn btn-danger " onClick={() => handleDeleteStudent(student.id)}>
                       Delete
+                    </button>
+                    <button className="btn btn-primary" onClick={() => handleEditStudent(student)}>
+                      Edit
                     </button>
                   </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="5">No students found for the selected level and grade.</td>
+                <td colSpan="12" className="text-center">No students found for the selected level and grade.</td>
               </tr>
             )}
           </tbody>
         </table>
       </div>
+
       <div className="add-student mt-5">
-        <h5 className="text-center mb-3">Add New Student</h5>
+        <h5 className="text-center mb-3">{editingStudent ? "Edit Student" : "Add New Student"}</h5>
         <form className="d-flex justify-content-center gap-3">
           <input
             type="text"
+            className="form-control"
             placeholder="ID"
             value={newStudent.id}
+            disabled={!!editingStudent}
             onChange={(e) => setNewStudent({ ...newStudent, id: e.target.value })}
           />
           <input
             type="text"
+            className="form-control"
             placeholder="Name"
             value={newStudent.name}
             onChange={(e) => setNewStudent({ ...newStudent, name: e.target.value })}
           />
+          <SelectDropdown label="Level" value={newStudent.level} options={levels} onChange={(e) => setNewStudent({ ...newStudent, level: e.target.value })} />
+          <SelectDropdown label="Grade" value={newStudent.grade} options={grades} onChange={(e) => setNewStudent({ ...newStudent, grade: e.target.value })} />
+          <input
+            type="date"
+            className="form-control"
+            value={newStudent.dob}
+            onChange={(e) => setNewStudent({ ...newStudent, dob: e.target.value })}
+          />
+          <SelectDropdown label="Gender" value={newStudent.gender} options={genders} onChange={(e) => setNewStudent({ ...newStudent, gender: e.target.value })} />
           <input
             type="text"
-            placeholder="Level"
-            value={newStudent.level}
-            onChange={(e) => setNewStudent({ ...newStudent, level: e.target.value })}
+            className="form-control"
+            placeholder="Phone"
+            value={newStudent.phone}
+            onChange={(e) => setNewStudent({ ...newStudent, phone: e.target.value })}
           />
           <input
             type="text"
-            placeholder="Grade"
-            value={newStudent.grade}
-            onChange={(e) => setNewStudent({ ...newStudent, grade: e.target.value })}
+            className="form-control"
+            placeholder="Address"
+            value={newStudent.address}
+            onChange={(e) => setNewStudent({ ...newStudent, address: e.target.value })}
           />
-          <button type="button" className="btn btn-success" onClick={handleAddStudent}>
-            Add Student
-          </button>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Father's Number"
+            value={newStudent.fatherNumber}
+            onChange={(e) => setNewStudent({ ...newStudent, fatherNumber: e.target.value })}
+          />
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Mother's Number"
+            value={newStudent.motherNumber}
+            onChange={(e) => setNewStudent({ ...newStudent, motherNumber: e.target.value })}
+          />
+          <SelectDropdown label="Blood Group" value={newStudent.bloodGroup} options={bloodGroups} onChange={(e) => setNewStudent({ ...newStudent, bloodGroup: e.target.value })} />
+          {editingStudent ? (
+            <button type="button " className="btn btn-warning" onClick={handleUpdateStudent}>Update Student</button>
+          ) : (
+            <button type="button" className="btn btn-success" onClick={handleAddStudent}>Add Student</button>
+          )}
         </form>
       </div>
     </div>
   );
 }
 
-export default DashAttendance;
+export default Student;
