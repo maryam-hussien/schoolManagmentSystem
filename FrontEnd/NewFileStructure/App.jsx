@@ -8,6 +8,7 @@ import Authentication from './pages/Authentication/Authentication'
 import Courses from "./pages/Courses/Courses";
 import Post from "./pages/Commuinty/Post";
 import DashHome from "./Dashboard/DashPages/DashHome/DashHome"
+import Profile from "./pages/Profile/Profile"
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/course" element={<Courses />} />
           <Route path="/login" element={<Authentication />} />
           <Route path='/community' element={<Post/> }/>
+          <Route path='/profile/*' element={<Profile/>}/>
           <Route path='/dashboard/*' element={<DashHome/>}/>
 
       </Routes>
