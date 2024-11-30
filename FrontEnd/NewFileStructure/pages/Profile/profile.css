@@ -41,7 +41,7 @@ left: 45%;
 }
 .bar{
   font-size: 1.25rem;
-  background-color: var(--font-high-light);
+  background-color: var(--secondry);
   border-radius: 13px;
   width: 88%;
   display: flex;
