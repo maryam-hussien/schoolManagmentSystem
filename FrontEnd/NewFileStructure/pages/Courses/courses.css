@@ -100,9 +100,7 @@
   height: 350px;
   background: var(--white);
   padding: 15px;
-  background-color: var(--background-color);
-  border-radius: 10px;
- 
+ font-family: var(--titleFont);
   display: flex;
   flex-direction: column;
   transition: transform 0.3s, box-shadow 0.3s;
