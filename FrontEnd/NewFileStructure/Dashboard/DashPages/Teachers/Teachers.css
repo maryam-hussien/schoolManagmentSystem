@@ -1,0 +1,23 @@
+.teachersPage {
+    padding: 20px;
+  }
+  
+  .teachersPage h3 {
+    color: #333;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  
+  .teachers-list table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .teachers-list table th,
+  .teachers-list table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  

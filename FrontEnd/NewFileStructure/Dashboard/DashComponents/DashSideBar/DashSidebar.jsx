@@ -78,7 +78,7 @@ const DashSidebar = () => {
          </NavLink>
          <NavLink
           className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-          to="dashAbout"
+          to="teacher"
           >
            <PersonBadge size={32} color="green" title="Teacher" />
           <span>Teachers</span>
