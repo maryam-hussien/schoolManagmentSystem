@@ -1,6 +1,6 @@
 .ProfileScheduleSection {
   border-radius: 13px;
-  background-color: #b6d5d8;
+  background-color: #cdeef1;
   padding: 1.5rem;
   min-width: 89%;
 }
@@ -10,9 +10,15 @@
   vertical-align: middle; /* Vertically center text */
 }
 
+
 .ProfileScheduleSection table.table thead th {
   background-color: #148B9c; /* Dark green for header background */
   color: white; /* White text in the header */
+  font-family: var(--titleFont);
+
+}
+.ProfileScheduleSection table.table td{
+  font-family: var(--heroDescrFont);
 }
 
 /* Styling for medium and small screens (tablets and below) */

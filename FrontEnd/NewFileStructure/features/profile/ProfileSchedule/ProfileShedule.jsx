@@ -2,7 +2,6 @@ import "./profileSchedule.css"
 const ProfileSchedule = () => {
   return (
  <div className=" container mt-3 ProfileScheduleSection">
-      <h3 className="text-center mb-4">Student Schedule</h3>
       
       <table className="table table-bordered table-hover table-responsive ">
         <thead className="thead-dark">

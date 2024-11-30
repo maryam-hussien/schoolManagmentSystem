@@ -40,14 +40,7 @@ const ProfileBar = () => {
         Scores
       </NavLink>
 
-      <NavLink 
-        to="/profile/settings" 
-        className={({ isActive }) => 
-          isActive ? "text-white text-decoration-none active" : "text-white text-decoration-none"
-        }
-      >
-        Settings
-      </NavLink>
+
     </>
   );
 }

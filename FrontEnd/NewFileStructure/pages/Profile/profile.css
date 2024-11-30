@@ -50,6 +50,32 @@ left: 45%;
   
 
 }
+.ProfilemainTitle{
+  font-family: var(--titleFont);
+  font-weight: 600;
+}
+
+.gradeCard{
+  border-radius: 23px;
+  padding: 1rem;
+  width: 88%;
+  font-family: var(--titleFont);
+  font-weight: 600; 
+ 
+}
+.profilebtn{
+  text-align: center;
+align-self: end;
+}
+.secTitleProfile{
+  font-family: var(--heroDescrFont);
+  font-weight: 600; 
+
+}
+.grades{
+  justify-content: space-between;
+
+}
 /* Media query for screens less than 1440px wide */
 
 
@@ -142,6 +168,9 @@ left: 45%;
     padding: 0.5rem;
   
   }
+  .gradeCard{
+    width: 100%;
+  }
 
 }
 
@@ -162,6 +191,9 @@ left: 45%;
   }
   .profileImgCont{
     left: 40%;
+  }
+  .gradeCard{
+width: 100%;
   }
 }
 
