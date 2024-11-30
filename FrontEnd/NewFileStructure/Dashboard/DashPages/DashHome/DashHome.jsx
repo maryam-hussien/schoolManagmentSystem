@@ -11,6 +11,7 @@ import DashNav from "../../DashComponents/DashNav/DashNav";
 import EditProfile from "../DashProfile/EditProfile/EditProfile";
 import Students from "../DashStudents/Students";
 import DashAbout from "../DashAbout/DashAbout";
+import Teachers from "../Teachers/Teachers";
 
 const DashHome = () => {
 
@@ -31,6 +32,7 @@ const DashHome = () => {
           <Route path="grades" element={<DashGrades />} />
           <Route path="schedule" element={<DashSchedule />} />
           <Route path="students" element={<Students/>}/>
+          <Route path="teacher" element={<Teachers/>}/>
           <Route path="/edit" element={<EditProfile/>} />
 
 
