@@ -86,7 +86,7 @@ function DashAttendance() {
                     <button className="btn btn-success me-2" onClick={() => markAttendance(student.id, true)}>
                       Attended
                     </button>
-                    <button className="btn btn-danger" onClick={() => markAttendance(student.id, false)}>
+                    <button className="btn btn-danger me-2" onClick={() => markAttendance(student.id, false)}>
                       Absent
                     </button>
                   </td>
@@ -95,7 +95,12 @@ function DashAttendance() {
               ))
             ) : (
               <tr>
-                <td colSpan="6">No students found for the selected level and grade.</td> {/* Adjusted colspan */}
+                <td>No students found for the selected level and grade.</td> 
+                <td>No students found for the selected level and grade.</td> 
+                <td>No students found for the selected level and grade.</td> 
+                <td>No students found for the selected level and grade.</td> 
+                <td>No students found for the selected level and grade.</td> 
+                <td>No students found for the selected level and grade.</td> 
               </tr>
             )}
           </tbody>

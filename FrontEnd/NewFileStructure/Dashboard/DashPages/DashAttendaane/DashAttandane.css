@@ -7,7 +7,7 @@
 
 
 .dashAttendance .table {
-  width: 80%; /* Reduce the table width */
+  width: 70%; /* Reduce the table width */
   margin: 20px auto; /* Center the table by adding automatic margins */
   border-collapse: collapse;
   overflow-x: auto; /* Enable horizontal scrolling */
@@ -29,7 +29,6 @@
   }
 
   .dashAttendance table.table td, .dashAttendance table.table th {
-    padding: 0.15rem; /* Further reduce padding */
     width: auto; /* Adjust width dynamically */
   }
 

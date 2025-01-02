@@ -13,7 +13,7 @@ const About = () => {
      <Header />
            <div className='about'>
             <Image />
-    <h1 className='center'>ABOUTt SCHOOL</h1>
+    <h1 className='center'>ABOUT SCHOOL</h1>
     <Schoolabout />
     <h1 className='center'>HISTORY OF SCHOOL</h1>
    <Schoolhist />
