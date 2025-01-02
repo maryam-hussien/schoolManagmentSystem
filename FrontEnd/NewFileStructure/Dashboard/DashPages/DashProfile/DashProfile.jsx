@@ -48,7 +48,6 @@ const DashdashProfile = () => {
           <NavLink to="/dashboard/edit">
           <Button label="Edit Profile" color="primary" />
           </NavLink>
-          <Button label="Change Password" color="secondary" />
         </div>
       </div>
     </div>

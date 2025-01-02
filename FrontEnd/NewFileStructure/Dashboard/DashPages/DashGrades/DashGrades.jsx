@@ -91,9 +91,10 @@ function DashGrades() {
               <th>Name</th>
               <th>Level</th>
               <th>Grade</th>
-              <th>Subject</th> {/* Added Subject column */}
+              <th>Subject</th>
               <th>Score</th>
               <th>Actions</th>
+              <th>Type</th>
             </tr>
           </thead>
           <tbody>

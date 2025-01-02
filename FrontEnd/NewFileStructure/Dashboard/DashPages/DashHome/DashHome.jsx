@@ -12,7 +12,7 @@ import EditProfile from "../DashProfile/EditProfile/EditProfile";
 import Students from "../DashStudents/Students";
 import DashAbout from "../DashAbout/DashAbout";
 import Teachers from "../Teachers/Teachers";
-
+import Review from '../DashReview/Review'
 const DashHome = () => {
 
   return (
@@ -33,6 +33,7 @@ const DashHome = () => {
           <Route path="schedule" element={<DashSchedule />} />
           <Route path="students" element={<Students/>}/>
           <Route path="teacher" element={<Teachers/>}/>
+          <Route path="dashReview" element={<Review/>}/>
           <Route path="/edit" element={<EditProfile/>} />
 
 

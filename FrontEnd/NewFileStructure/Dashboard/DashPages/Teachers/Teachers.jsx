@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const SelectDropdown = ({ label, value, options, onChange }) => (
   <div className="form-group">
     <label className="form-label">{label}</label>
-    <select className="form-select" value={value} onChange={onChange}>
+    <select className="form-select"  value={value} onChange={onChange}>
       <option value="">Select {label}</option>
       {options.map((option, index) => (
         <option key={index} value={option}>
@@ -108,7 +108,7 @@ function Teachers() {
           options={subjects}
           onChange={(e) => setSubject(e.target.value)}
         />
-        <button type="button" className="btn btn-primary" onClick={filterTeachers}>
+        <button type="button" className="btn btn-primary" style={{width:"250px",height:'45px',marginTop:'32px'}} onClick={filterTeachers}>
           Show Teachers
         </button>
       </form>
