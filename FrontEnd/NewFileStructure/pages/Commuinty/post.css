@@ -3,7 +3,6 @@
 .Social{
   height: auto;
   background-color: var(--font-high-light);
-  opacity: 75%;
   border-radius: 10px;
   margin: 0px auto 1rem;
   display: flex;
@@ -36,9 +35,12 @@
 }
 
 /* Media queries for responsiveness */
+
 @media (max-width: 768px) {
   
-
+  .Social{
+  margin-top: 11%;
+  }
   .SocialImg {
     max-width: 60%; /* Full width on smaller screens */
     margin: auto;
@@ -48,15 +50,13 @@
   .AddPost {
     width: 100%; /* AddPost takes full width */
   }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) { /* For tablets and small screens */
   .SocialTitle {
     font-size: 1.1rem; /* Slightly smaller font size */
     padding: 0.2rem; /* Reduced padding */
   }
 }
+
+
 
 @media (max-width: 576px) { /* For mobile devices */
   .SocialTitle {
@@ -64,4 +64,7 @@
     margin-bottom: 0.5rem; /* Reduced margin */
     padding: 0.15rem; /* Further reduced padding */
   }
+  .Social{
+    margin-top: 20%;
+    }
 }

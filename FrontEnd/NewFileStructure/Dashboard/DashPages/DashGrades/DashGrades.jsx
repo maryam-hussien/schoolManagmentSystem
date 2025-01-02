@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import studentScores from "../../../../public/data/scoresapi"; // Assuming this is where your student data is stored
+import studentScores from "../../../data//scoresapi"; // Assuming this is where your student data is stored
 import Level from '../../DashComponents/selectedLevel/Level'; // Import the Level component
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

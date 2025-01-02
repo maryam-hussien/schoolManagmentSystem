@@ -12,7 +12,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.edit-profile-container h2 {
   color: var(--font-high-light);
   font-size: 2rem;
   font-weight: bold;
@@ -85,7 +85,7 @@ input[type="file"]:focus {
 }
 
 /* Buttons */
-button {
+.edit-profile-container button {
   padding: 12px 20px;
   font-size: 1.1rem;
   border-radius: 8px;

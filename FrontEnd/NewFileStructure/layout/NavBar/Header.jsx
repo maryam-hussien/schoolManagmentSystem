@@ -45,6 +45,16 @@ const Header = () => {
 
               <div className={`nav-menu ${menuOpen ? 'open' : ''}`}>
                 <ul className="navbar-nav">
+
+                  <li className="nav-item">
+                    <NavLink 
+                      to="/announcement" 
+                      className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
+                      onClick={toggleMenu}
+                    >
+                      Announcement
+                    </NavLink>
+                  </li>
                   <li className="nav-item">
                     <NavLink 
                       to="/community" 

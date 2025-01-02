@@ -6,6 +6,7 @@ import { useState } from "react";
 import Header from "../../layout/NavBar/Header";
 import Footer from "../../layout/Footer/Footer";
 
+
 const Post = () => {
   const [posts, setPosts] = useState(postsData); // Initialize state with imported posts data
 
@@ -18,7 +19,8 @@ const Post = () => {
       <Header/>
     <div className="Social p-3">
       <div className="d-flex flex-wrap px-3 SocialDiv">
-       <div className="SocialTitle">School Social Community : </div>
+       <div className="SocialTitle">Here's Our Network!
+         </div>
         <AddPost onAddPost={handleAddPost} />
       <div className="SocialTitle text-center mt-2">POSTS :</div>
       <div >
