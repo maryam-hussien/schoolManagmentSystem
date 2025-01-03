@@ -42,7 +42,6 @@ function Student() {
   const levels = [...new Set(Students.map(student => student.level))];
   const grades = [...new Set(Students.map(student => student.grade))].sort((a, b) => a - b);
   const genders = ["Male", "Female", "Other"];
-  const bloodGroups = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"];
 
   const filterStudents = () => {
     if (level && grade) {
@@ -123,17 +122,18 @@ function Student() {
   };
 
   return (
-    <div className="dashAttendance w-100 p-3">
+    <div className="dashAttendance w-100">
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
-      <h3 className="text-start mb-4 dashComponentTitle">Students Attendance Dashboard:</h3>
+      <h3 className="text-start mb-4 dashComponentTitle">Students Dashboard:</h3>
 
-      <form className="filters mb-3 d-flex gap-3">
-        <SelectDropdown label="Level" value={level} options={levels} onChange={(e) => setLevel(e.target.value)} />
-        <SelectDropdown label="Grade" value={grade} options={grades} onChange={(e) => setGrade(e.target.value)} />
-        <button type="button" className="btn btn-primary" onClick={filterStudents}>
-          Show Students
-        </button>
-      </form>
+      <form className="filters mb-3 d-flex gap-3 align-items-center" style={{flex:'1'}}>
+  <SelectDropdown label="Level" value={level} options={levels} onChange={(e) => setLevel(e.target.value)} />
+  <SelectDropdown label="Grade" value={grade} options={grades} onChange={(e) => setGrade(e.target.value)} />
+  <button type="button" className="btn-primary" style={{width:"380px",height:'45px',marginTop:'20px'}} onClick={filterStudents}>
+    Show Students
+  </button>
+</form>
+
 
       <div>
         <h5 className="text-center mt-4 mb-2">Existing Students</h5>
@@ -150,7 +150,6 @@ function Student() {
               <th>Address</th>
               <th> Father's Number</th>
               <th> Mother's Number</th>
-              <th>Blood Group</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -243,7 +242,6 @@ function Student() {
             value={newStudent.motherNumber}
             onChange={(e) => setNewStudent({ ...newStudent, motherNumber: e.target.value })}
           />
-          <SelectDropdown label="Blood Group" value={newStudent.bloodGroup} options={bloodGroups} onChange={(e) => setNewStudent({ ...newStudent, bloodGroup: e.target.value })} />
           {editingStudent ? (
             <button type="button " className="btn btn-warning" onClick={handleUpdateStudent}>Update Student</button>
           ) : (

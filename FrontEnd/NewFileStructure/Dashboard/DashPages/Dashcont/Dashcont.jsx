@@ -2,8 +2,7 @@ import './DashCont.css';
 import { Person, PersonAdd, People, CurrencyDollar } from 'react-bootstrap-icons';
 import AttendanceChart from '../../DashComponents/AboutDash/Attendance'; 
 import { useNavigate} from 'react-router-dom';
-
-
+import { NavLink } from 'react-router-dom';
 const Dashcont = () => {
     const navigate = useNavigate();
 
@@ -15,10 +14,7 @@ const Dashcont = () => {
         { day: 'Fri', present: 60, absent: 40 },
     ];
 
-    const handleAddTeacher = () => {
-        navigate('/dashboard/courses');
-    };
-
+ 
     const handleAddStudent = () => {
         navigate('/dashboard/students'); 
     };
@@ -120,7 +116,12 @@ const Dashcont = () => {
                     <div className="table-card">
                         <div className='teach' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             <h4>Teacher List</h4>
-                            <PersonAdd style={{ fontSize: '25px', color: 'black', cursor: 'pointer' }} onClick={handleAddTeacher} />
+                            <NavLink 
+            to="/dashboard/teacher" 
+            style={{ textDecoration: 'none' }}
+        >
+            <PersonAdd style={{ fontSize: '25px', color: 'black', cursor: 'pointer' }} />
+        </NavLink>
                         </div>
                         <div className="table-responsive">
                             {renderTable(teacherList)}

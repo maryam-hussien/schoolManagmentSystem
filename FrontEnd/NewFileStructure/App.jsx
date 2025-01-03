@@ -9,6 +9,7 @@ import Post from "./pages/Commuinty/Post";
 import DashHome from "./Dashboard/DashPages/DashHome/DashHome"
 import Profile from "./pages/Profile/Profile"
 import Announcement from "./pages/announcement/Announcement";
+import Reviewpage from "./pages/Review/Reviewpage";
 function App() {
 
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Authentication />} />
           <Route path='/community' element={<Post/> }/>
           <Route path='/profile/*' element={<Profile/>}/>
+          <Route path='/review' element={<Reviewpage/>}/>
           <Route path='/announcement' element={<Announcement/>}/>
           <Route path='/dashboard/*' element={<DashHome/>}/>
 
