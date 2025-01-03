@@ -63,7 +63,7 @@ const DashSchedule = () => {
     <div className="manage-schedules">
                   <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
 
-      <h3 className="text-start mb-4 dashComponentTitle">Manage Schedules</h3>
+      <h3 className="text-start mb-4 dashComponentTitle"> Schedules Management Dashboard</h3>
 
       <Level 
         level={level} 
@@ -78,7 +78,7 @@ const DashSchedule = () => {
         showSubject={true}
       />
 
-      <h5 className="text-center mt-4 mb-2">Students Schedules Dashboard :</h5>
+      <h5 className="text-center mt-4 mb-2">Students Schedules </h5>
       {/* Display added schedules */}
       <table className="table table-responsive">
         <thead>
@@ -114,7 +114,7 @@ const DashSchedule = () => {
             ))
           ) : (
             <tr>
-              <td colSpan="6">No schedules added yet.</td>
+              <td colSpan="6" className="text-center">No schedules added yet.</td>
             </tr>
           )}
         </tbody>

@@ -85,16 +85,10 @@
   background-color: #e0a800;
 }
 
-/* Adjust Actions column */
-table td:last-child {
-  display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  align-items: center; /* Center buttons horizontally */
-  gap: 10px; /* Add space between buttons */
-  
-}
 
-table td:last-child .btn {
+
+/* Adjust Actions column */
+.dashstudents table td:last-child .btn {
   margin-right: 10px;
   max-width: 80px; /* Optional: Limit button width */
   align-items: center;
@@ -111,13 +105,15 @@ table td:last-child .btn {
 
 
 /* Table styles */
-table {
+/* Adjust Actions column */
+.dashstudents table {
   width: 90%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-thead th {
+/* Adjust Actions column */
+.dashstudentsthead th {
   background-color: var(--secondry);
   color: white;
   padding: 12px;
@@ -125,17 +121,20 @@ thead th {
   border: 1px solid #ddd;
 }
 
-tbody td {
+/* Adjust Actions column */
+.dashstudents tbody td {
   padding: 10px;
   text-align: center;
   border: 1px solid #ddd;
 }
 
-tbody tr:nth-child(even) {
+/* Adjust Actions column */
+.dashstudents tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-tbody tr:hover {
+/* Adjust Actions column */
+.dashstudents tbody tr:hover {
   background-color: #d6e9ff;
 }
 

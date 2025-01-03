@@ -122,9 +122,9 @@ function Student() {
   };
 
   return (
-    <div className="dashAttendance w-100">
+    <div className="dashAttendance w-100 dashstudents">
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
-      <h3 className="text-start mb-4 dashComponentTitle">Students Dashboard:</h3>
+      <h3 className="text-start mb-4 dashComponentTitle">Students Management Dashboard</h3>
 
       <form className="filters mb-3 d-flex gap-3 align-items-center" style={{flex:'1'}}>
   <SelectDropdown label="Level" value={level} options={levels} onChange={(e) => setLevel(e.target.value)} />

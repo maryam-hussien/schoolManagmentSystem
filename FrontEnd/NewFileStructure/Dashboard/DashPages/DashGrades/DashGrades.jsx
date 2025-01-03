@@ -63,7 +63,7 @@ function DashGrades() {
     <div className="dashAttendance w-100">
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
 
-      <h3 className="text-start mb-4 dashComponentTitle">Students Grade Dashboard:</h3>
+      <h3 className="text-start mb-4 dashComponentTitle"> Grades Management Dashboard</h3>
 
       <form className="filters mb-3">
         <Level 
@@ -125,7 +125,7 @@ function DashGrades() {
               ))
             ) : (
               <tr>
-                <td colSpan="7">No students found for the selected level, grade, and subject.</td>
+                <td colSpan="8" className="text-center">No students found for the selected level, grade, and subject.</td>
               </tr>
             )}
           </tbody>

@@ -43,7 +43,7 @@ function DashAttendance() {
     <div className="dashAttendance w-100 ">
             <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
 
-        <h3 className=" text-start mb-4 dashComponentTitle">Students Attendance Dashboard:</h3>
+        <h3 className=" text-start mb-4 dashComponentTitle"> Attendance Management Dashboard</h3>
 
       <form className="filters mb-3">
         {/* Use Level component for level and grade selection */}
@@ -95,12 +95,8 @@ function DashAttendance() {
               ))
             ) : (
               <tr>
-                <td>No students found for the selected level and grade.</td> 
-                <td>No students found for the selected level and grade.</td> 
-                <td>No students found for the selected level and grade.</td> 
-                <td>No students found for the selected level and grade.</td> 
-                <td>No students found for the selected level and grade.</td> 
-                <td>No students found for the selected level and grade.</td> 
+                <td colSpan="6" className="text-center">No students found for the selected level and grade.</td> 
+
               </tr>
             )}
           </tbody>

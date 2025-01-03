@@ -42,7 +42,7 @@
   }
 
   /* Ensure td wraps when necessary */
-  .dashAttendance table.table td, table.table th {
+  .dashAttendance table.table td, .dashAttendance table.table th {
     white-space: normal; /* Allow the content to wrap in cells */
   }
 }

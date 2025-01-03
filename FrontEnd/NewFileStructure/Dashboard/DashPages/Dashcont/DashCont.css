@@ -244,23 +244,23 @@
   border-radius: 50%;
 }
 
-table {
+.dashboard-contain table {
   width: 100%;
   border-collapse: collapse;
 }
 
-table th,
+.dashboard-contain table th, .dashboard-contain
 table td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-table th {
+.dashboard-contain table th {
   font-weight: bold;
 }
 
-table td {
+.dashboard-contain table td {
   color: #555;
 }
 

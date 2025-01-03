@@ -98,7 +98,7 @@ function Teachers() {
   return (
     <div className="teachersPage w-100 p-3">
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
-      <h3 className="dashComponentTitle mb-4">Teachers Dashboard</h3>
+      <h3 className="dashComponentTitle mb-4">Teachers Management Dashboard</h3>
 
       <form className="filters mb-3 d-flex gap-3">
         {/* Dropdown for subjects */}

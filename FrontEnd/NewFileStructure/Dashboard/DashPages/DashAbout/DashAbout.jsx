@@ -6,7 +6,7 @@ import "./DashAbout.css";
 function DashAbout() {
   return (
     <div className="dashAbout">
-      <div className="abouttitle">About Dashboard</div>
+      <div className="abouttitle">About Management Dashboard</div>
       <div className="aboutcards">
         <div className="card">
           <AddAboutSchool />
