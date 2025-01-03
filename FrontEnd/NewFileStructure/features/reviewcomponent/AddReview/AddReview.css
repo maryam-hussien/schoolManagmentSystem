@@ -26,7 +26,10 @@ font-family: var(--descrFont);
   font-size: 24px;
   color: #007bff; /* Bootstrap primary color */
 }
-
+.switchbtn{
+  display: flex;
+  
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .AddPost {

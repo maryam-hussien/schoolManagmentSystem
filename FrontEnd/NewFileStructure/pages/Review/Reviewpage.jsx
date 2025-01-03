@@ -1,5 +1,5 @@
-import AddPost from "../../features/reviewcomponent/AddReview/AddReview";
-import PostCard from "../../features/reviewcomponent/Postreview/PostReview";
+import AddReview from "../../features/reviewcomponent/AddReview/AddReview";
+import ReviewCard from "../../features/reviewcomponent/Postreview/PostReview";
 import postsData from "../../data/socialPostsapi";
 import '../Commuinty/post.css'
 import { useState } from "react";
@@ -21,7 +21,8 @@ const Reviewpage = () => {
       <div className="d-flex flex-wrap px-3 SocialDiv">
        <div className="SocialTitle">feel free to tell us your review
          </div>
-        <AddPost onAddPost={handleAddPost} />
+        <AddReview onAddPost={handleAddPost} />
+        
       <div className="SocialTitle text-center mt-2">Reviews :</div>
       <div >
         {posts.length === 0 ? (
@@ -29,7 +30,7 @@ const Reviewpage = () => {
         ) : (
           <ul className="list-group">
             {posts.map((post) => (
-              <PostCard key={post.id} post={post} />
+              <ReviewCard key={post.id} post={post} />
             ))}
           </ul>
         )}

@@ -5,6 +5,8 @@ import './post.css'
 import { useState } from "react";
 import Header from "../../layout/NavBar/Header";
 import Footer from "../../layout/Footer/Footer";
+import { Link } from "react-router-dom";
+
 
 
 const Post = () => {
@@ -19,7 +21,10 @@ const Post = () => {
       <Header/>
     <div className="Social p-3">
       <div className="d-flex flex-wrap px-3 SocialDiv">
-       <div className="SocialTitle">Here's Our Network!
+      <Link to="/review" className="reviewroute">
+        <div>Any Reviews?</div>
+      </Link>     
+        <div className="SocialTitle">Here's Our Network!
          </div>
         <AddPost onAddPost={handleAddPost} />
       <div className="SocialTitle text-center mt-2">POSTS :</div>
