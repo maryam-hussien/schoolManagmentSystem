@@ -40,7 +40,7 @@ function DashAttendance() {
    
   };
   return (
-    <div className="dashAttendance w-100 ">
+    <div className="dashAttendance">
             <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
 
         <h3 className=" text-start mb-4 dashComponentTitle"> Attendance Management Dashboard</h3>

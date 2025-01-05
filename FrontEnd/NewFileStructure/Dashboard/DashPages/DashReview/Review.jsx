@@ -26,7 +26,7 @@ function Review() {
   return (
     <>
       <div className="dashAbout">
-        <div className="abouttitle">Add Review</div>
+        <div className="dashComponentTitle "> Review Management Dashboard</div>
         <div className="card">
           <form onSubmit={handleReviewSubmit}>
             <label>

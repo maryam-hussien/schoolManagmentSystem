@@ -1,6 +1,6 @@
 
 import './DashSidebar.css';
-import { Boxes, PersonFill, Book,InfoCircle, CalendarCheckFill,PersonBadge, ClipboardData, Grid3x3GapFill,ArrowBarLeft ,PeopleFill,CardText } from 'react-bootstrap-icons';
+import { Boxes, MegaphoneFill,PersonFill, Book,InfoCircle, CalendarCheckFill,PersonBadge, ClipboardData, Grid3x3GapFill,ArrowBarLeft ,PeopleFill,CardText } from 'react-bootstrap-icons';
 import { NavLink ,useNavigate  } from 'react-router-dom';
 import Back from '../BackButton/Back';
 
@@ -21,18 +21,25 @@ const DashSidebar = () => {
         <ul className="nav flex-column m-auto">
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-            to="/dashboard/main"
+            to="main"
           >
             <Boxes style={{ color: "white", fontSize: "19px" }} />
             <span>Dashboard</span>
           </NavLink>
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-            to="dashProfile"
+            to="profile"
           >
             <PersonFill style={{ color: "white", fontSize: "19px" }} />
             <span>Profile</span>
           </NavLink>
+          <NavLink
+          className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
+          to="teacher"
+          >
+           <PersonBadge size={32} color="green" title="Teacher" />
+          <span>Teachers</span>
+         </NavLink>
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
             to="courses"
@@ -43,53 +50,54 @@ const DashSidebar = () => {
        
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-            to="Students"
+            to="students"
           >
             <PeopleFill style={{ color: "white", fontSize: "19px" }} />
             <span>Students</span>
           </NavLink>          
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-            to="Attendance"
+            to="attendance"
           >
             <CalendarCheckFill style={{ color: "white", fontSize: "19px" }} />
             <span>Attendance</span>
           </NavLink>
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-            to="Grades"
+            to="grades"
           >
             <ClipboardData style={{ color: "white", fontSize: "19px" }} />
             <span>Grades</span>
           </NavLink>
           <NavLink
             className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-            to="Schedule"
+            to="schedule"
           >
             <Grid3x3GapFill style={{ color: "white", fontSize: "19px" }} />
             <span>Schedule</span>
           </NavLink>
+                   <NavLink
+          className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
+          to="announcement"
+          >
+           <MegaphoneFill style={{ color: "white", fontSize: "19px" }} />
+          <span>Announcements</span>
+         </NavLink>
           <NavLink
           className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-          to="dashAbout"
+          to="about"
           >
           <InfoCircle style={{ color: "white", fontSize: "19px" }} />
           <span>About</span>
          </NavLink>
          <NavLink
           className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-          to="dashReview"
+          to="review"
           >
           <CardText style={{ color: "white", fontSize: "19px" }} />
           <span>Review</span>
          </NavLink>
-         <NavLink
-          className="icon-link icon-link-hover link-opacity-50-hover link-light fw-light mb-4"
-          to="teacher"
-          >
-           <PersonBadge size={32} color="green" title="Teacher" />
-          <span>Teachers</span>
-         </NavLink>
+
          <Back link='/login'
                onClickAction={handleLogout}
                Icon={ArrowBarLeft}

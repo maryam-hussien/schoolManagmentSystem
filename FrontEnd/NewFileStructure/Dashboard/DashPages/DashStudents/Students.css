@@ -6,9 +6,11 @@
   letter-spacing: 1.2px;
   text-transform: uppercase;
   border-bottom: 2px solid var(--gold);
-  display: inline-block;
   padding-bottom: 5px;
   margin-left: 150px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 

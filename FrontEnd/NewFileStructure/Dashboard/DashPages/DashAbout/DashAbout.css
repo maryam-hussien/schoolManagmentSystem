@@ -7,18 +7,6 @@
   
 }
 
-/* Title Section */
-.dashAbout .abouttitle {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--font-high-light);
-  margin-bottom: 10px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--gold);
-  display: inline-block;
-  padding-bottom: 5px;
-}
 
 .aboutcards { 
   flex-direction: column;

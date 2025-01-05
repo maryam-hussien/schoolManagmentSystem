@@ -1,5 +1,8 @@
 .teachersPage {
-    padding: 20px;
+  display: flex;
+  padding: 0.25rem;
+  flex-direction: column;
+  height: auto;    
   }
   
   .teachersPage h3 {

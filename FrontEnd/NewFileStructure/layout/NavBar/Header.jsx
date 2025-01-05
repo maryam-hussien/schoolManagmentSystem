@@ -55,15 +55,7 @@ const Header = () => {
                       Announcement
                     </NavLink>
                   </li>
-                  <li className="nav-item">
-                    <NavLink 
-                      to="/community" 
-                      className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
-                      onClick={toggleMenu}
-                    >
-                      Community
-                    </NavLink>
-                  </li>
+
                   <li className="nav-item">
                     <NavLink 
                       to="/profile" 
@@ -80,6 +72,15 @@ const Header = () => {
                       onClick={toggleMenu}
                     >
                       Courses
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink 
+                      to="/community" 
+                      className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
+                      onClick={toggleMenu}
+                    >
+                      Community
                     </NavLink>
                   </li>
                   <li className="nav-item">
