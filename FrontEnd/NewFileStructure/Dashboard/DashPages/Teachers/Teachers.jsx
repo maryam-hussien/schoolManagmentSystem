@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TeachersData from "../../../data/TeachersData"; 
+import TeachersData from "../../../data/TeachersData";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,8 +20,9 @@ const SelectDropdown = ({ label, value, options, onChange }) => (
 
 function Teachers() {
   const [subject, setSubject] = useState("");
-  const [filteredTeachers, setFilteredTeachers] = useState(TeachersData); // Display all teachers initially
-  const [editingTeacher, setEditingTeacher] = useState(null);
+  const [filteredTeachers, setFilteredTeachers] = useState(TeachersData);
+  const [isAddTeacherFormVisible, setIsAddTeacherFormVisible] = useState(false);
+  const [isEditing, setIsEditing] = useState(false); // New state to track if we are editing
   const [newTeacher, setNewTeacher] = useState({
     id: "",
     name: "",
@@ -30,93 +31,92 @@ function Teachers() {
     email: "",
   });
 
-  // Extract unique subjects from the Teachers dataset
-  const subjects = [...new Set(TeachersData.map(teacher => teacher.subject))];
+  // Extract unique subjects from TeachersData
+  const subjects = [...new Set(TeachersData.map((teacher) => teacher.subject))];
 
   const filterTeachers = () => {
     if (subject) {
-      const filtered = TeachersData.filter(teacher => teacher.subject === subject);
+      const filtered = TeachersData.filter((teacher) => teacher.subject === subject);
       setFilteredTeachers(filtered);
     } else {
       toast.error("Please select a subject to filter!");
     }
   };
 
-  const handleDeleteTeacher = (id) => {
-    setFilteredTeachers(prev => prev.filter(teacher => teacher.id !== id));
-    toast.info("Teacher removed successfully.");
+  const toggleAddTeacherForm = () => {
+    setIsAddTeacherFormVisible((prev) => !prev);
+    setNewTeacher({ id: "", name: "", subject: "", phone: "", email: "" });
+    setIsEditing(false); // Reset edit state when closing the form
   };
 
-  const handleEditTeacher = (teacher) => {
-    setEditingTeacher(teacher);
-    setNewTeacher({ ...teacher });
-  };
-
-  const handleUpdateTeacher = () => {
-    setFilteredTeachers(prev =>
-      prev.map(teacher =>
-        teacher.id === editingTeacher.id ? { ...newTeacher } : teacher
-      )
-    );
-    setEditingTeacher(null);
-    setNewTeacher({
-      id: "",
-      name: "",
-      subject: "",
-      phone: "",
-      email: "",
-    });
-    toast.success("Teacher updated successfully!");
-  };
-
-  const handleAddTeacher = () => {
+  const handleAddTeacher = (e) => {
+    e.preventDefault();
     const { id, name, subject, phone, email } = newTeacher;
     if (!id || !name || !subject || !phone || !email) {
       toast.error("Please fill in all fields.");
       return;
     }
 
-    if (filteredTeachers.some(teacher => teacher.id === id)) {
-      toast.error("A teacher with this ID already exists.");
-      return;
+    if (isEditing) {
+      // Handle editing an existing teacher
+      const updatedTeachers = filteredTeachers.map((teacher) =>
+        teacher.id === newTeacher.id ? newTeacher : teacher
+      );
+      setFilteredTeachers(updatedTeachers);
+      toast.success("Teacher updated successfully!");
+    } else {
+      // Handle adding a new teacher
+      if (filteredTeachers.some((teacher) => teacher.id === id)) {
+        toast.error("A teacher with this ID already exists.");
+        return;
+      }
+      setFilteredTeachers((prev) => [...prev, newTeacher]);
+      toast.success("Teacher added successfully!");
     }
+    setNewTeacher({ id: "", name: "", subject: "", phone: "", email: "" });
+    setIsEditing(false); // Reset edit state after save
+    toggleAddTeacherForm();
+  };
 
-    setFilteredTeachers(prev => [
-      ...prev,
-      { id, name, subject, phone, email },
-    ]);
-    setNewTeacher({
-      id: "",
-      name: "",
-      subject: "",
-      phone: "",
-      email: "",
-    });
-    toast.success("Teacher added successfully!");
+  const handleDeleteTeacher = (id) => {
+    setFilteredTeachers((prev) => prev.filter((teacher) => teacher.id !== id));
+    toast.info("Teacher removed successfully.");
+  };
+
+  const handleEditTeacher = (teacher) => {
+    setNewTeacher({ ...teacher });
+    setIsEditing(true); // Set editing mode
+    setIsAddTeacherFormVisible(true); // Show form when editing
   };
 
   return (
-    <div className="teachersPage w-100 p-3">
+    <div className="teachersPage w-100">
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
-      <h3 className="dashComponentTitle mb-4">Teachers Dashboard</h3>
+      <h3 className="text-start mb-4 dashComponentTitle">Teachers Management Dashboard</h3>
 
-      <form className="filters mb-3 d-flex gap-3">
-        {/* Dropdown for subjects */}
-        <SelectDropdown
-          label="Subject"
-          value={subject}
-          options={subjects}
-          onChange={(e) => setSubject(e.target.value)}
-        />
-        <button type="button" className="btn btn-primary" onClick={filterTeachers}>
-          Show Teachers
-        </button>
-      </form>
+      {/* Subject Filter */}
+      <form className="filters mb-3 d-flex align-items-center gap-3">
+  <SelectDropdown
+    label="Subject"
+    value={subject}
+    options={subjects}
+    onChange={(e) => setSubject(e.target.value)}
+  />
+  <button
+    type="button"
+    className="btn btn-primary"
+    onClick={filterTeachers}
+  >
+  ShowTeacher
+  </button>
+</form>
 
-      <div className="teachers-list">
-        <h5 className="text-center mt-4 mb-2">Teachers</h5>
+
+  
+      {/* Teacher List */}
+      <div className="teacher-list">
         {filteredTeachers.length > 0 ? (
-          <table className="table table-striped table-bordered table-sm">
+          <table className="table table-striped">
             <thead>
               <tr>
                 <th>ID</th>
@@ -136,19 +136,23 @@ function Teachers() {
                   <td>{teacher.phone}</td>
                   <td>{teacher.email}</td>
                   <td>
-                    <button
-                      className="btn btn-danger me-2"
-                      onClick={() => handleDeleteTeacher(teacher.id)}
-                    >
-                      Delete
-                    </button>
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => handleEditTeacher(teacher)}
-                    >
-                      Edit
-                    </button>
-                  </td>
+  <div className="d-flex flex-column gap-2">
+    <button
+      className="btn btn-primary"
+      onClick={() => handleEditTeacher(teacher)} // Edit button
+    >
+      Edit
+    </button>
+
+    <button
+      className="btn btn-danger"
+      onClick={() => handleDeleteTeacher(teacher.id)} // Delete button
+    >
+      Delete
+    </button>
+  </div>
+</td>
+
                 </tr>
               ))}
             </tbody>
@@ -157,66 +161,80 @@ function Teachers() {
           <p className="text-center">No teachers found for the selected subject.</p>
         )}
       </div>
+      <div className="d-flex justify-content-center align-items-center">
+  <button
+    className="btn btn-success mb-3"
+    onClick={toggleAddTeacherForm}
+  >
+    {isAddTeacherFormVisible ? "Close Form" : "Add Teacher"}
+  </button>
+</div>
 
-      <div className="add-teacher mt-5">
-        <h5 className="text-center mb-3">
-          {editingTeacher ? "Edit Teacher" : "Add New Teacher"}
-        </h5>
-        <form className="d-flex justify-content-center gap-3 flex-wrap">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="ID"
-            value={newTeacher.id}
-            disabled={!!editingTeacher}
-            onChange={(e) => setNewTeacher({ ...newTeacher, id: e.target.value })}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Name"
-            value={newTeacher.name}
-            onChange={(e) => setNewTeacher({ ...newTeacher, name: e.target.value })}
-          />
-          <SelectDropdown
-            label="Subject"
-            value={newTeacher.subject}
-            options={subjects}
-            onChange={(e) => setNewTeacher({ ...newTeacher, subject: e.target.value })}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Phone"
-            value={newTeacher.phone}
-            onChange={(e) => setNewTeacher({ ...newTeacher, phone: e.target.value })}
-          />
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Email"
-            value={newTeacher.email}
-            onChange={(e) => setNewTeacher({ ...newTeacher, email: e.target.value })}
-          />
-          {editingTeacher ? (
-            <button
-              type="button"
-              className="btn btn-warning"
-              onClick={handleUpdateTeacher}
-            >
-              Update Teacher
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="btn btn-success"
-              onClick={handleAddTeacher}
-            >
-              Add Teacher
-            </button>
-          )}
-        </form>
+
+      {isAddTeacherFormVisible && (
+  <div className="add-teacher mt-4">
+    <h5 className="text-center mb-3">{isEditing ? "Edit Teacher" : "Add New Teacher"}</h5>
+    <form className="d-flex gap-3 flex-wrap justify-content-center">
+      <input
+        type="text"
+        className="form-control"
+        placeholder="ID"
+        value={newTeacher.id}
+        onChange={(e) =>
+          setNewTeacher((prev) => ({ ...prev, id: e.target.value }))
+        }
+      />
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Name"
+        value={newTeacher.name}
+        onChange={(e) =>
+          setNewTeacher((prev) => ({ ...prev, name: e.target.value }))
+        }
+      />
+      <SelectDropdown
+        label="Subject"
+        value={newTeacher.subject}
+        options={subjects}
+        onChange={(e) =>
+          setNewTeacher((prev) => ({ ...prev, subject: e.target.value }))
+        }
+      />
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Phone"
+        value={newTeacher.phone}
+        onChange={(e) =>
+          setNewTeacher((prev) => ({ ...prev, phone: e.target.value }))
+        }
+      />
+      <input
+        type="email"
+        className="form-control"
+        placeholder="Email"
+        value={newTeacher.email}
+        onChange={(e) =>
+          setNewTeacher((prev) => ({ ...prev, email: e.target.value }))
+        }
+      />
+      
+      {/* Button Container with Flex Column */}
+      <div className="d-flex flex-column gap-3">
+        <button
+          type="submit"
+          className={`btn ${isEditing ? "btn-warning" : "btn-primary"}`}
+          onClick={handleAddTeacher}
+        >
+          {isEditing ? "Save Changes" : "Add Teacher"}
+        </button>
       </div>
+    </form>
+  </div>
+)}
+
+      
     </div>
   );
 }
