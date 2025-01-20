@@ -5,10 +5,11 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: var(--white); 
-    font-family: var(--descrFont); 
+    font-family: var(--titleFont); 
 }
 
 .about {
+    overflow: hidden;
     margin-top: 150px;  
     height: auto;
 }
@@ -26,7 +27,6 @@ html, body {
 .contaier p {
     width: 400px;
     font-size: 30px;
-    font-family: var(--heroDescrFont);
     color: var(--black); 
 }
 
@@ -42,7 +42,7 @@ html, body {
     text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
-    color: var(--black); 
+    color: var(--secondry); 
 }
 
 .school {
@@ -73,7 +73,6 @@ html, body {
 .history p,
 .school p {
     width: 450px;
-    font-family: var(--descrFont); 
     font-size: 30px;
     color: var(--black);
 }
@@ -98,14 +97,19 @@ html, body {
 }
 
 .logo {
-    border-radius: 12px;
+    border-radius: 40%;
     width: 500px;
 }
 
 .logo2 {
-    border-radius: 12px;
-    height: 400px;
+    border-radius: 40%;
+    height: 500px;
     width: 500px;
+}
+.logo3 {
+    border-radius: 40%;
+    height: 500px;
+
 }
 
 .slider {
@@ -133,7 +137,6 @@ html, body {
 }
     .history p,
     .school p {
-        width: 300px;
         font-size: 20px;
         color: var(--black); 
     }

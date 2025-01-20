@@ -1,5 +1,5 @@
 import image from '../../assets/Images/8cf95c4384883dd4dc407fbb0e82a49c.jpg'
-import '../../pages/About/about.css'
+import '../../../NewFileStructure/pages/About/about.css';
 const  Schoolabout =()=> {
     return (
     <>

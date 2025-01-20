@@ -6,7 +6,6 @@ import Slide from '../../Components/Slider/Slide'
 import Header from '../../layout/NavBar/Header'
 import Footer  from '../../layout/Footer/Footer'
 import Image from '../../features/About/Image'
-//import Course from '../../features/Home/Course'
 const About = () => {
   return (
     <>
