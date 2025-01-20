@@ -1,0 +1,74 @@
+/* الحاوية الرئيسية */
+.not-found-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    text-align: center;
+  }
+  
+  /* محتوى الصفحة */
+  .not-found-content {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* صورة 404 */
+  .not-found-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* عنوان الخطأ */
+  .not-found-content h1 {
+    font-size: 3rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* النص التوضيحي */
+  .not-found-content p {
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 25px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* زر العودة */
+  .back-home-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2563eb;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .back-home-button:hover {
+    background-color: #1e40af;
+    transform: scale(1.05);
+  }
+  
+  /* تأثير الدخول */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
