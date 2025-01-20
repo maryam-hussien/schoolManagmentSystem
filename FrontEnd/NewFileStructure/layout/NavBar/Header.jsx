@@ -15,11 +15,11 @@ const Header = () => {
   };
 
   const handlehome = () => {
-    navigate('/');
+    navigate('/home');
   };
 
   const handlelogin = () => {
-    navigate('/login');
+    navigate('/');
   };
 
   return (
