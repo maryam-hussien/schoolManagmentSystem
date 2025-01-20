@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Home from './pages/Home/Home';
 import About from './pages/About/About'
 import Authentication from './pages/Authentication/Authentication'
+import ForgotPassword from './pages/Authentication/ForgotPassword'
+import ResetPassword from './pages/Authentication/ResetPassword'
 import Courses from "./pages/Courses/Courses";
 import Post from "./pages/Commuinty/Post";
 import DashHome from "./Dashboard/DashPages/DashHome/DashHome"
@@ -20,6 +22,10 @@ function App() {
           <Route path="/course" element={<Courses />} />
           <Route path="/login" element={<Authentication />} />
           <Route path='/community' element={<Post/> }/>
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+
+
           <Route path='/profile/*' element={<Profile/>}/>
           <Route path='/review' element={<Reviewpage/>}/>
           <Route path='/announcement' element={<Announcement/>}/>
