@@ -1,13 +1,12 @@
-import AddPost from "../../features/Commuinty/AddPost/AddPost";
-import PostCard from "../../features/Commuinty/PostCard/PostCard";
-import './post.css';
 import { useState, useEffect } from "react";
+import "./post.css";
 import Header from "../../layout/NavBar/Header";
 import Footer from "../../layout/Footer/Footer";
 import { Link } from "react-router-dom";
+import AddPost from "../../features/Commuinty/AddPost/AddPost";
+import PostCard from "../../features/Commuinty/PostCard/PostCard";
 
 const Post = () => {
-  // Default educational posts with images
   const defaultPosts = [
     {
       id: 1,
@@ -18,7 +17,7 @@ const Post = () => {
         { id: 1, commenter: "Ali", comment: "هذا الكورس مفيد جداً للمبتدئين! 😊" },
         { id: 2, commenter: "Sara", comment: "أين أجد المصادر؟" },
       ],
-      image: "https://example.com/python-course.jpg",
+      image: null,
     },
     {
       id: 2,
@@ -28,38 +27,36 @@ const Post = () => {
       comments: [
         { id: 1, commenter: "Hassan", comment: "دورة رائعة للمطورين المتقدمين! 💡" },
       ],
-      image: "https://example.com/react-course.jpg",
-    },
+      image: null,
+        },
     {
       id: 3,
       content: "📖 جدول الدراسة الأسبوعي:\n- الاثنين: JavaScript Basics\n- الثلاثاء: CSS Advanced",
       date: "2025-01-18",
       likes: 10,
       comments: [],
-      image: null, // No image for this post
+      image: null,
     },
   ];
 
   const [posts, setPosts] = useState([]);
 
-  // Load posts from Local Storage or set default posts
   useEffect(() => {
-    const storedPosts = JSON.parse(localStorage.getItem("posts"));
-    if (storedPosts && storedPosts.length > 0) {
-      setPosts(storedPosts);
-    } else {
+    const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
+    if (storedPosts.length === 0) {
       setPosts(defaultPosts);
       localStorage.setItem("posts", JSON.stringify(defaultPosts));
+    } else {
+      setPosts(storedPosts);
     }
   }, []);
 
-  // Save posts to Local Storage whenever posts change
-  useEffect(() => {
-    localStorage.setItem("posts", JSON.stringify(posts));
-  }, [posts]);
-
   const handleAddPost = (newPost) => {
-    setPosts((prevPosts) => [newPost, ...prevPosts]);
+    setPosts((prevPosts) => {
+      const updatedPosts = [newPost, ...prevPosts];
+      localStorage.setItem("posts", JSON.stringify(updatedPosts));
+      return updatedPosts;
+    });
   };
 
   return (

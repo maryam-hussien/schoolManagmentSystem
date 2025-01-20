@@ -6,7 +6,7 @@ const PostCard = ({ post }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likes, setLikes] = useState(post.likes);
   const [areCommentsVisible, setAreCommentsVisible] = useState(false);
-  const [newComment, setNewComment] = useState('');
+  const [newComment, setNewComment] = useState("");
   const [comments, setComments] = useState(post.comments || []);
 
   useEffect(() => {
@@ -19,7 +19,6 @@ const PostCard = ({ post }) => {
     setLikes(updatedLikes);
     setIsLiked(!isLiked);
 
-    // Update Local Storage
     updatePostInLocalStorage(post.id, { likes: updatedLikes });
   };
 
@@ -36,9 +35,8 @@ const PostCard = ({ post }) => {
       };
       const updatedComments = [...comments, newCommentObj];
       setComments(updatedComments);
-      setNewComment('');
+      setNewComment("");
 
-      // Update Local Storage
       updatePostInLocalStorage(post.id, { comments: updatedComments });
     }
   };
@@ -62,7 +60,14 @@ const PostCard = ({ post }) => {
       <hr className="socialdivider" />
       <div className="socialpostsection">
         <p>{post.content}</p>
-        {post.image && <img src={post.image} alt="Post" />}
+        {/* تعديل عرض الصورة */}
+        {post.image && (
+          <img
+            src={post.image}
+            alt="Post"
+            style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
+          />
+        )}
       </div>
       <div className="ActionNumbers">
         <span className="ms-2 socialLikes">{likes} Likes</span>

@@ -1,11 +1,29 @@
-import { useState, useRef } from 'react';
-import './AddPost.css';
-import { FaImage } from 'react-icons/fa';
+import { useState, useRef } from "react";
+import "./AddPost.css";
+import { FaImage } from "react-icons/fa";
 
 const AddPost = ({ onAddPost }) => {
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const fileInputRef = useRef(null);
+
+  // دالة لتحويل الصورة إلى Base64
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = (err) => reject(err);
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const handleImageUpload = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const base64Image = await convertToBase64(file);
+      setImage(base64Image); // حفظ الصورة كـ Base64
+    }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,19 +31,15 @@ const AddPost = ({ onAddPost }) => {
     const newPost = {
       id: Math.floor(Math.random() * 1000),
       content,
-      date: new Date().toISOString().split('T')[0],
+      date: new Date().toISOString().split("T")[0],
       likes: 0,
       comments: [],
-      image: image ? URL.createObjectURL(image) : null,
+      image, // الصورة محفوظة بصيغة Base64
     };
 
     onAddPost(newPost);
-    setContent('');
+    setContent("");
     setImage(null);
-  };
-
-  const handleImageUpload = (event) => {
-    setImage(event.target.files[0]);
   };
 
   return (
@@ -67,7 +81,7 @@ const AddPost = ({ onAddPost }) => {
                   onChange={handleImageUpload}
                 />
               </label>
-              {image && <p className="mt-2">Image: {image.name}</p>}
+              {image && <p className="mt-2">Image uploaded successfully!</p>}
             </div>
             <button type="submit" className="btn btn-primary">
               Add Post
