@@ -49,9 +49,10 @@ const AddPost = ({ onAddPost }) => {
         <form onSubmit={handleSubmit}>
           <div className="d-flex align-items-start mb-3 flex-wrap mt-1 w-75">
             <img
-              src="https://via.placeholder.com/40"
+              src="https://icons.veryicon.com/png/o/system/system-1/post-5.png"
               alt="none"
               className="rounded-circle me-3"
+              style={{ width: "30px", height: "30px" }}
             />
             <div className="flex-grow-1">
               <textarea

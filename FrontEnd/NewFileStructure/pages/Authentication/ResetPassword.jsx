@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from 'react-router-dom';
-import './authentication.css'; 
-import { Lock } from 'react-bootstrap-icons';
-import img from '../../assets/images/child1.jpg'; 
+import { useLocation, useNavigate } from "react-router-dom";
+import "./authentication.css";
+import { Lock } from "react-bootstrap-icons";
+import img from "../../assets/images/child1.jpg";
 
 function ResetPassword() {
-  const location = useLocation(); 
+  const location = useLocation();
   const navigate = useNavigate();
   const [otp, setOtp] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -16,7 +16,7 @@ function ResetPassword() {
   const [successMessage, setSuccessMessage] = useState("");
 
   const validateOtp = () => {
-    const isValid = otp.length === 6; 
+    const isValid = otp.length === 6;
     setOtpError(isValid ? "" : "OTP must be 6 digits");
     return isValid;
   };
@@ -39,26 +39,31 @@ function ResetPassword() {
       try {
         setIsLoading(true);
 
-        const response = await fetch('https://school-backend-eight.vercel.app/api/v1/auth/reset-password', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email: location.state.email, 
-            otp,
-            newPassword,
-          }),
-        });
+        const response = await fetch(
+          "https://school-backend-eight.vercel.app/api/v1/auth/reset-password",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: location.state.email,
+              otp,
+              newPassword,
+            }),
+          }
+        );
 
         const data = await response.json();
         setIsLoading(false);
 
         if (response.ok) {
           setSuccessMessage(data.message || "Password reset successfully.");
-          navigate('/login'); 
+          navigate("/home");
         } else {
-          setApiError(data.message || "Failed to reset password. Please try again.");
+          setApiError(
+            data.message || "Failed to reset password. Please try again."
+          );
         }
       } catch (error) {
         setIsLoading(false);
@@ -82,7 +87,7 @@ function ResetPassword() {
                 onBlur={validateOtp}
               />
             </div>
-            <small style={{ color: 'red' }}>{otpError}</small>
+            <small style={{ color: "red" }}>{otpError}</small>
 
             <div className="input-with-icon">
               <Lock className="input-icon" />
@@ -94,10 +99,12 @@ function ResetPassword() {
                 onBlur={validatePassword}
               />
             </div>
-            <small style={{ color: 'red' }}>{passwordError}</small>
+            <small style={{ color: "red" }}>{passwordError}</small>
 
-            {apiError && <p style={{ color: 'red' }}>{apiError}</p>}
-            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+            {apiError && <p style={{ color: "red" }}>{apiError}</p>}
+            {successMessage && (
+              <p style={{ color: "green" }}>{successMessage}</p>
+            )}
             {isLoading ? (
               <button disabled>Resetting...</button>
             ) : (
@@ -105,7 +112,7 @@ function ResetPassword() {
             )}
           </form>
         </div>
-        <div className="image-containennt"> 
+        <div className="image-containennt">
           <img src={img} alt="Reset Password" />
         </div>
       </div>

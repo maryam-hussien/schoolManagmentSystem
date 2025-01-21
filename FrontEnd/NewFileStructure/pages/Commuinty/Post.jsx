@@ -14,7 +14,11 @@ const Post = () => {
       date: "2025-01-20",
       likes: 20,
       comments: [
-        { id: 1, commenter: "Ali", comment: "هذا الكورس مفيد جداً للمبتدئين! 😊" },
+        {
+          id: 1,
+          commenter: "Ali",
+          comment: "هذا الكورس مفيد جداً للمبتدئين! 😊",
+        },
         { id: 2, commenter: "Sara", comment: "أين أجد المصادر؟" },
       ],
       image: null,
@@ -25,13 +29,19 @@ const Post = () => {
       date: "2025-01-19",
       likes: 15,
       comments: [
-        { id: 1, commenter: "Hassan", comment: "دورة رائعة للمطورين المتقدمين! 💡" },
-      ],
-      image: null,
+        {
+          id: 1,
+          commenter: "Hassan",
+          comment: "دورة رائعة للمطورين المتقدمين! 💡",
         },
+      ],
+      image:
+        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2022/08/iStock-1404450332_Nine-characteristics-of-great-teamwork_v1-scaled.jpg?resize=1120%2C630",
+    },
     {
       id: 3,
-      content: "📖 جدول الدراسة الأسبوعي:\n- الاثنين: JavaScript Basics\n- الثلاثاء: CSS Advanced",
+      content:
+        "📖 جدول الدراسة الأسبوعي:\n- الاثنين: JavaScript Basics\n- الثلاثاء: CSS Advanced",
       date: "2025-01-18",
       likes: 10,
       comments: [],
@@ -64,9 +74,9 @@ const Post = () => {
       <Header />
       <div className="Social p-3">
         <div className="d-flex flex-wrap px-3 SocialDiv">
-          <Link to="/review" className="reviewroute">
+          {/* <Link to="/review" className="reviewroute">
             <div>Any Reviews?</div>
-          </Link>
+          </Link> */}
           <div className="SocialTitle">Here's Our Educational Network!</div>
           <AddPost onAddPost={handleAddPost} />
           <div className="SocialTitle text-center mt-2">POSTS :</div>

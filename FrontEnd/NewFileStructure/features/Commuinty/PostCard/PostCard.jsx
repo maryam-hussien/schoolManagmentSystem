@@ -60,14 +60,10 @@ const PostCard = ({ post }) => {
       <hr className="socialdivider" />
       <div className="socialpostsection">
         <p>{post.content}</p>
-        {/* تعديل عرض الصورة */}
         {post.image && (
-          <img
-            src={post.image}
-            alt="Post"
-            style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
-          />
+          <img src={post.image} alt="Post" className="post-image" />
         )}
+        {/* تعديل عرض الصورة */}
       </div>
       <div className="ActionNumbers">
         <span className="ms-2 socialLikes">{likes} Likes</span>
