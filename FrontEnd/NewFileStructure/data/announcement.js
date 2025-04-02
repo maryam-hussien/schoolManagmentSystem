@@ -2,7 +2,8 @@ const announcements = [
   {
     text: "The new academic year will commence on January 15, 2025. Don’t miss the orientation session on the first day to get all the details and schedules.",
     date: new Date("2025-01-15"),
-    courseName: "Orientation"
+    courseName: "Orientation",
+    googleFormLink:'https://docs.google.com/forms/d/e/1FAIpQLSf2TzydPOXDHc8A7ZlGboWLAPsZwiT4MJZh0Qi7cuF8TNapjw/viewform?usp=dialog',
   },
   {
     text: "The science fair will be held on February 10, 2025. All students are invited to participate. Don’t forget to register your project ideas before January 30!",
@@ -12,7 +13,7 @@ const announcements = [
   {
     text: "Mid-term exams will start on March 1, 2025. Make sure you review all study materials in advance, and check the portal for the specific exam schedule.",
     date: new Date("2025-03-01"),
-    courseName: "Exams"
+    
   },
   {
     text: "The school library will remain open during winter break from 9:00 AM to 1:00 PM. This is a great opportunity to catch up on assignments and read your favorite books.",
@@ -71,7 +72,7 @@ const announcements = [
   },
   {
     text: "Winter holiday begins on December 24, 2024, and classes resume on January 15, 2025. Make the most of your break, rest up, and come back ready for a fresh semester.",
-    date: new Date("2024-12-24"),
+    date: new Date("2025-1-9"),
     courseName: "Holiday"
   }
 ];

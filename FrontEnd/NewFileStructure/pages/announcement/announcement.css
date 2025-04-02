@@ -19,7 +19,7 @@
 
 
 .announcementCard h5 {
-  font-family: var(--descrFont);
+  font-family: var(--titleFont);
   margin-bottom: 0; /* Prevent margin below the h5 */
 }
 
@@ -34,7 +34,7 @@
   border: none; /* Remove default border style */
   background-color: var(--font-high-light); /* Same color as the course name */
   margin-top: 0;  /* Remove space above hr */
-  margin-bottom: 10px; /* Optional: Adds spacing below hr */
+  margin-bottom: 0; /* Optional: Adds spacing below hr */
 }
 
 
@@ -68,4 +68,17 @@
 color: var(--font-high-light);
 margin-left: 20%;
 margin-top: 0.5rem;
+}
+.centeredcard{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  font-family: var(--titleFont);
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.announcementCard .announcequiz{
+  display: flex;
+  font-family: var(--titleFont);
+  margin-bottom: 0.2rem;
 }

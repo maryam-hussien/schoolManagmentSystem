@@ -15,11 +15,15 @@ const Card = ({ announcements }) => {
       {announcements.map((announcement, index) => (
         <div key={index} className="announcementCard">
           {/* Display the course name */}
+          {announcement.courseName &&
           <div className="topcard">
           <h5>{announcement.courseName} course</h5>
           <hr></hr>
+          </div>}
+          <div className="centeredcard">
+            <div>level</div>
+            <div>grade</div>
           </div>
-          
 
           <p>
             {/* Check if the text exceeds the defined max length */}
@@ -37,7 +41,16 @@ const Card = ({ announcements }) => {
               {expanded === index ? "Show Less" : "Show More"}
             </button>
           )}
-
+          {announcement.googleFormLink &&
+<div className="announcequiz"><p>Here's a New Quiz:  </p>      
+       <a
+            href={announcement.googleFormLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="quiz-link"
+          >
+            Open Quiz
+          </a></div>}
           <small className="text-secondary">{announcement.date.toDateString()}</small>
         </div>
       ))}
