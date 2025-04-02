@@ -1,4 +1,28 @@
 @import url('../../assets/global.css');
+.custom-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%; /* عرض الكرت حسب عرض الصفحة */
+  max-width: 600px; /* أقصى عرض */
+  margin: 0 auto; /* لتوسيط الكرت */
+}
+
+.custom-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--font-high-light); /* لون العنوان */
+  margin-bottom: 10px;
+}
+
+.custom-card-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
 
 .Social{
   height: auto;

@@ -1,35 +1,79 @@
+import { useState, useEffect } from "react";
 import Header from "../../layout/NavBar/Header";
 import Footer from "../../layout/Footer/Footer";
-import './announcement.css';
-import Card from "../../features/announcement/Card";
-import announcements from "../../data/announcement";
+import "./announcement.css";
+import axios from "axios";
 
 const Announcement = () => {
-  // Get today's date and calculate the start of the current week (Monday)
-  const today = new Date();
-  today.setHours(0, 0, 0, 0); // Remove the time part for today
+  const [thisWeek, setThisWeek] = useState([]);
+  const [earlierThisYear, setEarlierThisYear] = useState([]); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null);
 
-  const startOfWeek = new Date(today);
-  startOfWeek.setDate(today.getDate() - 7); // First day of this week (Monday)
-  
-  const thisWeek = [];
-  const earlierThisYear = [];
+  useEffect(() => {
+    const fetchAnnouncements = async () => {
+      try {
+        const response = await axios.get(
+          "https://school-backend-eight.vercel.app/api/v1/announcements"
+        );
+        const announcements = response.data.data || []; 
 
-  // Categorize announcements based on the date
-  announcements.forEach((announcement) => {
-    const announcementDate = new Date(announcement.date);
-    announcementDate.setHours(0, 0, 0, 0); // Remove the time part for the announcement date
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
-    // Check if the announcement is within this week
-    if (
-      announcementDate >= startOfWeek &&
-      announcementDate <= today
-    ) {
-      thisWeek.push(announcement);
-    } else {
-      earlierThisYear.push(announcement);
-    }
-  });
+        const startOfWeek = new Date(today);
+        startOfWeek.setDate(today.getDate() - 7);
+
+        const thisWeekAnnouncements = [];
+        const earlierThisYearAnnouncements = [];
+
+        announcements.forEach((announcement) => {
+          const announcementDate = new Date(announcement.date);
+          announcementDate.setHours(0, 0, 0, 0);
+
+          if (announcementDate >= startOfWeek && announcementDate <= today) {
+            thisWeekAnnouncements.push(announcement);
+          } else {
+            earlierThisYearAnnouncements.push(announcement);
+          }
+        });
+
+        setThisWeek(thisWeekAnnouncements);
+        setEarlierThisYear(earlierThisYearAnnouncements);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching announcements:", err);
+        setError("Failed to fetch announcements. Please try again later.");
+        setLoading(false);
+      }
+    };
+
+    fetchAnnouncements();
+  }, []);
+
+  if (loading) {
+    return (
+      <div>
+        <Header />
+        <div className="announcement">
+          <h2 className="announcementTitle">Loading announcements...</h2>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div>
+        <Header />
+        <div className="announcement">
+          <h2 className="announcementTitle">{error}</h2>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -41,7 +85,17 @@ const Announcement = () => {
         {thisWeek.length > 0 && (
           <>
             <h4>This Week</h4>
-            <Card announcements={thisWeek} />
+            <div className="announcement-cards">
+              {thisWeek.map((announcement) => (
+                <div key={announcement._id} className="announcement-card">
+                  <h5>{announcement.title}</h5>
+                  <p>{announcement.description}</p>
+                  <p>
+                    <strong>Date:</strong> {announcement.date}
+                  </p>
+                </div>
+              ))}
+            </div>
           </>
         )}
 
@@ -49,10 +103,24 @@ const Announcement = () => {
         {earlierThisYear.length > 0 && (
           <>
             <h4>Earlier This Year</h4>
-            <Card announcements={earlierThisYear} />
+            <div className="announcement-cards">
+              {earlierThisYear.map((announcement) => (
+                <div key={announcement._id} className="announcement-card">
+                  <h5>{announcement.title}</h5>
+                  <p>{announcement.description}</p>
+                  <p>
+                    <strong>Date:</strong> {announcement.date}
+                  </p>
+                </div>
+              ))}
+            </div>
           </>
         )}
 
+        {/* Message if no announcements */}
+        {thisWeek.length === 0 && earlierThisYear.length === 0 && (
+          <p>No announcements available.</p>
+        )}
       </div>
       <Footer />
     </>

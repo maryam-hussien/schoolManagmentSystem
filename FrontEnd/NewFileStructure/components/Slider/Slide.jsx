@@ -10,10 +10,6 @@ const Slide = () => {
             title: "Jenny Doe",
         },
         {
-            imgSrc: "/assets/download (2).jpg",
-            title: "Olivia Davis",
-        },
-        {
             imgSrc: "/assets/download (3).jpg",
             title: "Michael Brown",
         },

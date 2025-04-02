@@ -12,7 +12,7 @@ const DashSidebar = () => {
     localStorage.removeItem('authToken'); // Example: removing token from localStorage
 
     // Redirect to login page
-    navigate('/login'); // Change '/login' to your login route
+    navigate('/'); // Change '/login' to your login route
   };
   return (
 
@@ -98,7 +98,7 @@ const DashSidebar = () => {
           <span>Review</span>
          </NavLink>
 
-         <Back link='/login'
+         <Back link='/'
                onClickAction={handleLogout}
                Icon={ArrowBarLeft}
                label='Log Out'

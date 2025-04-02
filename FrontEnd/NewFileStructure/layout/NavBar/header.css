@@ -7,6 +7,17 @@
   width: 100%;
   z-index: 1000;
 }
+/* تنسيق الأيقونة */
+.logout-icon {
+  transition: transform 0.3s ease, color 0.3s ease; /* إضافة تأثير حركة عند التحويل أو تغيير اللون */
+  cursor: pointer; /* مؤشر اليد */
+}
+
+/* تأثير عند الوقوف على الأيقونة */
+.logout-icon:hover {
+  transform: scale(1.2) rotate(20deg); /* تكبير الأيقونة مع دوران خفيف */
+  color: red; /* تغيير لون الأيقونة عند الوقوف عليها */
+}
 
 .bheader {
   font-family: var(--titleFont);

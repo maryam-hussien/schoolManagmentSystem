@@ -6,7 +6,7 @@ const DashNav = () => {
   const navigate = useNavigate(); // Get the navigate function
 
   const handleClick = () => {
-    navigate("/"); // Navigate to the homepage
+    navigate("/home"); // Navigate to the homepage
   };
 
   return (

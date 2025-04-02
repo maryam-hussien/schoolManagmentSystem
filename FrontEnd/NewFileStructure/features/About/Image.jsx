@@ -5,7 +5,7 @@ const Image=()=>{
     return (
       <>
        <div className="image-contanent">
-    <img src={img} alt="Brand Logo" className="logo2" />
+    <img src={img} alt="Brand Logo" className="logo3" />
     </div>
       
       </>

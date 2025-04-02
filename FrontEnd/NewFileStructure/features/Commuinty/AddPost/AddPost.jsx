@@ -1,53 +1,62 @@
-import { useState, useRef } from 'react';
-import './AddPost.css';
-import { FaImage } from 'react-icons/fa'; 
+import { useState, useRef } from "react";
+import "./AddPost.css";
+import { FaImage } from "react-icons/fa";
 
 const AddPost = ({ onAddPost }) => {
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
-  const fileInputRef = useRef(null); // Ref to handle file input
+  const fileInputRef = useRef(null);
 
-  // Handle form submission
+  // دالة لتحويل الصورة إلى Base64
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = (err) => reject(err);
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const handleImageUpload = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const base64Image = await convertToBase64(file);
+      setImage(base64Image); // حفظ الصورة كـ Base64
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const newPost = {
-      id: Math.floor(Math.random() * 1000), // Generate a random ID for the post
+      id: Math.floor(Math.random() * 1000),
       content,
-      date: new Date().toISOString().split('T')[0], // Current date
+      date: new Date().toISOString().split("T")[0],
       likes: 0,
       comments: [],
-      image: image ? URL.createObjectURL(image) : null,
-      sharedBy: [],
+      image, // الصورة محفوظة بصيغة Base64
     };
 
-    // Call the onAddPost function passed from App
     onAddPost(newPost);
-
-    // Clear form inputs
-    setContent('');
+    setContent("");
     setImage(null);
-  };
-
-  const handleImageUpload = (event) => {
-    setImage(event.target.files[0]);
   };
 
   return (
     <div className="card mb-4 AddPost">
       <div className="card-body">
-        <h5 className="card-title mb-4 ">Add Post</h5>
-
+        <h5 className="card-title mb-4">Add New Post</h5>
         <form onSubmit={handleSubmit}>
-          <div className="d-flex align-items-start mb-3 flex-wrap mt-1 w-75"> 
+          <div className="d-flex align-items-start mb-3 flex-wrap mt-1 w-75">
             <img
-              src="https://via.placeholder.com/40"
+              src="https://icons.veryicon.com/png/o/system/system-1/post-5.png"
               alt="none"
               className="rounded-circle me-3"
+              style={{ width: "30px", height: "30px" }}
             />
             <div className="flex-grow-1">
               <textarea
-                className="form-control border-0 "
+                className="form-control border-0"
                 id="content"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
@@ -57,30 +66,27 @@ const AddPost = ({ onAddPost }) => {
               ></textarea>
             </div>
           </div>
-
-          {/* Divider */}
           <hr className="border border-secondary w-100" />
-
-          <div className='addpostLastSec'>
+          <div className="addpostLastSec">
             <div className="mb-3">
               <label htmlFor="image" className="form-label">
                 <FaImage
-                  onClick={() => fileInputRef.current.click()} // Trigger file input click
+                  onClick={() => fileInputRef.current.click()}
                   className="image-icon"
                 />
                 <input
                   type="file"
-                  className="d-none" // Hide the file input
+                  className="d-none"
                   id="image"
                   ref={fileInputRef}
                   onChange={handleImageUpload}
                 />
               </label>
-              {image && <p className="mt-2">Image: {image.name}</p>} 
+              {image && <p className="mt-2">Image uploaded successfully!</p>}
             </div>
-            <div>
-            <button type="submit" className="btn btn-primary">Add Post</button>
-            </div>
+            <button type="submit" className="btn btn-primary">
+              Add Post
+            </button>
           </div>
         </form>
       </div>

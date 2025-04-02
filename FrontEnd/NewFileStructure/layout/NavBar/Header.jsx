@@ -2,8 +2,8 @@ import './header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import img from '../../assets/images/730005bd39661bcd3959d4dad27f9d5b-removebg-preview.png';
-import imag from '../../assets/images/33f54f271b2de59273f34e582a00e05e.png';
 import { NavLink, useNavigate } from 'react-router-dom'; 
+import { FiLogOut } from 'react-icons/fi'; // استيراد أيقونة تسجيل الخروج
 import { useState } from 'react';
 
 const Header = () => {
@@ -15,23 +15,21 @@ const Header = () => {
   };
 
   const handlehome = () => {
-    navigate('/');
+    navigate('/home');
   };
 
   const handlelogin = () => {
-    navigate('/login');
+    navigate('/');
   };
 
   return (
     <div className="header">
       <div className="bheader">
-  
         <div className="school-team" onClick={handlehome}>
           <img src={img} alt="nav-brand" className="logo-img" />
           <span className="fw-semibold">SCHOOL TEAM</span>
         </div>
 
-     
         <nav className="navbar navbar-expand-lg">
           <div className="container navbar-container">
             <div className="navt">
@@ -96,7 +94,7 @@ const Header = () => {
               </div>
               
               <div className="login-icon" onClick={handlelogin}>
-                <img src={imag} alt="nav-brand" className="nohover" />
+                <FiLogOut size={30} color="black" className="logout-icon" /> {/* استبدال الصورة بأيقونة تسجيل الخروج */}
               </div>
             </div>
           </div>

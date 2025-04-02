@@ -1,17 +1,10 @@
 import { FaSearch } from "react-icons/fa";
 
 const FilterSection = ({ filter, setFilter, searchQuery, setSearchQuery }) => (
-  <section className="fsec" style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-    {["Kindergarten", "Primary", "Preparatory", "Secondary"].map((level) => (
-      <button
-        key={level}
-        onClick={() => setFilter(level)}
-        className={filter === level ? "active" : ""}
-        style={{ flex: "1 1 150px" }}
-      >
-        {level}
-      </button>
-    ))}
+  <section
+    className="fsec"
+    style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}
+  >
     <div style={{ flex: "1 1 150px", position: "relative" }}>
       <FaSearch className="iconsearch" />
       <input
